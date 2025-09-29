@@ -1,0 +1,37 @@
+# Enable URL rewriting
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+# If the request matches a .html file without extension, serve it
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [L]
+
+# If the request is a real file, serve it
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# If the request is a directory, serve its index.html
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ %{REQUEST_URI}/index.html [L]
+
+# Fallback: send everything else to index.html
+
+RewriteRule ^ index.html [L]
+</IfModule>
+
+# Use your exported 404.html for not found pages
+
+ErrorDocument 404 /404.html
+
+# Optional: serve correct MIME types
+
+AddType application/javascript .js
+AddType text/css .css
+AddType application/json .json
+AddType image/svg+xml .svg
+AddType application/font-woff2 .woff2
