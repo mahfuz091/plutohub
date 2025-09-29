@@ -4144,3 +4144,206 @@ html {
 .blog-h {
   scroll-margin-top: 180px;
 }
+
+// Services
+
+.service_banner_area {
+  height: 440px;
+  display: flex;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+
+  position: relative;
+  z-index: 2;
+
+  overflow: hidden;
+  &:before {
+    content: "";
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+
+    filter: blur(120px);
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.service_banner_area {
+  position: relative;
+  z-index: 2;
+}
+
+.services-banner {
+  padding-top: 180px;
+
+  max-width: 714px;
+  margin: 0 auto;
+  text-align: center;
+  .section-title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 120%;
+  }
+  .section-description {
+    opacity: 0.8;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    padding-top: 7px;
+  }
+}
+
+.logo-branding {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.ellipse {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.ellipse-top-left {
+  top: -80px;
+  left: 0px;
+}
+
+.ellipse-bottom-left {
+  bottom: -150px;
+  left: 200px;
+}
+
+.ellipse-right {
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.logo-branding-section {
+  padding-top: 60px;
+  color: #fff;
+  .section-title {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+
+    line-height: 120%;
+  }
+
+  .section-description {
+    padding-top: 16px;
+    font-weight: 400;
+
+    font-size: 18px;
+
+    line-height: 160%;
+    letter-spacing: 0%;
+
+    opacity: 0.8;
+  }
+}
+
+.branding-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 20px;
+
+  font-weight: 600;
+
+  font-size: 22px;
+
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+
+.ux-design {
+  border-radius: 60px;
+  background: rgba(0, 129, 83, 0.2);
+  opacity: 1;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+
+.ui-ux-ellipse-right {
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+}
+
+.ui-ux-contain-main{
+  margin-top: 60px;
+}
+
+.ux-design-heading {
+  max-width: 722px;
+  margin: 0 auto;
+
+  text-align: center;
+  .section-title {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+
+    line-height: 120%;
+  }
+
+  .section-description {
+    padding-top: 16px;
+    font-weight: 400;
+
+    font-size: 18px;
+
+    line-height: 160%;
+    letter-spacing: 0%;
+
+    opacity: 0.8;
+  }
+}
+.ui-ux-content {
+
+  opacity: 1;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+
+  font-size: 22px;
+  .pt-service{
+    margin-top:8px ;
+  }
+  .borders{
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   padding:20px 0;
+
+  }
+  
+}
+
+.ux-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem; 
+  
+}
+.ux-services-grid div {
+  align-items: start;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.section-description {
+  font-size: 1rem;
+  color: #ccc;
+}
