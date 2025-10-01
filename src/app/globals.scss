@@ -11,6 +11,8 @@
     --hoverColor: #06d6a0;
   }
 }
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 html,
 body {
@@ -4241,6 +4243,8 @@ html {
   transform: translateY(-50%);
 }
 
+
+
 .logo-branding-section {
   padding-top: 60px;
   color: #fff;
@@ -4385,10 +4389,87 @@ html {
   }
 }
 
-.Shopify{
-  
+.Shopify {
   opacity: 1;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
+
+.work-process {
+  border-radius: 60px;
+  background: rgba(0, 129, 83, 0.2);
+  opacity: 1;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-process {
+  position: relative;
+  overflow: hidden;
+  .process-card {
+    height: 384px;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+
+    .heading {
+      padding-top: 15px;
+      font-weight: 600;
+
+      font-size: 26px;
+
+      line-height: 130%;
+    }
+    .description {
+      font-weight: 400;
+
+      font-size: 16px;
+      padding-top: 5px;
+      line-height: 160%;
+      opacity: 0.8;
+    }
+  }
+
+  .process-heding {
+    padding-bottom: 40px;
+  }
+
+  .nav-arrow {
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(6, 214, 160, 1);
+    transition: 0.3s;
+
+    &:hover {
+      background: rgba(6, 214, 160, 1);
+      color: white;
+    }
+  }
+
+  .ellipse-workprocess {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 1;
+   
+                       
+}
+
+}
+
+

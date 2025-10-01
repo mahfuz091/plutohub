@@ -4,8 +4,7 @@ import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import { MoveLeft, MoveRight } from "lucide-react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import { useRef, useState } from "react";
 
 const IndustriesServeCard = () => {
@@ -113,7 +112,7 @@ const IndustriesServeCard = () => {
         <Row className="text-center arrow-testi ">
           <Col xl={12}>
             <div className="testi-navigation d-flex justify-content-end align-items-end gap-3">
-              {/* Dots */}
+             
               <div>
                 {testimonialsData.map((_, index) => (
                   <span
@@ -126,7 +125,7 @@ const IndustriesServeCard = () => {
                 ))}
               </div>
 
-              {/* Arrows */}
+              
               <div className="testi-nav d-flex gap-3">
                 <span className="testi-arrow-left" onClick={handlePrevClick}>
                   <MoveLeft size={24} />

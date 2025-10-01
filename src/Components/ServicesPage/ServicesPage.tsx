@@ -10,6 +10,8 @@ import Webflow from "./Webflow/Webflow";
 import WordPress from "./WordPress/WordPress";
 import Shopify from "./Shopify/Shopify";
 
+import WorkProcess from "./WorkProcess/WorkProcess";
+
 const ServicesPage = () => {
   return (
     <div>
@@ -23,6 +25,8 @@ const ServicesPage = () => {
       <Webflow/>
       <WordPress/>
       <Shopify/>
+      <WorkProcess/>
+      
     </div>
   );
 };
