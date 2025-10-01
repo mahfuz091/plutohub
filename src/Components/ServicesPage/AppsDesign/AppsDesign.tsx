@@ -31,8 +31,8 @@ const AppsDesign = () => {
 
       <Container>
         <div className="ux-design-heading">
-          <h1 className="section-title">Apps Design</h1>
-          <p className="section-description">
+          <h1 className="service-title">Apps Design</h1>
+          <p className="service-description">
             Designed for the small screen but big on impact, our apps deliver smooth interactions, clear navigation, and visuals that keep users engaged on the go.
           </p>
         </div>

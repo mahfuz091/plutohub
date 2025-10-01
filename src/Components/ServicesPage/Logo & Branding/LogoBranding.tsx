@@ -41,8 +41,8 @@ const LogoBranding = () => {
         <Container>
           <Row className="align-items-center">
             <Col md={4} className="mb-4 mb-md-0">
-              <h2 className="section-title">Logo & Branding</h2>
-              <p className="section-description">
+              <h2 className="service-title">Logo & Branding</h2>
+              <p className="service-description">
                 We create brand identities that leave a strong and lasting
                 impression. From distinctive logos to complete visual systems,
                 we make sure every detail reflects your personality and connects

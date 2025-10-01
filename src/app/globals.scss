@@ -4198,6 +4198,21 @@ html {
   }
 }
 
+.service-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.service-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  opacity: 0.8;
+  padding-top: 5px;
+}
+
 .logo-branding {
   padding-top: 120px;
   padding-bottom: 100px;
@@ -4229,25 +4244,6 @@ html {
 .logo-branding-section {
   padding-top: 60px;
   color: #fff;
-  .section-title {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 48px;
-
-    line-height: 120%;
-  }
-
-  .section-description {
-    padding-top: 16px;
-    font-weight: 400;
-
-    font-size: 18px;
-
-    line-height: 160%;
-    letter-spacing: 0%;
-
-    opacity: 0.8;
-  }
 }
 
 .branding-card {
@@ -4270,9 +4266,7 @@ html {
   padding: 100px 0;
   position: relative;
   overflow: hidden;
-  
 }
-
 
 .ui-ux-ellipse-right {
   top: 50%;
@@ -4280,7 +4274,7 @@ html {
   transform: translateY(-50%);
 }
 
-.ui-ux-contain-main{
+.ui-ux-contain-main {
   margin-top: 60px;
 }
 
@@ -4289,28 +4283,8 @@ html {
   margin: 0 auto;
 
   text-align: center;
-  .section-title {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 48px;
-
-    line-height: 120%;
-  }
-
-  .section-description {
-    padding-top: 16px;
-    font-weight: 400;
-
-    font-size: 18px;
-
-    line-height: 160%;
-    letter-spacing: 0%;
-
-    opacity: 0.8;
-  }
 }
 .ui-ux-content {
-
   opacity: 1;
   padding: 20px;
   border-radius: 20px;
@@ -4318,36 +4292,103 @@ html {
   font-weight: 600;
 
   font-size: 22px;
-  .pt-service{
-    margin-top:8px ;
+  .pt-service {
+    margin-top: 8px;
   }
-  .borders{
-   border-top: 1px solid rgba(255, 255, 255, 0.1);
-   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-   padding:20px 0;
-
+  .borders {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
   }
-  
 }
 
 .ux-services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 2rem; 
-  
+  gap: 1rem 2rem;
 }
 .ux-services-grid div {
   align-items: start;
 }
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-}
-.section-description {
-  font-size: 1rem;
-  color: #ccc;
+
+.web {
+  padding-top: 100px;
 }
 
-.web{
-  padding-top: 100px;
+.SaasDesign {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  .sassHeading-heading {
+    max-width: 1066px;
+  }
+
+  .sassHeading-content {
+    margin: 40px 0 60px 0;
+  }
+}
+
+.ai-product {
+  text-align: left;
+}
+
+.ai-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0 20px 0;
+}
+
+.ai-contain-main {
+  margin-top: 0;
+}
+
+.webflow-content {
+  margin: 0 0 50px 0;
+}
+
+.webflow-heading {
+  max-width: 1066px;
+  padding-bottom: 25px;
+}
+
+.WordPress {
+  border-radius: 60px;
+  background: rgba(0, 129, 83, 0.2);
+  opacity: 1;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.webflow-services-row {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 60px;
+
+  .service-col {
+    font-weight: 600;
+
+    font-size: 22px;
+
+    line-height: 160%;
+
+    color: rgba(255, 255, 255, 1);
+
+    &.bg-light-row {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    &.bg-dark-row {
+      background: rgba(87, 87, 87, 0.1);
+    }
+  }
+}
+
+.Shopify{
+  
+  opacity: 1;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
