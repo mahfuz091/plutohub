@@ -11,6 +11,9 @@ import WordPress from "./WordPress/WordPress";
 import Shopify from "./Shopify/Shopify";
 
 import WorkProcess from "./WorkProcess/WorkProcess";
+import Investment from "./Investment/Investment";
+import WhatGet from "./WhatGet/WhatGet";
+import TestimonialsSection from "../Testimonial/testimonial";
 
 const ServicesPage = () => {
   return (
@@ -26,7 +29,9 @@ const ServicesPage = () => {
       <WordPress/>
       <Shopify/>
       <WorkProcess/>
-      
+      <Investment/>
+      <WhatGet/>
+      <TestimonialsSection />
     </div>
   );
 };

@@ -59,24 +59,27 @@ const WorkProcess = () => {
 
   return (
     <section className="work-process ">
-        <Image
-                src="/images/yellow.png"
-                alt="yellow ellipse"
-                width={400}
-                height={400}
-                className="ellipse ellipse-top-left"
-              />
-         <Image
-                        src="/images/idu.png"
-                        alt="yellow ellipse"
-                        width={1200}
-                        height={800}
-                        className=" ellipse-workprocess"
-                      />
+      <Image
+        src="/images/yellow.png"
+        alt="yellow ellipse"
+        width={400}
+        height={400}
+        className="ellipse ellipse-top-left"
+      />
+      <Image
+        src="/images/idu.png"
+        alt="yellow ellipse"
+        width={1200}
+        height={800}
+        className=" ellipse-workprocess"
+      />
       <Container>
         <div className="text-center process-heding">
-            <h2 className="service-title ">Our Work Process</h2>
-            <p className="service-description">We follow a clear, collaborative process to ensure great results every time.</p>
+          <h2 className="service-title ">Our Work Process</h2>
+          <p className="service-description">
+            We follow a clear, collaborative process to ensure great results
+            every time.
+          </p>
         </div>
         <Slider {...sliderSettings} ref={sliderRef} className="">
           {processSteps.map((step) => (
