@@ -37,7 +37,7 @@ const Investment = () => {
           </Col>
           <Col className="d-flex justify-content-end">
             <Image
-              src="/images/investment.png"
+              src="/images/investment-right.png"
               width={589}
               height={500}
               alt="Investment"
