@@ -5,6 +5,7 @@ import FaqSection from "../FAQ/faq";
 import RecentWork from "./RecentWork/RecentWork";
 import Difference from './Difference/Difference';
 import IndustriesExpertise from "./IndustriesExpertise/IndustriesExpertise";
+import Number from "./Number/Number";
 
 const WebDesignDevPage = () => {
   return (
@@ -24,6 +25,7 @@ const WebDesignDevPage = () => {
       </div>
 
       <IndustriesExpertise/>
+      <Number/>
       <FaqSection/>
       
     </div>
