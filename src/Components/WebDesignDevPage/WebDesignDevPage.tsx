@@ -2,6 +2,9 @@ import React from "react";
 import Banner from "./Banner/Banner";
 import Services from "./Services/Services";
 import FaqSection from "../FAQ/faq";
+import RecentWork from "./RecentWork/RecentWork";
+import Difference from './Difference/Difference';
+import IndustriesExpertise from "./IndustriesExpertise/IndustriesExpertise";
 
 const WebDesignDevPage = () => {
   return (
@@ -15,7 +18,14 @@ const WebDesignDevPage = () => {
         title="Website Design & Development"
       />
       <Services/>
+      <div className="common-bg">
+        <RecentWork/>
+        <Difference/>
+      </div>
+
+      <IndustriesExpertise/>
       <FaqSection/>
+      
     </div>
   );
 };

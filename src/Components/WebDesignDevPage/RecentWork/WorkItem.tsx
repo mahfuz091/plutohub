@@ -3,13 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Slider from "react-slick";
-import Primage1 from "../../assets/img/ai-fitness.png";
-import Primage2 from "../../assets/img/kayaking.png";
-import Primage3 from "../../assets/img/ai-creativity.png";
-import Primage4 from "../../assets/img/hotel-booking.png";
 
-const ProjectsItem = () => {
+const WorkItem = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -36,17 +31,17 @@ const ProjectsItem = () => {
     ],
   };
   return (
-    <div className='project_wrapper'>
-      <div className='project-grid'>
+    <div className='project_wrapper-web'>
+      <div className='project-grid-web'>
         <a
           href='https://www.behance.net/gallery/230888791/Quantafit-AI-Fitness-app'
           target='_blank'
           className='project_item'
         >
           <div className='pr_image'>
-            <Image src={Primage1} alt='pr1' />
+            <Image src='/images/services-web/FinVault.png' alt='pr1' height={330} width={333} />
           </div>
-          <div className='pr_content'>
+          <div className='pr_content-web '>
             <h3 className='ph-text'>FinVault – Personal Finance App</h3>
 
             <p>
@@ -64,9 +59,9 @@ const ProjectsItem = () => {
           className='project_item'
         >
           <div className='pr_image'>
-            <Image src={Primage2} alt='pr1' />
+              <Image src='/images/services-web/doctor.png' alt='pr1' height={330} width={333} />
           </div>
-          <div className='pr_content'>
+          <div className='pr_content-web '>
             <h3>Kayaking Landing Page</h3>
 
             <p>
@@ -84,9 +79,9 @@ const ProjectsItem = () => {
           className='project_item'
         >
           <div className='pr_image'>
-            <Image src={Primage3} alt='pr1' />
+             <Image src='/images/services-web/eduocore-dashboard.png' alt='pr1' height={330} width={333} />
           </div>
-          <div className='pr_content'>
+          <div className='pr_content-web '>
             <h3 className='ph-text'>
               AI Creativity: Unlock Your Creative Potential
             </h3>
@@ -103,37 +98,15 @@ const ProjectsItem = () => {
           className='project_item'
         >
           <div className='pr_image'>
-            <Image src={Primage4} alt='pr1' />
+              <Image src='/images/services-web/FinVault.png' alt='pr1' height={330} width={333} />
           </div>
-          <div className='pr_content'>
+          <div className='pr_content-web '>
             <h3 className='ph-text'>Hotel Booking Landing Page</h3>
 
             <p>
               We designed this hotel booking landing page to make finding the
               perfect stay easy and stress-free. Because booking a getaway
               should feel as good as the trip itself!
-            </p>
-          </div>
-        </a>
-      </div>
-      <div className='project-grid project-top d-none'>
-        <a
-          href='https://dribbble.com/shots/25469638-AI-Creativity-Landing-Page
-'
-          target='_blank'
-          className='project_item'
-        >
-          <div className='pr_image'>
-            <Image src={Primage3} alt='pr1' height={330} width={600} />
-          </div>
-          <div className='pr_content'>
-            <h3 className='ph-text'>
-              AI Creativity: Unlock Your Creative Potential
-            </h3>
-
-            <p>
-              These AI tools automate tasks and create stunning visuals in
-              minutes, making your work easier, faster, and more creative.
             </p>
           </div>
         </a>
@@ -143,9 +116,27 @@ const ProjectsItem = () => {
           className='project_item'
         >
           <div className='pr_image'>
-            <Image src={Primage4} alt='pr1' height={330} width={600} />
+              <Image src='/images/services-web/shopwise.png' alt='pr1' height={330} width={333} />
           </div>
-          <div className='pr_content'>
+          <div className='pr_content-web '>
+            <h3 className='ph-text'>Hotel Booking Landing Page</h3>
+
+            <p>
+              We designed this hotel booking landing page to make finding the
+              perfect stay easy and stress-free. Because booking a getaway
+              should feel as good as the trip itself!
+            </p>
+          </div>
+        </a>
+        <a
+          href='https://dribbble.com/shots/25672112-Hotel-Booking-Landing-Page'
+          target='_blank'
+          className='project_item'
+        >
+          <div className='pr_image'>
+              <Image src='/images/services-web/eduocore.png' alt='pr1' height={330} width={333} />
+          </div>
+          <div className='pr_content-web '>
             <h3 className='ph-text'>Hotel Booking Landing Page</h3>
 
             <p>
@@ -156,8 +147,9 @@ const ProjectsItem = () => {
           </div>
         </a>
       </div>
+     
     </div>
   );
 };
 
-export default ProjectsItem;
+export default WorkItem;

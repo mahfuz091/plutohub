@@ -146,6 +146,7 @@ const Services: React.FC = () => {
 
   return (
     <section className="service_about_area about_area services web-design" ref={aboutRef}>
+        
       <Container>
         <Row>
           <Col sm={5}>

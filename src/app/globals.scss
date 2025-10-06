@@ -4563,6 +4563,7 @@ html {
   }
 }
 .web-design{
+  padding-bottom: 120px;
   .text-left{
 font-weight: 500;
 font-style: Medium;
@@ -4579,6 +4580,25 @@ line-height: 140%;
 letter-spacing: 0%;
 
   }
+}
+
+
+.recent-work{
+  position: relative;
+  overflow: hidden;
+}
+
+.ellipse-recentwork{
+ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 1;
+   
+                       
+
 }
 
 
@@ -4673,4 +4693,125 @@ letter-spacing: 0%;
       color: white;
     }
   }
+}
+
+
+.common-bg{
+  padding:120px 0;
+  background:rgba(0, 129, 83, 0.2);
+}
+
+.web-title{
+font-weight: 600;
+font-size: 44px;
+line-height: 140%;
+letter-spacing: 0%;
+color:#FFFFFF;
+
+
+}
+.web-description{
+font-weight: 400;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 160%;
+letter-spacing: 0%;
+opacity:0.8;
+padding-top:15px;
+
+
+}
+
+.project-grid-web {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+}
+.service-top {
+  margin-top: -50px;
+}
+
+ .pr_content-web {
+    
+
+    h3 {
+      padding-top:20px;
+      font-size: 20px;
+      line-height: 120%;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 160%;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      padding-right:5px;
+    }
+  }
+
+@media (min-width: 768px) {
+  .project-grid-web {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .project-grid-web {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project_wrapper-web{
+  padding-top:50px;
+}
+
+.industries-expertise{
+  padding:120px 0;
+  position: relative;
+  overflow: hidden;
+  .industries-content{
+  max-width: 672px;
+  margin:0 auto;
+  
+}
+}
+
+
+.industry-card {
+  
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.industry-card img {
+  transition: transform 0.6s ease;
+}
+
+
+.industry-card:hover {
+  transform: translateY(-5px) scale(1.02); 
+}
+
+
+.industry-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  text-align: left;
+  padding-left:30px;
+  padding-bottom:30px;
+}
+
+.ellipse-industries-expertise{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 1;
 }

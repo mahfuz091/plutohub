@@ -10,35 +10,11 @@ import serimage5 from "../../assets/img/ai-product.png";
 import serimage6 from "../../assets/img/sass.png";
 import check from "../../assets/img/check.svg";
 import Buttons from "../Banner/Buttons";
-import "slick-carousel/slick/slick.css";
-import Slider from "react-slick";
+
+
 
 const ProjectsItem = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  
   return (
     <div className='service_wrapper '>
       <div className='services-grid'>
