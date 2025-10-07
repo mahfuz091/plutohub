@@ -7,6 +7,7 @@ import Difference from './Difference/Difference';
 import IndustriesExpertise from "./IndustriesExpertise/IndustriesExpertise";
 import Number from "./Number/Number";
 
+import DevelopmentProcess from "./DevelopmentProcess/DevelopmentProcess";
 const WebDesignDevPage = () => {
   return (
     <div>
@@ -19,6 +20,7 @@ const WebDesignDevPage = () => {
         title="Website Design & Development"
       />
       <Services/>
+      <DevelopmentProcess/>
       <div className="common-bg">
         <RecentWork/>
         <Difference/>

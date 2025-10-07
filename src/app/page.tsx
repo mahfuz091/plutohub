@@ -4,7 +4,7 @@ import Banner from "../Components/Banner/Banner";
 import About from "../Components/About/About";
 import Clientlogo from "../Components/Clientlogo/Clientlogo";
 import Projects from "../Components/Projects/Projects";
-import Services from "../Components/Service/Services";
+import Services from "../Components/Services/Services";
 import Promo from "../Components/Promo/Promo";
 import Price from "../Components/Price/Price";
 import WhyWe from "../Components/WhyWe/WhyWe";
