@@ -8,7 +8,7 @@ import { MoveLeft, MoveRight } from "lucide-react";
 const processData = [
   {
     id: 1,
-    image: "/images/logoBranding/Brand.png",
+    image: "/images/Brand.png",
     step: "Step 1",
     title: "Brand Discovery",
     description:
@@ -16,7 +16,7 @@ const processData = [
   },
   {
     id: 2,
-    image: "/images/logoBranding/Visual.png",
+    image: "/images/Visual.png",
     step: "Step 2",
     title: "Visual Exploration",
     description:
@@ -24,7 +24,7 @@ const processData = [
   },
   {
     id: 3,
-    image: "/images/logoBranding/Market.png",
+    image: "/images/Market.png",
     step: "Step 3",
     title: "Market & Competitor Research",
     description:
@@ -32,7 +32,7 @@ const processData = [
   },
   {
     id: 4,
-    image: "/images/logoBranding/Market.png",
+    image: "/images/Market.png",
     step: "Step 4",
     title: "Creative Design",
     description:
@@ -40,7 +40,7 @@ const processData = [
   },
   {
     id: 5,
-    image: "/images/logoBranding/Market.png",
+    image: "/images/Market.png",
     step: "Step 5",
     title: "Final Delivery",
     description:
