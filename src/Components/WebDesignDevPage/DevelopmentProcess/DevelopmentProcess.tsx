@@ -14,6 +14,9 @@ const processData = [
     description:
       "We begin by understanding your goals, target audience, and competitors. This helps us shape a website strategy that's focused, goal-oriented, and user-centric.",
   },
+
+
+  
   {
     id: 2,
     image: "/images/logoBranding/step-2.png",
