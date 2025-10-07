@@ -8,7 +8,7 @@ import { MoveLeft, MoveRight } from "lucide-react";
 const processData = [
   {
     id: 1,
-    image: "/images/logoBranding/step1.png",
+    image: "/images/logoBranding/Brand.png",
     step: "Step 1",
     title: "Discovery & Planning",
     description:
@@ -19,7 +19,7 @@ const processData = [
 
   {
     id: 2,
-    image: "/images/logoBranding/step2.png",
+    image: "/images/logoBranding/Market.png",
     step: "Step 2",
     title: "Content & Architecture",
     description:
@@ -27,7 +27,7 @@ const processData = [
   },
   {
     id: 3,
-    image: "/images/logoBranding/step1.png",
+    image: "/images/logoBranding/Visual.png",
     step: "Step 3",
     title: "Content & Architecture",
     description:
@@ -35,7 +35,7 @@ const processData = [
   },
   {
     id: 4,
-    image: "/images/logoBranding/step2.png",
+    image: "/images/logoBranding/Brand.png",
     step: "Step 4",
     title: "Content & Architecture",
     description:
@@ -43,7 +43,7 @@ const processData = [
   },
   {
     id: 5,
-    image: "/images/logoBranding/step3.png",
+    image: "/images/logoBranding/Market.png",
     step: "Step 5",
     title: "Content & Architecture",
     description:
@@ -159,7 +159,7 @@ const DevelopmentProcess = () => {
                     <Col><div className="process-image">
                   <Image
                     src={item.image}
-                    alt={item.step}
+                    alt={item.title}
                     width={400}
                     height={300}
                    
