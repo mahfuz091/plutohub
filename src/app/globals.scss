@@ -715,7 +715,7 @@ span.animated-dominate {
   .tab-content {
     height: 100%;
   }
-
+   
   .tab_content {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -5139,3 +5139,182 @@ padding-bottom:40px;
     opacity: 1;
     opacity:0.8;
   }
+
+
+
+
+
+  // uiux design
+
+  .uiux-des {
+  max-width: 745px;
+  margin: 0 auto;
+}
+
+
+.uiux-services-section{
+  padding:120px 0;
+  position: relative;
+  overflow: hidden;
+
+  .uiux-services-header{
+    max-width:473px;
+    margin:0 auto;
+    h6{
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 140%;
+      letter-spacing: 0%;
+
+    }
+
+    h1{
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 140%;
+      letter-spacing: 0%;
+      padding-top:10px;
+    }
+  }
+  
+
+  .service-bg {
+  position: absolute;
+  top: 50%;
+ 
+  left:50%;
+  transform: translate(-50%, -50%); 
+  background-image: url('/images/UiUx-Service/service-bg.png');
+  background-size: 465px 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 465px; 
+  height: 817.5px; 
+  z-index: 0; 
+  
+}
+
+.uiux-elips{
+  position: relative;
+  overflow: hidden;
+}
+.uiux-card-service{
+  padding-top:60px;
+}
+
+}
+
+.ellipse-top-mid{
+
+  top: 45%;
+  left: 12%;
+
+}
+
+
+.recent-work-uiux{
+    padding-bottom:  120px ;
+    position: relative;
+  overflow: hidden;
+ }
+
+ .ellipse-industries-uiux {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 1;
+}
+
+
+.uiux-expertise{
+  padding: 120px 0;
+  position: relative;
+  overflow:hidden;
+}
+
+
+.result-uiux{
+ position: relative;
+ overflow:hidden;
+padding-top: 120px;
+padding-bottom: 120px;
+background: rgba(0, 129, 83, 0.2);
+opacity: 1;
+
+
+.uiux-result-header{
+  max-width:668px;
+  margin: 0 auto;
+  padding-bottom:50px;
+
+  h2{
+font-weight: 700;
+font-style: Bold;
+font-size: 48px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+
+  }
+
+  p{
+
+font-weight: 400;
+padding-top:15px;
+font-size: 16px;
+
+line-height: 160%;
+letter-spacing: 0%;
+
+opacity:0.8;
+  }
+}
+
+.result-card {
+  height: 540px; 
+  gap: 30px; 
+  opacity: 1;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.1);  
+  h3{
+font-weight: 600;
+padding-top:25px;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 130%;
+letter-spacing: 0%;
+
+  }
+  p{
+font-weight: 400;
+font-size: 16px;
+line-height: 160%;
+
+padding-top:10px;
+padding-bottom:25px;
+
+
+  }
+  .list {
+  padding: 8px 10px; 
+  gap: 10px; 
+  opacity: 1; 
+  border-radius: 8px; 
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%); /* gradient background */
+  font-family: Inter;
+font-weight: 400;
+font-size: 16px;
+letter-spacing: 0%;
+
+  
+}
+
+}
+
+
+}

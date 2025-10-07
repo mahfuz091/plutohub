@@ -125,6 +125,9 @@ const Header = () => {
                         <NavDropdown.Item as={Link} href="/services/web">
                           Website Design & Development
                         </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} href="/services/uiux">
+                          UI & UX Design
+                        </NavDropdown.Item>
                         <NavDropdown.Item as={Link} href="/services/logo&branding">
                           Logo & Branding
                         </NavDropdown.Item>
