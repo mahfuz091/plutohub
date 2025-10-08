@@ -117,7 +117,7 @@ const ServicesScroll = () => {
   }, []);
 
   return (
-    <section className="">
+    <section className="rd_service_area section_padding pt-0">
       <Container>
          <div className="differenec-content text-center mb-5">
           <h1 className="web-title">Why Our UI/UX Design Services Make a Difference?</h1>
