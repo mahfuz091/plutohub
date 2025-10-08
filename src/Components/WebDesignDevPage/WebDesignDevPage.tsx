@@ -3,11 +3,12 @@ import Banner from "./Banner/Banner";
 import Services from "./Services/Services";
 import FaqSection from "../FAQ/faq";
 import RecentWork from "./RecentWork/RecentWork";
-import Difference from './Difference/Difference';
+
 import IndustriesExpertise from "./IndustriesExpertise/IndustriesExpertise";
 import Number from "./Number/Number";
 
 import DevelopmentProcess from "./DevelopmentProcess/DevelopmentProcess";
+import ServicesScroll from "./Difference/Difference";
 const WebDesignDevPage = () => {
   return (
     <div>
@@ -23,7 +24,7 @@ const WebDesignDevPage = () => {
       <DevelopmentProcess/>
       <div className="common-bg">
         <RecentWork/>
-        <Difference/>
+        <ServicesScroll/>
       </div>
 
       <IndustriesExpertise/>
