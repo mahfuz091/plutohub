@@ -4220,10 +4220,29 @@ html {
   padding-top: 5px;
 }
 
+@media (max-width: 1024px) { 
+  .service-title {
+  
+  font-size: 38px;
+  
+}
+ } 
+
+@media (max-width: 768px) { 
+    .service-title {
+  
+  font-size: 38px;
+  
+}
+ } 
+
+
+
 .logo-branding {
   padding-top: 120px;
   padding-bottom: 100px;
   position: relative;
+  overflow: hidden;
 }
 
 .ellipse {
@@ -4524,6 +4543,72 @@ html {
       opacity: 0.8;
     }
   }
+}
+
+
+
+@media (max-width: 1024px) {
+  .services-banner .section-title {
+    font-size: 34px;
+  }
+  .services-banner .section-description {
+    font-size: 16px;
+  }
+  .logo-branding {
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+}
+  .service-title {
+    font-size: 32px;
+  }
+  .service-description {
+    font-size: 16px;
+  }
+  .work-process .process-card {
+    height: auto;
+  }
+  .branding-card {
+    font-size: 18px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .service_banner_area {
+    height: 300px;
+  }
+  .services-banner {
+    padding-top: 100px;
+  }
+  .services-banner .section-title {
+    font-size: 28px;
+  }
+  .logo-branding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+  .ux-design,
+  .WordPress,
+  .Shopify,
+  .work-process {
+    padding: 60px 0;
+    border-radius: 0px;
+  }
+  .process-card {
+    padding: 15px;
+  }
+  .ui-ux-content {
+    font-size: 18px;
+  }
+
+  .ux-services-grid {
+  
+  grid-template-columns: repeat(1, 1fr);
+  
+}
 }
 
 // web design
