@@ -51,7 +51,7 @@ const WhatGet = () => {
         </h1>
         <Row>
           {processCards.map((card, index) => (
-            <Col md={4} className="mb-4" key={index}>
+            <Col md={6} xl={4} className="mb-4" key={index}>
               <div className="process-card ">
                 <Image
                   src={card.icon}

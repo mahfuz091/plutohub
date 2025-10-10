@@ -54,15 +54,15 @@ const services = [
       "We build your brand identity to connect emotionally and strategically with your audience.",
     list: ["Brand identity", "Market positioning", "Consistent messaging"],
   },
-  {
-    id: 6,
-    number: "Service-4",
-    image: "/images/services-web/your-in-loop.png",
-    title: "Brand Strategy",
-    description:
-      "We build your brand identity to connect emotionally and strategically with your audience.",
-    list: ["Brand identity", "Market positioning", "Consistent messaging"],
-  },
+  // {
+  //   id: 6,
+  //   number: "Service-4",
+  //   image: "/images/services-web/your-in-loop.png",
+  //   title: "Brand Strategy",
+  //   description:
+  //     "We build your brand identity to connect emotionally and strategically with your audience.",
+  //   list: ["Brand identity", "Market positioning", "Consistent messaging"],
+  // },
 ];
 
 const ServicesScroll = () => {
@@ -136,21 +136,22 @@ const ServicesScroll = () => {
               <Card.Body>
                 
 
-                <Row className="d-flex align-items-center justify-content-between">
+                <Row className="d-flex align-items-center justify-content-between g-4">
 
                  
-                  <Col md={4} className="text-center mb-3 mb-md-0">
+                  <Col xl={4} className="text-center mb-3 mb-md-0">
                     <Image
                       src={feature.image}
                       alt={feature.title}
                       width={353.33}
                       height={250}
+                      layout="responsive"
                       className="img-fluid rounded"
                     />
                   </Col>
 
                  
-                  <Col md={4} >
+                  <Col xl={4} >
 
                   <div className="tides">
                      <h2 className="mb-3">{feature.title}</h2>
@@ -161,7 +162,7 @@ const ServicesScroll = () => {
                   </Col>
 
                   
-                  <Col md={4}>
+                  <Col xl={4}>
                     <ul className="list-unstyled">
                       {feature.list.map((item, idx) => (
                         <li

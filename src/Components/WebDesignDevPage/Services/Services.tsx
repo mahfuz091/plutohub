@@ -149,7 +149,7 @@ const Services: React.FC = () => {
         
       <Container>
         <Row>
-          <Col sm={5}>
+          <Col xl={5}>
             <h5 className="text-left">Our Services</h5>
             <Image
               src="/images/services-bg.png"
@@ -168,7 +168,7 @@ const Services: React.FC = () => {
             />
           </Col>
 
-          <Col sm={6}>
+          <Col xl={6}>
             <h2 className="title_animation2 text-right">
               Our Custom Website Design and Development Solutions
             </h2>

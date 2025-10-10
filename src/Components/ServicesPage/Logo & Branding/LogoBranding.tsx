@@ -40,7 +40,7 @@ const LogoBranding = () => {
       <div className="logo-branding-section">
         <Container>
           <Row className="align-items-center">
-            <Col md={4} className="mb-4 mb-md-0">
+            <Col xl={4} className="mb-4 mb-md-0">
               <h2 className="service-title">Logo & Branding</h2>
               <p className="service-description">
                 We create brand identities that leave a strong and lasting
@@ -50,7 +50,7 @@ const LogoBranding = () => {
               </p>
             </Col>
 
-            <Col md={8}>
+            <Col xl={8}>
               <Row>
                 {[
                   "Custom Logo Design",

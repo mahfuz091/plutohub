@@ -34,14 +34,14 @@ const Web = () => {
       <div className="logo-branding-section">
         <Container>
           <Row className="align-items-center">
-            <Col md={4} className="mb-4 mb-md-0">
+            <Col xl={4} className="mb-4 mb-md-0">
               <h2 className="service-title">Website Design</h2>
               <p className="service-description">
                Blending creativity with functionality, our websites capture attention instantly, guide visitors effortlessly, and turn casual browsing into lasting customer connections.
               </p>
             </Col>
 
-            <Col md={8}>
+            <Col xl={8}>
               <Row>
                 {[
                   " Responsive & Mobile-First Design",

@@ -15,7 +15,7 @@ const Investment = () => {
       />
       <Container>
         <Row className="d-flex align-items-center gap-5 flex-column flex-md-row justify-content-between">
-          <Col className="invesetment-col">
+          <Col xl={6} className="invesetment-col">
             <h1 className="section-title">
               Smarter Investment Than Hiring In-House
             </h1>
@@ -35,12 +35,13 @@ const Investment = () => {
               <Buttons links="#" btnText="Start Project" />
             </div>
           </Col>
-          <Col className="d-flex justify-content-end">
+          <Col xl={6} className="d-flex justify-content-end">
             <Image
               src="/images/investment-right.png"
               width={589}
               height={500}
               alt="Investment"
+              layout="responsive"
             />
           </Col>
         </Row>

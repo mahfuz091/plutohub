@@ -19,28 +19,33 @@ const WordPress = () => {
                 height={400}
                 className="ellipse ui-ux-ellipse-right"
               />
-      <Container>
-        <Row className="d-flex align-items-center">
-          <Col>
-            <Image
-              src="/images/wordpress-services.png"
-              alt="WordPress"
-              width={567}
-              height={400}
-            />
-          </Col>
-          <Col>
-            <h1 className="service-title">
-              WordPress Website <br /> Design
-            </h1>
-            <p className="service-description">
-              Combining creativity with WordPress's flexibility, we design and
-              build sites that are easy to manage, visually engaging, and
-              optimized for performance.
-            </p>
-          </Col>
-        </Row>
-      </Container>
+          <Container>
+      <Row className="d-flex align-items-center g-4">
+        {/* 🖼️ Image Column */}
+        <Col xl={6} className="order-2 order-xl-1 text-center">
+          <Image
+            src="/images/wordpress-services.png"
+            alt="WordPress"
+            width={567}
+            height={400}
+            layout="responsive"
+            className="img-fluid"
+          />
+        </Col>
+
+        {/* 📝 Text Column */}
+        <Col xl={6} className="order-1 order-xl-2">
+          <h1 className="service-title">
+            WordPress Website <br /> Design
+          </h1>
+          <p className="service-description">
+            Combining creativity with WordPress's flexibility, we design and
+            build sites that are easy to manage, visually engaging, and optimized
+            for performance.
+          </p>
+        </Col>
+      </Row>
+    </Container>
 
       <Container>
         <Row className="webflow-services-row">

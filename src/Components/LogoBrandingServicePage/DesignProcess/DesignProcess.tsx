@@ -101,13 +101,13 @@ const DesignProcess = () => {
       <Container>
         
         <Row className="align-items-center mb-5">
-          <Col sm={7}>
+          <Col xl={7}>
             <h5 className="text-left web-title">
               Our Strategic Branding & <br /> Identity Design Process
             </h5>
           </Col>
 
-          <Col sm={5}>
+          <Col xl={5}>
             <h2 className="text-right web-description">
               We follow a structured branding process that transforms ideas into
               iconic brand identities. From discovery to final delivery, each
@@ -118,7 +118,7 @@ const DesignProcess = () => {
         </Row>
 
         
-        <div className="process-tabs d-flex gap-1 mb-4  justify-content-between">
+        <div className="process-tabs d-flex gap-1 mb-4  justify-content-between flex-wrap">
 
           {processData.map((item, index) => (
             <button

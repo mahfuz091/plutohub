@@ -65,14 +65,14 @@ const IndustriesExpertise = () => {
       <Container>
         <div className="Industries-Expertise-heading mb-5">
           <Row>
-            <Col>
+            <Col xl={6}>
               <h2>
                 Industries
                 <br />
                 Expertise
               </h2>
             </Col>
-            <Col>
+            <Col xl={6}>
               <p>
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and

@@ -41,8 +41,8 @@ const UXDesign = () => {
       </Container>
 
       <Container>
-        <Row className="d-flex align-items-center ui-ux-contain-main">
-          <Col md={5}>
+        <Row className="d-flex align-items-center ui-ux-contain-main g-4">
+          <Col xl={5}>
             <Image
               src="/images/services-uiux.png"
               width={670}
@@ -51,7 +51,7 @@ const UXDesign = () => {
               alt="uiux"
             />
           </Col>
-          <Col md={7}>
+          <Col xl={7}>
             <div className="ux-services-grid ui-ux-content">
               {uxServices.map((service, index) => (
                 <div

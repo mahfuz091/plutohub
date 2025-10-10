@@ -15,12 +15,12 @@ const Number = () => {
       <Container>
         <div className="number-heading">
           <Row>
-            <Col>
+            <Col md={6}>
               <h2>
                 Number <br /> Don’t lie
               </h2>
             </Col>
-            <Col>
+            <Col md={6}>
               <p>
                 Trusted by hundreds of businesses to deliver websites that
                 perform and grow with them.

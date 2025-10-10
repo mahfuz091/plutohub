@@ -20,10 +20,13 @@ const UiUxServicePage = () => {
         title="UI & UX Design"
       />
       <Services />
-      <RecentWork/>
-      <RealResults/>
-      <UIUXExpertise/>
-      <ContactSection />
+      <RecentWork />
+      <RealResults />
+      <UIUXExpertise />
+      <div className="overflow-hidden">
+        <ContactSection />
+      </div>
+
       <FaqSection />
     </div>
   );

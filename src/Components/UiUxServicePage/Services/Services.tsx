@@ -44,44 +44,44 @@ const Services = () => {
 
   return (
     <div className="uiux-services-section">
-        <Image
-              src="/images/services-bg.png"
-              width={344}
-              height={400}
-              alt="background"
-              className="services-bg"
-            />
-            <Image
-             
-              src="/images/about-shape.png"
-              width={244}
-              height={200}
-              alt="shape"
-              className="services-shape"
-            />
-             <Image
-                    src="/images/yellow.png"
-                    alt="yellow ellipse"
-                    width={400}
-                    height={400}
-                    className="ellipse ellipse-top-left"
-                  />
-            
+      <Image
+        src="/images/services-bg.png"
+        width={344}
+        height={400}
+        alt="background"
+        className="services-bg"
+      />
+      <Image
+        src="/images/about-shape.png"
+        width={244}
+        height={200}
+        alt="shape"
+        className="services-shape"
+      />
+      <Image
+        src="/images/yellow.png"
+        alt="yellow ellipse"
+        width={400}
+        height={400}
+        className="ellipse ellipse-top-left"
+      />
+
       <Container className="uiux-elips">
-         <Image
-                    src="/images/yellow.png"
-                    alt="yellow ellipse"
-                    width={500}
-                    height={500}
-                    className="ellipse ellipse-top-mid"
-                  />
+        <Image
+          src="/images/yellow.png"
+          alt="yellow ellipse"
+          width={500}
+          height={500}
+          className="ellipse ellipse-top-mid"
+        />
         <div className="uiux-services-header text-center">
           <h6>Our Services</h6>
           <h1>Our Core UI/UX Services at Plutohub</h1>
         </div>
 
         <Row className="align-items-center uiux-card-service">
-          <Col md={4}>
+          
+          <Col md={6} xl={4}>
             {stats.slice(0, 3).map((item, index) => (
               <div className="mb-4" key={index}>
                 <CardService
@@ -93,14 +93,13 @@ const Services = () => {
             ))}
           </Col>
 
-          <Col
-            md={4}
-            className=" md={4} position-relative "
-          >
+          
+          <Col md={4} className="d-none d-xl-block position-relative">
             <div className="service-bg" />
           </Col>
 
-          <Col md={4}>
+          
+          <Col md={6} xl={4}>
             {stats.slice(3).map((item, index) => (
               <div className="mb-4" key={index}>
                 <CardService

@@ -13,12 +13,12 @@ const UIUXExpertise = () => {
                 className="ellipse-industries-expertise"
               />
       <Container>
-        <div className="Industries-Expertise-heading mb-5">
+        <div className="Industries-Expertise-heading mb-2 mb-xl-5">
           <Row className="d-flex justify-content-between">
-            <Col md={4}>
+            <Col xl={4}>
               <h2>Domain-Focused UI/UX Expertise</h2>
             </Col>
-            <Col md={5}>
+            <Col xl={5}>
               <p>
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and
