@@ -4734,7 +4734,7 @@ html {
 
   &:before {
     content: "";
-    width: 230px;
+    width: 100%;
     height: 364px;
     border-radius: 50%;
     background: var(--hoverColor);
@@ -4780,6 +4780,11 @@ html {
     }
   }
 }
+
+@media (max-width: 768px) {
+
+ }
+
 
 .nav-mt-arrow {
   padding-top: 60px;
@@ -6112,4 +6117,12 @@ html {
   .recent-work-uiux {
     padding-bottom: 60px;
 }
+}
+
+
+
+@media (max-width: 767px) {
+    .offcanvas-lg a {
+        color: black;
+    }
 }

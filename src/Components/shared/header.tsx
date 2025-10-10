@@ -42,14 +42,20 @@ const Header = () => {
                   <Link href="/about">About Us</Link>
                 </li>
                 <li>
-                  <NavDropdown title="Services" id="mobile-services-dropdown">
-                    <NavDropdown.Item as={Link} href="/services/web">
-                      Website Design & Development
-                    </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/uiux">
-                      UI/UX Design
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                  <NavDropdown title="Services" id="desktop-services-dropdown">
+                        <NavDropdown.Item as={Link} href="/services">
+                          Our Services
+                        </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} href="/services/web">
+                          Website Design & Development
+                        </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} href="/services/uiux">
+                          UI & UX Design
+                        </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} href="/services/logo&branding">
+                          Logo & Branding
+                        </NavDropdown.Item>
+                      </NavDropdown>
                 </li>
                 <li>
                   <Link href="/blog">Blogs</Link>
@@ -117,7 +123,7 @@ const Header = () => {
                     </li>
                     
                     <li>
-                      {/* Bootstrap NavDropdown */}
+                    
                       <NavDropdown title="Services" id="desktop-services-dropdown">
                         <NavDropdown.Item as={Link} href="/services">
                           Our Services
