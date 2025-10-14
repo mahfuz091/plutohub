@@ -3,21 +3,38 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Col, Container, Row } from "react-bootstrap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Buttons from "../Banner/Buttons";
 import { usePathname } from "next/navigation";
+import { HiArrowUp } from "react-icons/hi";
+import { toast } from "sonner";
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  services: string;
+  budget: string;
+  project: string;
+}
 
 const ContactUs = () => {
   const blubRef = useRef<HTMLImageElement>(null);
+  const pathname = usePathname();
 
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    phone: "",
+    services: "",
+    budget: "",
+    project: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  // Mouse move parallax effect
   useEffect(() => {
-    // Animate "Design" by character with different animations for each
-
-    // Drop and bounce animation for "Develop" - same for all characters
-
-    // Loop color changes for "Dominate" every 7 seconds
-
-    // Mouse move parallax effect
     const handleMouseMove = (e: MouseEvent) => {
       const banner = document.querySelector(
         ".contact_banner_area"
@@ -33,13 +50,9 @@ const ContactUs = () => {
       const yPos = (clientY / innerHeight - 0.5) * 2;
 
       if (blubRef.current) {
-        gsap.to(blubRef.current, {
-          duration: 0.8,
-          x: xPos * 20,
-          y: yPos * 15,
-          rotation: xPos * 5,
-          ease: "power2.out",
-        });
+        blubRef.current.style.transform = `translate(${xPos * 20}px, ${
+          yPos * 15
+        }px) rotate(${xPos * 5}deg)`;
       }
     };
 
@@ -47,7 +60,50 @@ const ContactUs = () => {
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const pathname = usePathname();
+  // Input change handler
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
+
+  // Form submit handler
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success("Email sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          services: "",
+          budget: "",
+          project: "",
+        });
+        setStatus("Sent successfully!");
+      } else {
+        toast.error("Failed to send email");
+        setStatus("Failed to send email");
+      }
+    } catch (err) {
+      toast.error("Failed to send email");
+      setStatus("Failed to send email");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className='contact_banner_area contact con'>
@@ -85,6 +141,7 @@ const ContactUs = () => {
         height={600}
         alt='screw'
         className='contact-bottom-img'
+        ref={blubRef}
       />
       <div
         className='hero-image'
@@ -120,7 +177,6 @@ const ContactUs = () => {
         </Row>
 
         <Row className='gx-5'>
-          {/* col 01 */}
           <Col xl={4} lg={5} className='order-2 order-lg-1 mobile-gap gy-4'>
             <div className='contact-info'>
               <div className='contact-info-inner'>
@@ -172,13 +228,13 @@ const ContactUs = () => {
               </div>
             </div>
           </Col>
-          {/* col 02 */}
+
           <Col xl={8} lg={7} className='order-1 order-lg-2 '>
             <div
               className='contact-form-wrapper'
               style={{ backgroundImage: "url(/images/contact-form-bg.png)" }}
             >
-              <form action=''>
+              <form onSubmit={handleSubmit}>
                 <Row>
                   <Col xl={12}>
                     <div className='form-group'>
@@ -187,6 +243,9 @@ const ContactUs = () => {
                         type='text'
                         placeholder='e.g. Adam Smith'
                         id='name'
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </Col>
@@ -199,16 +258,22 @@ const ContactUs = () => {
                         type='email'
                         placeholder='example@email.com'
                         id='email'
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </Col>
                   <Col xl={6}>
                     <div className='form-group'>
-                      <label htmlFor='email'>Phone (Whatsapp)*</label>
+                      <label htmlFor='phone'>Phone (Whatsapp)*</label>
                       <input
-                        type='number'
-                        placeholder='+192********‬'
-                        id='number'
+                        type='text'
+                        placeholder='+192********'
+                        id='phone'
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </Col>
@@ -221,6 +286,9 @@ const ContactUs = () => {
                         type='text'
                         placeholder='Insert your service'
                         id='services'
+                        value={formData.services}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </Col>
@@ -231,6 +299,9 @@ const ContactUs = () => {
                         type='text'
                         placeholder='Insert your range'
                         id='budget'
+                        value={formData.budget}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </Col>
@@ -243,6 +314,9 @@ const ContactUs = () => {
                         name='project'
                         id='project'
                         placeholder='Tell us more about your project'
+                        value={formData.project}
+                        onChange={handleChange}
+                        required
                       ></textarea>
                     </div>
                   </Col>
@@ -251,7 +325,16 @@ const ContactUs = () => {
                 <Row>
                   <Col xl={12}>
                     <div className='form-group'>
-                      <Buttons links='#' btnText='Submit Now' />
+                      <button
+                        className='theme_btn flex items-center gap-2'
+                        type='submit'
+                        disabled={loading}
+                      >
+                        <span>{loading ? "Sending..." : "Submit Now"}</span>
+                        <span className='arrow_icon'>
+                          <HiArrowUp />
+                        </span>
+                      </button>
                     </div>
                   </Col>
                 </Row>

@@ -20,6 +20,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/web`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/uiux`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/logo&branding`,
+      lastModified: new Date(),
+    },
+    {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
       lastModified: new Date(),
     },

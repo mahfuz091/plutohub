@@ -11,6 +11,7 @@ import WhyWe from "../Components/WhyWe/WhyWe";
 import TestimonialsSection from "../Components/Testimonial/testimonial";
 import ContactSection from "../Components/contact/contact";
 import FaqSection from "../Components/FAQ/faq";
+import ContactUs from "@/Components/ContactUs/ContactUs";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
       <Promo />
       <TestimonialsSection />
       <Price />
-      <ContactSection />
+      <ContactUs />
       <FaqSection />
     </>
   );
