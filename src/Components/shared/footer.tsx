@@ -23,18 +23,34 @@ const Footer = () => {
                   leaders. <strong>Lets discuss</strong>
                 </h2>
                 <div className="social-links">
-                  <a href="">
-                    <Facebook color="white" />
-                  </a>
-                  <a href="">
-                    <Instagram color="white" />
-                  </a>
-                  <a href="">
-                    <Linkedin color="white" />
-                  </a>
-                  <a href="">
-                    <Twitter color="white" />
-                  </a>
+                  <a
+          href='https://www.facebook.com/p/PlutoHub-61569889000814/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Facebook color='white' />
+        </a>
+        <a
+          href='https://www.instagram.com/plutohub.agency/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Instagram color='white' />
+        </a>
+        <a
+          href='https://www.linkedin.com/company/105067253'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Linkedin color='white' />
+        </a>
+        <a
+          href='https://x.com/PlutohubAgency'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Twitter color='white' />
+        </a>
                 </div>
               </div>
             </Col>

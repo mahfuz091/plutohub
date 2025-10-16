@@ -121,13 +121,15 @@ const Header = () => {
                     <li>
                       <Link href="/">Home</Link>
                     </li>
+                    <div className="d-flex gap-2 align-items-center">
+                      <li>
+                      <Link href="/services">Services</Link>
+                    </li>
                     
                     <li>
                     
-                      <NavDropdown title="Services" id="desktop-services-dropdown">
-                        <NavDropdown.Item as={Link} href="/services">
-                          Our Services
-                        </NavDropdown.Item>
+                      <NavDropdown title="" id="desktop-services-dropdown">
+                       
                         <NavDropdown.Item as={Link} href="/services/web">
                           Website Design & Development
                         </NavDropdown.Item>
@@ -139,6 +141,7 @@ const Header = () => {
                         </NavDropdown.Item>
                       </NavDropdown>
                     </li>
+                    </div>
                     <li>
                       <Link href="/about">About Us</Link>
                     </li>
