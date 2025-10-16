@@ -287,7 +287,7 @@ const Price = () => {
               <p>
                Start with a UI/UX design and if we’re fit for your needs without any major commitment.
               </p>
-              <Buttons links='#' btnText='Get a Quote' />
+              <Buttons links='/contact' btnText='Get a Quote' />
             </div>
           </Col>
         </Row>

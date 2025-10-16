@@ -55,7 +55,7 @@ const ProjectsItem = () => {
                   Accessibility & Inclusive Design
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const ProjectsItem = () => {
                   Usability Testing & Iteration
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ const ProjectsItem = () => {
                   Web Applications and more.
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ const ProjectsItem = () => {
                   Brand Guidelines
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -213,7 +213,7 @@ const ProjectsItem = () => {
                   Trust-Building UX Patterns
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ const ProjectsItem = () => {
                   Consistent Design Systems
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ const ProjectsItem = () => {
                   Brand Guidelines
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -333,7 +333,7 @@ const ProjectsItem = () => {
                   Trust-Building UX Patterns
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -372,7 +372,7 @@ const ProjectsItem = () => {
                   Consistent Design Systems
                 </li>
               </ul>
-              <Buttons links='#' btnText='Get a Service' />
+              <Buttons links='/services' btnText='Get a Service' />
             </div>
           </div>
         </div>

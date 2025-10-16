@@ -94,7 +94,7 @@ const Promo = () => {
                 real results.
               </p>
 
-              <Buttons links='#' btnText='More About Us' />
+              <Buttons links='/about' btnText='More About Us' />
             </div>
           </Col>
         </Row>

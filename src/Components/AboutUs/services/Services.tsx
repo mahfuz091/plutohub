@@ -160,7 +160,7 @@ const Services = () => {
               design that performs, no matter your size, market, or tech stack.
               Design that clicks with users and converts for business.
             </p>
-            <Buttons links='#' btnText="Let's Talk" />
+            <Buttons links='/contact' btnText="Let's Talk" />
           </Col>
         </Row>
         <Counter />

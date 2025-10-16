@@ -43,19 +43,19 @@ const Header = () => {
                 </li>
                 <li>
                   <NavDropdown title="Services" id="desktop-services-dropdown">
-                        <NavDropdown.Item as={Link} href="/services">
-                          Our Services
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/web">
-                          Website Design & Development
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/uiux">
-                          UI & UX Design
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/logo&branding">
-                          Logo & Branding
-                        </NavDropdown.Item>
-                      </NavDropdown>
+                    <NavDropdown.Item as={Link} href="/services">
+                      Our Services
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} href="/services/web">
+                      Website Design & Development
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} href="/services/uiux">
+                      UI & UX Design
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} href="/services/logo&branding">
+                      Logo & Branding
+                    </NavDropdown.Item>
+                  </NavDropdown>
                 </li>
                 <li>
                   <Link href="/blog">Blogs</Link>
@@ -123,24 +123,25 @@ const Header = () => {
                     </li>
                     <div className="d-flex gap-2 align-items-center">
                       <li>
-                      <Link href="/services">Services</Link>
-                    </li>
-                    
-                    <li>
-                    
-                      <NavDropdown title="" id="desktop-services-dropdown">
-                       
-                        <NavDropdown.Item as={Link} href="/services/web">
-                          Website Design & Development
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/uiux">
-                          UI & UX Design
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/logo&branding">
-                          Logo & Branding
-                        </NavDropdown.Item>
-                      </NavDropdown>
-                    </li>
+                        <Link href="/services">Services</Link>
+                      </li>
+
+                      <li>
+                        <NavDropdown title="" id="desktop-services-dropdown">
+                          <NavDropdown.Item as={Link} href="/services/web">
+                            Website Design & Development
+                          </NavDropdown.Item>
+                          <NavDropdown.Item as={Link} href="/services/uiux">
+                            UI & UX Design
+                          </NavDropdown.Item>
+                          <NavDropdown.Item
+                            as={Link}
+                            href="/services/logo&branding"
+                          >
+                            Logo & Branding
+                          </NavDropdown.Item>
+                        </NavDropdown>
+                      </li>
                     </div>
                     <li>
                       <Link href="/about">About Us</Link>

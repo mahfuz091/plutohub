@@ -282,7 +282,7 @@ const Banner = () => {
                                 We Create Unique Digital Experiences For Global Brands By
                                 Integrating AI, Innovative Design, And Advanced Technology.
                               </p>
-              <Buttons links='#' btnText='Lets Explore Our Services' />
+              <Buttons links='/services' btnText='Lets Explore Our Services' />
               <Image
                 ref={screwRef}
                 src='/images/banner-shape.png'

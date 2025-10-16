@@ -126,7 +126,7 @@ const About = () => {
               We create innovative digital products customized to your business
               needs. Our goal is to help you grow faster and easier.
             </h2>
-            <Buttons links='#' btnText='Lets Connect' />
+            <Buttons links='/contact' btnText='Lets Connect' />
           </Col>
         </Row>
         <Counter />

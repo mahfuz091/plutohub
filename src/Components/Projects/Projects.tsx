@@ -125,7 +125,7 @@ const Projects = () => {
               Take a look at the projects that have turned our clients' ideas
               into remarkable success stories!
             </h2>
-            <Buttons links='#' btnText='View All Projects' />
+            <Buttons links='/services' btnText='View All Projects' />
           </Col>
         </Row>
         <ProjectsItem />
