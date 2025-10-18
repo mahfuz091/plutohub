@@ -33,7 +33,7 @@ const AiProduct = () => {
       
         <Col xl={6} className="order-2 order-xl-1 text-center">
           <Image
-            src="/images/shopify-services.png"
+            src="/images/ai-product.png"
             alt="uiux"
             width={590}
             height={665}

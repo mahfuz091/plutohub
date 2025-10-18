@@ -32,7 +32,7 @@ const Investment = () => {
               a fraction of the cost of traditional agencies.
             </p>
             <div className="pt-investment-description-2">
-              <Buttons links="/contact" btnText="Start Project" />
+              <Buttons links="/contact" btnText="Lern More " />
             </div>
           </Col>
           <Col xl={6} className="d-flex justify-content-end">

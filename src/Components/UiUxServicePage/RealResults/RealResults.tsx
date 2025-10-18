@@ -51,7 +51,7 @@ const RealResults = () => {
     infinite: false,
     speed: 500,
     arrows: false,
-    slidesToShow: 2.6,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: false,
     responsive: [

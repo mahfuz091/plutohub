@@ -4,12 +4,12 @@ import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 
 const industries = [
-  { img: "/images/LogoBranding/recent-work-4.png", title: "Crypto" },
-  { img: "/images/LogoBranding/recent-work-2.png", title: "Travel" },
-  { img: "/images/LogoBranding/recent-work-3.png", title: "Medical" },
-  { img: "/images/LogoBranding/recent-work-5.png", title: "Finance" },
-  { img: "/images/LogoBranding/recent-work-6.png", title: "Finance" },
-  { img: "/images/LogoBranding/recent-work-1.png", title: "Finance" },
+   { img: "/images/LogoBranding/recent-work-01.png", title: "Crypto" },
+    { img: "/images/LogoBranding/recent-work-02.png", title: "Travel" },
+    { img: "/images/LogoBranding/recent-work-03.png", title: "Medical" },
+    { img: "/images/LogoBranding/recent-work-04.png", title: "Finance" },
+    { img: "/images/LogoBranding/recent-work-05.png", title: "Finance" },
+    { img: "/images/LogoBranding/recent-work-06.png", title: "Finance" },
 ];
 
 const RecentWork = () => {
@@ -29,7 +29,7 @@ const RecentWork = () => {
          
         </div>
 
-        <Row className="g-4">
+        <Row className="g-4 industry-b">
           {industries.map((item, index) => (
             <Col key={index}  sm={6} md={6}>
               <div className="industry-card position-relative overflow-hidden rounded-3">

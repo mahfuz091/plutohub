@@ -39,7 +39,7 @@ const CardService: React.FC<CardServiceProps> = ({ icon, title, text }) => {
   return (
     <div className="web_Services_fact_item p-4" ref={cardRef}>
       <div className="icon-wrapper mb-3 flex justify-center">
-        <Image src={icon} alt={title} width={50} height={50} />
+        <Image src={icon} alt={title} width={70} height={70} />
       </div>
       <h6>{title}</h6>
       <p>{text}</p>

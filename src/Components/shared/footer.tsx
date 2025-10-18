@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaTwitter } from "react-icons/fa"; 
+import { FaXTwitter } from "react-icons/fa6"; 
 const Footer = () => {
   return (
     <footer style={{ backgroundImage: "url(/images/footer-bg.jpg)" }}>
@@ -49,7 +49,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                     
+                  <FaXTwitter color="white" size={22} /> 
                   </a>
                 </div>
               </div>

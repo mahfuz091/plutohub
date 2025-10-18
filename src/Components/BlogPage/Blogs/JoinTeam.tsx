@@ -5,7 +5,7 @@ import Buttons from '../../Banner/Buttons';
 
 const JoinTeam = () => {
     return (
-        <div className="join blog-join mb-5">
+        <div className="join blog-join ">
             <Container>
         <div className=" team-container ">
         <Row className="align-items-center ">

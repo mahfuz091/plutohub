@@ -21,7 +21,7 @@ const Webflow = () => {
       />
       <Container>
         <Image
-            src="/images/sass-services.png"
+            src="/images/webfllow.png"
             width={1500}
             height={400}
             alt="sass"

@@ -36,33 +36,34 @@ const services = [
       "Whether on a phone, tablet, or desktop, your website should always shine. We make sure it's fast, responsive, and visually sharp on every screen.",
     list: ["Fully responsive design", "Optimized for all screen sizes", "No app download needed"],
   },
+   {
+    id: 5,
+    number: "Service-4",
+    image: "/images/services-web/headaches.png",
+    title: "No Headaches, Just Results",
+    description:
+      "You can relax while we handle the technical stuff. From hosting and security to updates, your site stays stable and high-performing.",
+    list: ["Hassle-free maintenance", "Smooth integrations", "Strong performance and uptime"],
+  },
   {
     id: 4,
     number: "Service-4",
     image: "/images/services-web/made-to-grow.png",
     title: "Made to Grow With You",
     description:
-      "We build your brand identity to connect emotionally and strategically with your audience.",
-    list: ["Brand identity", "Market positioning", "Consistent messaging"],
+      "Your website should evolve as your business does. We build flexible systems that are easy to update and scale as needed.",
+    list: ["Scalable CMS platforms", "Easily updatable content", "Room for future features"],
   },
+ 
   {
-    id: 5,
+    id: 6,
     number: "Service-4",
-    image: "/images/services-web/headaches.png",
-    title: "No Headaches, Just Results",
+    image: "/images/services-web/your-in-loop.png",
+    title: "You're in the Loop",
     description:
-      "We build your brand identity to connect emotionally and strategically with your audience.",
-    list: ["Brand identity", "Market positioning", "Consistent messaging"],
+      "You’ll never be left guessing. We maintain transparent and collaborative communication throughout the entire process.",
+    list: ["Transparent process", "Feedback-driven design", "Dedicated communication"],
   },
-  // {
-  //   id: 6,
-  //   number: "Service-4",
-  //   image: "/images/services-web/your-in-loop.png",
-  //   title: "Brand Strategy",
-  //   description:
-  //     "We build your brand identity to connect emotionally and strategically with your audience.",
-  //   list: ["Brand identity", "Market positioning", "Consistent messaging"],
-  // },
 ];
 
 const ServicesScroll = () => {

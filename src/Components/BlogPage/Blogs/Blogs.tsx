@@ -57,7 +57,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
               <h3>No blogs found</h3>
             </div>
           ) : (
-            <div className='row row-cols-1 row-cols-md-2 row-cols-xl-3  blog-card-main '>
+            <div className='row row-cols-1 row-cols-md-2 row-cols-xl-3  blog-card-main  g-4 '>
               {filteredBlogs.map((blog) => (
                 <div key={blog.id} className='col'>
                   <Item

@@ -42,11 +42,13 @@ const BlogPage: React.FC<BlogPageProps> = ({ blogs, blogCategories }) => {
         title="Plutohub's Blog"
       />
       <BlogBanner blogs={blogs} categories={blogCategories} />
-      <div id='blog-section' className='blog-h'>
+      <div id='blog-section' className='blog-h blog-bg'>
         <Blogs blogs={blogs} categories={blogCategories} />
+
+         <JoinTeam />
       </div>
 
-      <JoinTeam />
+     
     </div>
   );
 };
