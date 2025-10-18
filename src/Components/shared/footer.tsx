@@ -57,27 +57,27 @@ const Footer = () => {
 
 
             <Col xl={2} lg={2} md={6} xs={6}>
-              <div className="footer-box uppercase">
+              <div className="footer-box ">
                 <h3>Services</h3>
-                <ul>
-                  <li><Link href="/">UI/UX Design</Link></li>
-                <li><Link href="/">Logo & Branding</Link></li>
-                <li><Link href="/">Website Design</Link></li>
-                <li><Link href="/">Apps Design</Link></li>
-                <li><Link href="/">SaaS Design</Link></li>
-                <li><Link href="/">AI Product Design</Link></li>
+                <ul className="footer-text">
+                  <li><Link href="/services/uiux">UI/UX Design</Link></li>
+                <li><Link href="/services/logo&branding">Logo & Branding</Link></li>
+                <li><Link href="/services/web">Website Design</Link></li>
+                <li><Link href="/services">Apps Design</Link></li>
+                <li><Link href="/services">SaaS Design</Link></li>
+                <li><Link href="/services">AI Product Design</Link></li>
                 
                 </ul>
               </div>
             </Col>
 
             <Col xl={2} lg={3} md={12} xs={12}>
-              <div className="footer-box uppercase">
+              <div className="footer-box ">
               <h3 className="font-semibold mb-4 ">Services & Legal</h3>
-              <ul className="space-y-2">
-                <li><Link href="/">Webflow Website</Link></li>
-                <li><Link href="/">WordPress Website</Link></li>
-                <li><Link href="/">Shopify Website</Link></li>
+              <ul className=" footer-text">
+                <li><Link href="/services">Webflow Website</Link></li>
+                <li><Link href="/services">WordPress Website</Link></li>
+                <li><Link href="/services">Shopify Website</Link></li>
                 <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                 <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
               </ul>
@@ -86,16 +86,16 @@ const Footer = () => {
                         <Col xl={2} lg={2} md={6} xs={6}>
              <div className="footer-box uppercase">
                  <h3>Quick Links</h3>
-                <ul>
+                <ul className="footer-text">
                   <li>
-                     <Link href="/">Services</Link>
+                     <Link href="/services">Services</Link>
                   </li>
-                    <Link href="/">Blog</Link>
+                    <Link href="/blog">Blog</Link>
                   <li>
-                     <Link href="/">About Us</Link>
+                     <Link href="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/">Contact</Link>
+                    <Link href="/contact">Contact</Link>
                   </li>
                  
                 </ul>

@@ -174,7 +174,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
         <h2 className='blog-title'>{post.title}</h2>
 
         <div className='blog-author-meta'>
-          <div className='blog-author-meta-gap'>
+          {/* <div className='blog-author-meta-gap'>
             <Image
               src={post?.author?.profileImage}
               width={36}
@@ -184,18 +184,23 @@ const BlogContent = ({ post }: BlogContentProps) => {
               style={{ objectFit: "cover" }}
             />
             <span>{post.author?.name}</span>
-          </div>
-          <span className='blog-author-meta-gap'>
-            <CalendarDays />
-            {new Date(post.createdAt).toLocaleDateString()}
-          </span>
-          <span className='blog-author-meta-gap'>
+          </div> */}
+          <span className="blog-author-meta-gap">
+<span className="text-black">Last updated:</span>{" "}
+  {new Date(post.createdAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })}
+</span>
+
+          {/* <span className='blog-author-meta-gap'>
             <MessageCircleMore />
 
             {post.Comment && post.Comment.length
               ? post.Comment.length
               : "No Comments"}
-          </span>
+          </span> */}
         </div>
 
         <div className='blog-explain blog-image'>

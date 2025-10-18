@@ -42,7 +42,7 @@ const RightSidebar = ({ categories }: RightSidebarProps) => {
           goals.
         </p>
         <div>
-          <Buttons btnText="Book Now" />
+          <Buttons links="https://calendly.com/plutohubagency/30min?month=2025-08" btnText="Book Now" />
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 "use client";
 import { CircleMinus } from "lucide-react";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-
+import { FaXTwitter } from "react-icons/fa6"; 
 interface TOCProps {
   blocks: any[];
   postSlug: string;
@@ -41,7 +41,7 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
         </ul>
       </div>
 
-      <div className='social-links social-row mt-4 flex gap-3'>
+      <div className='social-links social-row  flex gap-3 tab-of'>
         <a
           href='https://www.facebook.com/p/PlutoHub-61569889000814/'
           target='_blank'
@@ -68,7 +68,7 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <Twitter color='white' />
+           <FaXTwitter color="white" size={22} /> 
         </a>
       </div>
     </div>

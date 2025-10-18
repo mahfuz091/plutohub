@@ -1035,6 +1035,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50px;
+  
 }
 
 .social-links {
@@ -1201,6 +1202,7 @@ header {
 
   .mobile-nav ul a {
     font-weight: 500;
+    color:white !important;
   }
 
   .offcanvas-body {
@@ -1212,9 +1214,7 @@ header {
     background-color: #33333324;
   }
 
-  .offcanvas-lg a {
-    color: #fff;
-  }
+ 
 
   button.btn-close {
     color: #fff;
@@ -6245,11 +6245,6 @@ html {
 
 
 
-@media (max-width: 767px) {
-    .offcanvas-lg a {
-        color: black;
-    }
-}
 
 .industry-b{
     position: relative; 
@@ -6265,4 +6260,31 @@ html {
   height: 30%; 
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   pointer-events: none; 
+}
+
+.tab-of{
+  margin-top:400px;
+}
+
+.footer-text{
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: 0%;
+text-transform: uppercase;
+
+}
+
+.dropdown-menu.show {
+    display: block;
+    height:200px;
+    color:black !important;
+  
+}
+
+
+
+
+.dropdown-menu-custm {
+   color:balck 
 }
