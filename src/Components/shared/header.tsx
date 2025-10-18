@@ -18,50 +18,50 @@ const Header = () => {
       <Offcanvas
         show={show}
         onHide={handleClose}
-        responsive="lg"
-        placement="end"
+        responsive='lg'
+        placement='end'
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
             <Image
-              src="/images/logo.svg"
-              alt="Plutohob"
+              src='/images/logo.svg'
+              alt='Plutohob'
               width={110}
               height={24}
             />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <div className="mobile-nav">
+          <div className='mobile-nav'>
             <nav>
               <ul>
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href='/'>Home</Link>
                 </li>
                 <li>
-                  <Link href="/about">About Us</Link>
+                  <Link href='/about'>About Us</Link>
                 </li>
                 <li>
-                  <NavDropdown title="Services" id="desktop-services-dropdown">
-                    <NavDropdown.Item as={Link} href="/services">
+                  <NavDropdown title='Services' id='desktop-services-dropdown'>
+                    <NavDropdown.Item as={Link} href='/services'>
                       Our Services
                     </NavDropdown.Item>
                     <NavDropdown.Item as={Link} href="/services/web">
                      Web Development
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/uiux">
+                    <NavDropdown.Item as={Link} href='/services/uiux'>
                       UI & UX Design
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/logo&branding">
+                    <NavDropdown.Item as={Link} href='/services/logo&branding'>
                       Logo & Branding
                     </NavDropdown.Item>
                   </NavDropdown>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/blog">Blogs</Link>
-                </li>
+                </li> */}
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href='/contact'>Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -70,26 +70,26 @@ const Header = () => {
       </Offcanvas>
 
       {/* Mobile Header */}
-      <div className="mobile-header">
+      <div className='mobile-header'>
         <Container>
           <Row>
             <Col>
-              <div className="header-inside">
-                <div className="mobile-site-logo">
-                  <Link href="/">
+              <div className='header-inside'>
+                <div className='mobile-site-logo'>
+                  <Link href='/'>
                     <Image
-                      src="/images/logo.svg"
-                      alt="Plutohob"
+                      src='/images/logo.svg'
+                      alt='Plutohob'
                       width={110}
                       height={24}
                     />
                   </Link>
                 </div>
 
-                <span className="mobile-menu-trigger" onClick={handleShow}>
+                <span className='mobile-menu-trigger' onClick={handleShow}>
                   <Image
-                    src="/images/mobile-menu-trigger.svg"
-                    alt="mobile menu trigger"
+                    src='/images/mobile-menu-trigger.svg'
+                    alt='mobile menu trigger'
                     width={44}
                     height={44}
                   />
@@ -105,25 +105,25 @@ const Header = () => {
         <Container>
           <Row>
             <Col xxl={12}>
-              <div className="header-content d-flex align-items-center justify-content-between">
-                <div className="site-logo">
-                  <Link href="/">
+              <div className='header-content d-flex align-items-center justify-content-between'>
+                <div className='site-logo'>
+                  <Link href='/'>
                     <Image
-                      src="/images/logo.svg"
-                      alt="Plutohob"
+                      src='/images/logo.svg'
+                      alt='Plutohob'
                       width={160}
                       height={35}
                     />
                   </Link>
                 </div>
                 <nav>
-                  <ul className="d-flex gap-4 align-items-center">
+                  <ul className='d-flex gap-4 align-items-center'>
                     <li>
-                      <Link href="/">Home</Link>
+                      <Link href='/'>Home</Link>
                     </li>
-                    <div className="d-flex gap-2 align-items-center">
+                    <div className='d-flex gap-2 align-items-center'>
                       <li>
-                        <Link href="/services">Services</Link>
+                        <Link href='/services'>Services</Link>
                       </li>
 
                       <li>
@@ -131,12 +131,12 @@ const Header = () => {
                           <NavDropdown.Item as={Link} href="/services/web">
                             Web Development
                           </NavDropdown.Item>
-                          <NavDropdown.Item as={Link} href="/services/uiux">
+                          <NavDropdown.Item as={Link} href='/services/uiux'>
                             UI & UX Design
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             as={Link}
-                            href="/services/logo&branding"
+                            href='/services/logo&branding'
                           >
                             Logo & Branding
                           </NavDropdown.Item>
@@ -144,21 +144,21 @@ const Header = () => {
                       </li>
                     </div>
                     <li>
-                      <Link href="/about">About Us</Link>
+                      <Link href='/about'>About Us</Link>
                     </li>
+                    {/* <li>
+                      <Link href='/blog'>Blog</Link>
+                    </li> */}
                     <li>
-                      <Link href="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Contact</Link>
+                      <Link href='/contact'>Contact</Link>
                     </li>
                   </ul>
                 </nav>
 
-                <div className="header-btn">
+                <div className='header-btn'>
                   <Buttons
-                    links="https://calendly.com/plutohubagency/30min?month=2025-08"
-                    btnText="Let’s Talk"
+                    links='https://calendly.com/plutohubagency/30min?month=2025-08'
+                    btnText='Let’s Talk'
                   />
                 </div>
               </div>
