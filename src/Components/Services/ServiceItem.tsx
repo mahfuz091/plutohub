@@ -55,7 +55,7 @@ const ProjectsItem = () => {
                   Accessibility & Inclusive Design
                 </li>
               </ul>
-              <Buttons links='/services' btnText='Get a Service' />
+              <Buttons links='/services/uiux' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ const ProjectsItem = () => {
                   Web Applications and more.
                 </li>
               </ul>
-              <Buttons links='/services' btnText='Get a Service' />
+              <Buttons links='/services/web' btnText='Get a Service' />
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ const ProjectsItem = () => {
                   Brand Guidelines
                 </li>
               </ul>
-              <Buttons links='/services' btnText='Get a Service' />
+              <Buttons links='/services/logo&branding' btnText='Get a Service' />
             </div>
           </div>
         </div>

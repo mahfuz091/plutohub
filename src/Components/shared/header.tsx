@@ -47,7 +47,7 @@ const Header = () => {
                       Our Services
                     </NavDropdown.Item>
                     <NavDropdown.Item as={Link} href="/services/web">
-                      Website Design & Development
+                     Web Development
                     </NavDropdown.Item>
                     <NavDropdown.Item as={Link} href="/services/uiux">
                       UI & UX Design
@@ -129,7 +129,7 @@ const Header = () => {
                       <li>
                         <NavDropdown title="" id="desktop-services-dropdown">
                           <NavDropdown.Item as={Link} href="/services/web">
-                            Website Design & Development
+                            Web Development
                           </NavDropdown.Item>
                           <NavDropdown.Item as={Link} href="/services/uiux">
                             UI & UX Design

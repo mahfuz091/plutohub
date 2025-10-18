@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
-
+import { FaTwitter } from "react-icons/fa"; 
 const Footer = () => {
   return (
     <footer style={{ backgroundImage: "url(/images/footer-bg.jpg)" }}>
@@ -24,96 +24,84 @@ const Footer = () => {
                 </h2>
                 <div className="social-links">
                   <a
-          href='https://www.facebook.com/p/PlutoHub-61569889000814/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Facebook color='white' />
-        </a>
-        <a
-          href='https://www.instagram.com/plutohub.agency/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Instagram color='white' />
-        </a>
-        <a
-          href='https://www.linkedin.com/company/105067253'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Linkedin color='white' />
-        </a>
-        <a
-          href='https://x.com/PlutohubAgency'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Twitter color='white' />
-        </a>
+                    href="https://www.facebook.com/p/PlutoHub-61569889000814/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook color="white" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/plutohub.agency/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram color="white" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/105067253"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin color="white" />
+                  </a>
+                  <a
+                    href="https://x.com/PlutohubAgency"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                     
+                  </a>
                 </div>
               </div>
             </Col>
 
-            <Col xl={2} lg={2} md={6} xs={6}>
-              <div className="footer-box uppercase ">
-                <h3>Quick Links</h3>
-                <ul>
-                  <li>
-                    <Link href="/">Services</Link>
-                  </li>
-                  <li>
-                    <Link href="/">About Us</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Projects</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Blog</Link>
-                  </li>
-                </ul>
-              </div>
-            </Col>
 
             <Col xl={2} lg={2} md={6} xs={6}>
               <div className="footer-box uppercase">
                 <h3>Services</h3>
                 <ul>
-                  <li>
-                    <Link href="/">UI Design</Link>
-                  </li>
-                  <li>
-                    <Link href="/">UX Design</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Web Design</Link>
-                  </li>
-                  <li>
-                    <Link href="/">View More</Link>
-                  </li>
+                  <li><Link href="/">UI/UX Design</Link></li>
+                <li><Link href="/">Logo & Branding</Link></li>
+                <li><Link href="/">Website Design</Link></li>
+                <li><Link href="/">Apps Design</Link></li>
+                <li><Link href="/">SaaS Design</Link></li>
+                <li><Link href="/">AI Product Design</Link></li>
+                
                 </ul>
               </div>
             </Col>
 
             <Col xl={2} lg={3} md={12} xs={12}>
               <div className="footer-box uppercase">
-                <h3>Company</h3>
+              <h3 className="font-semibold mb-4 ">Services & Legal</h3>
+              <ul className="space-y-2">
+                <li><Link href="/">Webflow Website</Link></li>
+                <li><Link href="/">WordPress Website</Link></li>
+                <li><Link href="/">Shopify Website</Link></li>
+                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
+              </ul>
+            </div>
+            </Col>
+                        <Col xl={2} lg={2} md={6} xs={6}>
+             <div className="footer-box uppercase">
+                 <h3>Quick Links</h3>
                 <ul>
                   <li>
-                    <Link href="/">Work</Link>
+                     <Link href="/">Services</Link>
+                  </li>
+                    <Link href="/">Blog</Link>
+                  <li>
+                     <Link href="/">About Us</Link>
                   </li>
                   <li>
                     <Link href="/">Contact</Link>
                   </li>
-                  <li>
-                    <Link href="/">Privacy Policy</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Terms and Conditions</Link>
-                  </li>
+                 
                 </ul>
               </div>
             </Col>
+
           </Row>
         </Container>
       </div>
@@ -132,7 +120,8 @@ const Footer = () => {
                 <div className="middle-footer-box-content">
                   <h4>USA</h4>
                   <p>
-                    750 W Dimond Blvd Ste 103 #204 <br/> Anchorage <br/> Alaska 99515 <br/>
+                    750 W Dimond Blvd Ste 103 #204, <br /> Anchorage , Alaska
+                    99515 <br />
                     United State
                   </p>
                   <a
@@ -154,7 +143,10 @@ const Footer = () => {
                 />
                 <div className="middle-footer-box-content">
                   <h4>Portugal</h4>
-                  <p>R. Das Pedralvas 5 A <br/> 1500-487 <br/> Lisboa</p>
+                  <p>
+                    R. Das Pedralvas 5 A, <br /> 1500-487, Lisboa <br />{" "}
+                    Portugal{" "}
+                  </p>
                   <a href="tel:++351937296113">+351937296113</a>
                 </div>
               </div>
