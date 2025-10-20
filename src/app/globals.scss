@@ -1162,6 +1162,10 @@ header {
     display: none;
   }
 
+  .mobile-nav{
+    height:80dvh;
+  }
+
   .header-inside {
     display: flex;
     justify-content: space-between;
@@ -1205,7 +1209,7 @@ header {
 
   .mobile-nav ul a {
     font-weight: 500;
-    color:white !important;
+    color:white ;
   }
 
   .offcanvas-body {
@@ -1223,13 +1227,27 @@ header {
     color: #fff;
     filter: brightness(1) invert(1);
   }
+
+  .nav-item.dropdown a {
+    color: #ffff;
+} 
+
+.dropdown-menu{
+   background-color: #292525;
+}
+
+.dropdown-item{
+   color: black;
+}
+
+
 }
 
 .spotlight {
   position: fixed;
   inset: 0;
   z-index: -1;
-  /* Send it behind everything */
+ 
   pointer-events: none;
   opacity: 1;
   background-image: radial-gradient(
@@ -3119,12 +3137,14 @@ section.team {
   line-height: 1.4;
   margin-bottom: 2px !important;
   margin-top: 12px !important;
+   color: white;
 }
 
 .post {
   font-weight: 400 !important;
   font-size: 16px !important;
   line-height: 1.6;
+   color: white;
 }
 .team-container {
   padding: 40px 30px;
@@ -5452,13 +5472,12 @@ html {
   padding-left: 26px;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.05);
-
+   color: white;
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .process-tab {
-  width: 100;
-  height: 46;
+ 
   border: 1px solid rgba(255, 255, 255, 0.02);
   opacity: 1;
   padding-top: 10px;
@@ -5472,6 +5491,7 @@ html {
   line-height: 160%;
   letter-spacing: 0%;
   transition: all 0.3s ease-in-out;
+   color: white;
 }
 
 .process-tab:hover {
@@ -6323,7 +6343,6 @@ text-transform: uppercase;
 
 .dropdown-menu.show {
     display: block;
-    height:200px;
     color:black !important;
   
 }
@@ -6334,3 +6353,10 @@ text-transform: uppercase;
 .dropdown-menu-custm {
    color:balck 
 }
+
+
+
+
+
+
+
