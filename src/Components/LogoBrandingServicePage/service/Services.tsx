@@ -127,12 +127,10 @@ const Services: React.FC = () => {
 
           <Col xl={7}>
             <h2 className="title_animation2 text-right">
-             Our Expert Branding and Identity Design Services/typography/ stylesheet/color scheme
+             Our Expert Branding and Identity Design Services
             </h2>
           </Col>
-        </Row>
-
-        
+        </Row>       
         <Row className="g-4">
           {stats.map((item, index) => (
             <Col key={index} xs={12} sm={6} md={4}>
