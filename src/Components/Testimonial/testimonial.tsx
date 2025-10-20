@@ -4,8 +4,6 @@ import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import { MoveLeft, MoveRight } from "lucide-react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useEffect } from "react";
 import { useRef, useState } from "react";
 
@@ -252,6 +250,20 @@ const TestimonialsSection = () => {
             
           ))}
         </Slider>
+                <div className="d-flex justify-content-end gap-3 nav-mt-arrow ">
+          <span
+            className="nav-arrow"
+            onClick={() => sliderRef.current?.slickPrev()}
+          >
+            <MoveLeft size={24} />
+          </span>
+          <span
+            className="nav-arrow"
+            onClick={() => sliderRef.current?.slickNext()}
+          >
+            <MoveRight size={24} />
+          </span>
+        </div>
 
       </Container>
 

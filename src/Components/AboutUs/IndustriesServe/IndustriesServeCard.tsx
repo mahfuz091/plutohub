@@ -92,7 +92,7 @@ const IndustriesServeCard = () => {
               key={testimonial.id}
               className="industry-card d-flex flex-column align-items-center  text-center idus_why_fact_item no-margin"
             >
-              <div className="industry-image-wrapper">
+              <div className="industry-image-wrapper icon-wrapper">
                 <Image
                   src={testimonial.img}
                   width={40}

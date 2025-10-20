@@ -1,14 +1,14 @@
 :root {
   --background: #030207;
   --foreground: #838a95;
-  --hoverColor: #06d6a0;
+  --hoverColor:#04c28f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #030207;
     --foreground: #ededed;
-    --hoverColor: #06d6a0;
+    --hoverColor: #04c28f;
   }
 }
 @import "slick-carousel/slick/slick.css";
@@ -353,6 +353,9 @@ span.animated-dominate {
     }
 
     h3 {
+      color: #fff;
+    }
+    p{
       color: #fff;
     }
   }
@@ -830,7 +833,7 @@ span.animated-dominate {
     .theme_btn {
       width: 100%;
       text-align: center;
-      background: rgba(6, 214, 160, 0.2);
+
       border: 1px solid rgba(255, 255, 255, 0.3);
       position: relative;
 
@@ -1231,7 +1234,7 @@ header {
   opacity: 1;
   background-image: radial-gradient(
     circle at var(--clientX, 50%) var(--clientY, 50%),
-    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.7) 0,
     black 15em
   );
 }
@@ -2838,15 +2841,27 @@ section.WhyPlutohub {
     margin-bottom: 0;
     line-height: 160%;
   }
-
+  .icon-wrapper img {
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
   &:hover {
     &:before {
       filter: blur(0px);
       transform: scale(3.2);
     }
 
+     .icon-wrapper img {
+      filter: brightness(0) invert(1);
+      transform: scale(1.1);
+    }
+
+   
+
     h3 {
       color: #fff;
+    }
+    p{
+      color:#fff;
     }
   }
 }
@@ -2998,13 +3013,27 @@ section.WhyPlutohub {
     line-height: 160%;
   }
 
+      .icon-wrapper img {
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
   &:hover {
     &:before {
       filter: blur(0px);
       transform: scale(3.2);
     }
 
+
+
+   .icon-wrapper img {
+      filter: brightness(0) invert(1);
+      transform: scale(1.1);
+    } 
+
     h3 {
+      color: #fff;
+    }
+  p {
       color: #fff;
     }
   }
@@ -3179,7 +3208,7 @@ section.team {
   opacity: 1;
   background-image: radial-gradient(
     circle at var(--clientX, 50%) var(--clientY, 50%),
-    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.7) 0,
     #041a14 15em
   );
 }
@@ -3337,7 +3366,7 @@ section.team {
   opacity: 1;
   background-image: radial-gradient(
     circle at var(--clientX, 50%) var(--clientY, 50%),
-    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.7) 0,
     #010504 15em
   );
 }
