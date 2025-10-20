@@ -59,7 +59,7 @@ const IndustriesServeCard = () => {
     },
     {
       id: 4,
-      img: "/images/medTech.png",
+      img: "/images/medtech.png",
       title: "MedTech",
       des: "MedTech design blends precision with empathy. We craft interfaces that make complex tools feel clear, from diagnostics to patient dashboards.",
     },
