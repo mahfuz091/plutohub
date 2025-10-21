@@ -5,6 +5,7 @@ type Blog = {
   title: string;
   shortDesc: string;
   bannerImage: string;
+  bannerAltText: string;
   content: any;
   authorId: string;
   author: { id: string; email: string; profileImage: string; name: string };
@@ -24,7 +25,7 @@ const BlogBanner: React.FC<BlogsProps> = ({ blogs, categories }) => {
         <div className='blog-banner__img'>
           <Image
             src={firstBlog?.bannerImage}
-            alt='Blog Banner'
+            alt={firstBlog?.bannerAltText}
             width={1216}
             height={597}
             style={{ objectFit: "cover", borderRadius: "10px" }}

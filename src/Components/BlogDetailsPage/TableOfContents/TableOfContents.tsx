@@ -1,16 +1,18 @@
 "use client";
 import { CircleMinus } from "lucide-react";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import { FaXTwitter } from "react-icons/fa6"; 
+import { FaXTwitter } from "react-icons/fa6";
 interface TOCProps {
   blocks: any[];
   postSlug: string;
 }
 
 const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
+  console.log(blocks, "block");
+
   const headers = blocks
     .map((block, index) => ({ ...block, index }))
-    .filter((block) => block.type === "header");
+    .filter((block) => block.type === "header" && block.data.level === 2);
 
   return (
     <div>
@@ -68,7 +70,7 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
           target='_blank'
           rel='noopener noreferrer'
         >
-           <FaXTwitter color="white" size={22} /> 
+          <FaXTwitter color='white' size={22} />
         </a>
       </div>
     </div>

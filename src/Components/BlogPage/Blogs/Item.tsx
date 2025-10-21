@@ -7,6 +7,7 @@ interface ItemProps {
   item: {
     id: string;
     postSlug: string;
+    bannerAltText: string;
     title: string;
     category: string;
     image: string;
@@ -26,7 +27,12 @@ const Item: React.FC<ItemProps> = ({ item }) => {
     <div className={`${isVisible ? "appear" : ""}`}>
       <Link href={`/blog/${item.postSlug}`} className='blog-card-link'>
         <div className='blog-card'>
-          <Image src={item.image} alt={item.title} height={300} width={390} />
+          <Image
+            src={item.image}
+            alt={item.bannerAltText}
+            height={300}
+            width={390}
+          />
           <div className='blog-card-text'>
             <span>{item.category}</span>
             <h3>{item.title}</h3>

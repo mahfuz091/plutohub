@@ -9,6 +9,10 @@ type Blog = {
   postSlug: string;
   shortDesc: string;
   bannerImage: string;
+  bannerAltText: string;
+  canonicalUrl: string;
+  metaDescription: string;
+  metaTitle: string;
   content: any;
   authorId: string;
   createdAt: Date;
@@ -65,6 +69,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
                       id: blog.id,
                       title: blog.title,
                       postSlug: blog.postSlug,
+                      bannerAltText: blog.bannerAltText,
                       category:
                         categories.find((c) => c.id === blog.blogCategoryId)
                           ?.name || "Uncategorized",

@@ -117,9 +117,9 @@ const BlogContent = ({ post }: BlogContentProps) => {
               src={block.data.file.url}
               alt={block.data.caption || "Blog Image"}
             />
-            {block.data.caption && (
+            {/* {block.data.caption && (
               <p className='blog-caption'>{block.data.caption}</p>
-            )}
+            )} */}
           </div>
         ) : null;
 
@@ -185,14 +185,14 @@ const BlogContent = ({ post }: BlogContentProps) => {
             />
             <span>{post.author?.name}</span>
           </div> */}
-          <span className="blog-author-meta-gap">
-<span className="text-black">Last updated:</span>{" "}
-  {new Date(post.createdAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })}
-</span>
+          <span className='blog-author-meta-gap'>
+            <span className='text-black'>Last updated:</span>{" "}
+            {new Date(post.createdAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>
 
           {/* <span className='blog-author-meta-gap'>
             <MessageCircleMore />

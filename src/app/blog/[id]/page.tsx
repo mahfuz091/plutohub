@@ -24,18 +24,22 @@ export async function generateMetadata({
   const ogImage = post.bannerImage || "";
 
   return {
-    title: post.title || "Blog Post",
-    description: post.shortDesc || "",
+    title: post.metaTitle || "Blog Post",
+    description: post.metaDescription || "",
     openGraph: {
-      title: post.title,
-      description: post.shortDesc || "",
-      images: post.bannerImage ? [{ url: ogImage, alt: post.title }] : [],
+      title: post.metaTitle,
+      description: post.metaDescription || "",
+      images: post.bannerImage
+        ? [{ url: ogImage, alt: post.bannerAltText }]
+        : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.shortDesc || "",
-      images: post.bannerImage ? [{ url: ogImage, alt: post.title }] : [],
+      title: post.metaTitle,
+      description: post.metaDescription || "",
+      images: post.bannerImage
+        ? [{ url: ogImage, alt: post.bannerAltText }]
+        : [],
     },
   };
 }

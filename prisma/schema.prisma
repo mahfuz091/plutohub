@@ -27,20 +27,23 @@ model User {
 }
 
 model Post {
-  id    String @id @default(uuid())
-  title String
-
-  postSlug       String        @unique
-  shortDesc      String
-  bannerImage    String
-  content        Json
-  author         User?         @relation(fields: [authorId], references: [id])
-  authorId       String?
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
-  BlogCategory   BlogCategory? @relation(fields: [blogCategoryId], references: [id])
-  blogCategoryId String?
-  Comment        Comment[]
+  id              String        @id @default(uuid())
+  title           String
+  postSlug        String        @unique
+  shortDesc       String?
+  bannerImage     String
+  bannerAltText   String? // new: image ALT text (SEO)
+  metaTitle       String?       @db.VarChar(70) // new: meta title
+  metaDescription String?       @db.VarChar(160) // new: meta description
+  canonicalUrl    String? // new: custom canonical URL
+  content         Json
+  author          User?         @relation(fields: [authorId], references: [id])
+  authorId        String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  BlogCategory    BlogCategory? @relation(fields: [blogCategoryId], references: [id])
+  blogCategoryId  String?
+  Comment         Comment[]
 
   @@index([authorId], name: "author_idx")
 }
