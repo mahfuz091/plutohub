@@ -23,6 +23,8 @@ export async function generateMetadata({
   const post = result.post;
   const ogImage = post.bannerImage || "";
 
+  const canonicalUrl = `https://plutohub.agency/blog/${post.canonicalUrl}`;
+
   return {
     title: post.metaTitle || "Blog Post",
     description: post.metaDescription || "",
@@ -40,6 +42,9 @@ export async function generateMetadata({
       images: post.bannerImage
         ? [{ url: ogImage, alt: post.bannerAltText }]
         : [],
+    },
+    alternates: {
+      canonical: canonicalUrl,
     },
   };
 }
