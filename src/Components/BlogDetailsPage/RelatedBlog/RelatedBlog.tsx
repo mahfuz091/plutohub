@@ -6,6 +6,7 @@ export interface BlogType {
   id: string;
   title: string;
   postSlug: string;
+  bannerAltText: string;
   shortDesc: string;
   bannerImage: string;
   blogCategoryId: string;
@@ -51,6 +52,7 @@ const RelatedBlog: React.FC<RelatedBlogProps> = ({
                 item={{
                   id: blog.id,
                   postSlug: blog.postSlug,
+                  bannerAltText: blog.bannerAltText,
                   title: blog.title,
                   category: blog.BlogCategory.name,
                   image: blog.bannerImage,
