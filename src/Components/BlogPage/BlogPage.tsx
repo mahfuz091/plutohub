@@ -18,6 +18,10 @@ type Blog = {
   postSlug: string;
   shortDesc: string;
   bannerImage: string;
+  bannerAltText: string;
+  canonicalUrl: string;
+  metaDescription: string;
+  metaTitle: string;
   content: any;
   authorId: string;
   author: { id: string; name: string; email: string; profileImage: string };
@@ -45,10 +49,8 @@ const BlogPage: React.FC<BlogPageProps> = ({ blogs, blogCategories }) => {
       <div id='blog-section' className='blog-h blog-bg'>
         <Blogs blogs={blogs} categories={blogCategories} />
 
-         <JoinTeam />
+        <JoinTeam />
       </div>
-
-     
     </div>
   );
 };
