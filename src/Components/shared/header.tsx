@@ -57,9 +57,9 @@ const Header = () => {
                     </NavDropdown.Item>
                   </NavDropdown>
                 </li>
-                {/* <li>
+                <li>
                   <Link href="/blog">Blogs</Link>
-                </li> */}
+                </li>
                 <li>
                   <Link href='/contact'>Contact</Link>
                 </li>
@@ -146,9 +146,9 @@ const Header = () => {
                     <li>
                       <Link href='/about'>About Us</Link>
                     </li>
-                    {/* <li>
+                    <li>
                       <Link href='/blog'>Blog</Link>
-                    </li> */}
+                    </li>
                     <li>
                       <Link href='/contact'>Contact</Link>
                     </li>

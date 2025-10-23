@@ -171,7 +171,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
       <div className='blogContent'>
         <span className='blog-Category'>{post.BlogCategory?.name}</span>
 
-        <h2 className='blog-title'>{post.title}</h2>
+        <h1 className='blog-title'>{post.title}</h1>
 
         <div className='blog-author-meta'>
           {/* <div className='blog-author-meta-gap'>
