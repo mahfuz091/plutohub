@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
   { icon: "/images/thinking.png", title: "Human-First Thinking", text: "People come before pixels. Every solution starts with understanding your users' needs, so designs feel intuitive, personal, and genuinely helpful." },
-  { icon: "/images/design.png", title: "Cross-Disciplinary Experts", text: "Our team combines creative minds, strategic thinkers, and tech specialists—working together to craft solutions that strike a balance between beauty and functionality." },
+  { icon: "/images/cross.svg", title: "Cross-Disciplinary Experts", text: "Our team combines creative minds, strategic thinkers, and tech specialists—working together to craft solutions that strike a balance between beauty and functionality." },
   { icon: "/images/noise.png", title: "Clarity in Every Step", text: "Clients stay in the loop, always. From kickoff to delivery, our transparent workflow builds trust, eliminates confusion, and delivers confidence." },
   { icon: "/images/adapt.png", title: "Built to Adapt", text: "We're fast, flexible, and responsive to change. Whether it's a user need or a business pivot, your product stays ahead." },
   { icon: "/images/innovation.png", title: "Innovation with Intent", text: "We innovate with purpose, not just for flair. Every idea is tested, refined, and grounded in insights to drive measurable results." },

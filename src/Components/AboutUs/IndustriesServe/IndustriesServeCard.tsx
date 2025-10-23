@@ -46,6 +46,12 @@ const IndustriesServeCard = () => {
       des: "SaaS design made simple and scalable. We create intuitive flows that help users get started fast and keep your product ready to grow.",
     },
     {
+      id: 1,
+      img: "/images/b2b.svg",
+      title: "B2B Platforms",
+      des: "Behind-the-scenes tools should feel just as good as customer-facing ones. We design B2B platforms that are clear, efficient, and genuinely enjoyable to use.",
+    },
+    {
       id: 2,
       img: "/images/fintech.png",
       title: "Fintech",

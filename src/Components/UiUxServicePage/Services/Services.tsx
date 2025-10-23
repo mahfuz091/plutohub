@@ -11,34 +11,34 @@ interface Stat {
 const Services = () => {
   const stats: Stat[] = [
     {
-      icon: "/images/services-redesign.svg",
-      title: "Website Design & Re-design",
-      text: "Your website should look good and perform well. Whether you're starting fresh or giving it a facelift, we design clean, responsive sites that feel modern and convert better.",
+      icon: "/images/uiux.svg",
+      title: "UI UX Consulting",
+      text: "At our UI/UX design services company, we dig deep to spot what's holding your product back. Our expert UI UX consulting transforms issues into user-friendly wins with innovative UI and UX services.",
     },
     {
-      icon: "/images/services-webflow.svg",
-      title: "Website Information Architecture",
-      text: "Our team combines creative minds, strategic thinkers, and tech specialists.",
+      icon: "/images/uiuxdesign.svg",
+      title: "UI UX Design",
+      text: "We craft exceptional digital experiences with our creative UI/UX services. From sleek UI design services to seamless UX design services, we ensure your users love every click.",
     },
     {
-      icon: "/images/servicesStrategy.svg",
-      title: "Website Strategy",
-      text: "Every great website begins with a well-planned strategy. We help you define goals, understand your users, and map out a clear plan to build a site that works.",
+      icon: "/images/eye.svg",
+      title: "Visual Design",
+      text: "Visuals matter, and our UI and UX design company knows how to make yours pop. As the best UI/UX design company, we blend creativity and strategy in every pixel of our UI/UX services.",
     },
     {
-      icon: "/images/services-webflow.svg",
-      title: "Webflow Development",
-      text: "Want something sleek and smooth? With Webflow, we build responsive websites that feel modern, move beautifully, and don't need heavy backend development.",
+      icon: "/images/baseuiux.svg",
+      title: "UX Audit & Research",
+      text: "Our UX agency services delve into data and real user insights to address pain points. With our UX design services company approach, you gain valuable insights that truly enhance your user experience.",
     },
     {
-      icon: "/images/servicesStrategy.svg",
-      title: "Website Strategy",
-      text: "Every great website begins with a well-planned strategy. We help you define goals, understand your users, and map out a clear plan to build a site that works.",
+      icon: "/images/wireframing.svg",
+      title: "Wireframing and Prototyping",
+      text: "We bring ideas to life with crisp wireframes and interactive prototypes. Our UI/UX development services ensure your user interface design feels just right before launch.",
     },
     {
-      icon: "/images/services-webflow.svg",
-      title: "Webflow Development",
-      text: "Want something sleek and smooth? With Webflow, we build responsive websites that feel modern, move beautifully, and don't need heavy backend development.",
+      icon: "/images/designsys.svg",
+      title: "Design System Audit",
+      text: "Consistency is key, and our UI/UX design services company keeps your design system sharp and up-to-date. We align your UI/UX services to deliver flawless, scalable UI and UX design solutions every time.",
     },
   ];
 

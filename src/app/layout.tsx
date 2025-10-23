@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+ 
 };
 
 export default function RootLayout({
@@ -46,7 +47,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {/* ✅ Google Analytics */}
+        {/*  Google Analytics */}
         <Script
           src='https://www.googletagmanager.com/gtag/js?id=G-BV2Q0LTKVM'
           strategy='afterInteractive'
