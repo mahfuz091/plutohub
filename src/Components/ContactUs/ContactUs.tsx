@@ -135,14 +135,7 @@ const ContactUs = () => {
         alt='screw'
         className='contact-left-img'
       />
-      <Image
-        src='/images/contactmainbg.png'
-        width={800}
-        height={600}
-        alt='screw'
-        className='contact-bottom-img'
-        ref={blubRef}
-      />
+      
       <div
         className='hero-image'
         style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
@@ -158,7 +151,7 @@ const ContactUs = () => {
                   : "section-title-wrapper"
               }`}
             >
-              <h2 className='title '>
+              <h1 className='title '>
                 Have a{" "}
                 <span className='green-text'>
                   Pr
@@ -171,7 +164,7 @@ const ContactUs = () => {
                   ject
                 </span>{" "}
                 Idea?
-              </h2>
+              </h1>
             </div>
           </Col>
         </Row>

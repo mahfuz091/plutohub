@@ -238,7 +238,7 @@ const Banner = () => {
                 />
                 Based on <strong>24 clutch</strong> reviews
               </div> */}
-              <h2 className="banner-title">
+              <h1 className="banner-title">
                 <Image
                   ref={blubRef}
                   src="/images/blub.svg"
@@ -277,7 +277,7 @@ const Banner = () => {
                   <span className="char">e</span>
                 </span>{" "}
                 the Digital Space
-              </h2>
+              </h1>
               <p className="optional_text2">
                 We Create Unique Digital Experiences For Global Brands By
                 Integrating AI, Innovative Design, And Advanced Technology.

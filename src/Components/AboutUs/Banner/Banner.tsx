@@ -93,14 +93,8 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
                   })}
                 </ol>
               </nav>
-              <h2>{title}</h2>
-              <div className='optional_text d-flex flex-column align-items-center justify-content-center text-center'>
-                <p>
-                  We Create Unique Digital Experiences For Global Brands By
-                  Integrating AI, Innovative Design, And Advanced Technology.
-                </p>
-                <Buttons links='#' btnText='Let’s Explore Our Services' />
-              </div>
+              <h1>{title}</h1>
+              
             </div>
           </Col>
           <Col

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "@fontsource/work-sans/latin.css";
 import "bootstrap/dist/css/bootstrap.css";
-
 import "./globals.scss";
 import Footer from "../Components/shared/footer";
 import Layout from "../Components/Layout/Layout";

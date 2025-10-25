@@ -111,7 +111,7 @@ $title_color: #00234b;
   
 }
 
-.banner_content h2 {
+.banner_content h1 {
   margin-top: 90px;
 }
 
@@ -131,7 +131,7 @@ img.blub-banner {
   bottom: 100px;
 }
 
-.banner_content h2 {
+.banner_content h1 {
   position: relative;
 }
 
@@ -174,7 +174,7 @@ span.animated-dominate {
     }
   }
 
-  h2 {
+  h1 {
     font-size: 90px;
     font-weight: 900;
     line-height: 120%;
@@ -3259,7 +3259,7 @@ section.team {
    color: white;
 }
 
-.about h2 {
+.about h1 {
   font-weight: 600;
   font-size: 60px;
   line-height: 120%;
@@ -3272,8 +3272,8 @@ section.team {
 }
 
 @media (max-width: 768px) {
-  .about h2 {
-    font-size: 40px;
+  .about h1 {
+    font-size: 30px;
   }
 }
 
@@ -3297,7 +3297,7 @@ section.team {
   .about h2 {
     font-size: 32px;
     padding-bottom: 10px;
-    text-align: center;
+    text-align: center !important;
   }
 
   .about h6 {
@@ -3457,6 +3457,13 @@ section.team {
 }
 
 @media (max-width: 767px) {
+
+@media (max-width: 767px) {
+    .about_banner_area {
+       height: 400px !important; 
+       
+    }
+}
 }
 /* Base */
 .breadcrumb {
