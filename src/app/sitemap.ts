@@ -28,11 +28,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/uiux`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/ui-ux`,
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/logo&branding`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/logo-and-branding`,
       lastModified: new Date(),
     },
     {

@@ -49,10 +49,10 @@ const Header = () => {
                     <NavDropdown.Item as={Link} href="/services/web">
                      Web Development
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href='/services/uiux'>
+                    <NavDropdown.Item as={Link} href='/services/ui-ux'>
                       UI & UX Design
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href='/services/logo&branding'>
+                    <NavDropdown.Item as={Link} href='/services/logo-and-branding'>
                       Logo & Branding
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -131,12 +131,12 @@ const Header = () => {
                           <NavDropdown.Item as={Link} href="/services/web">
                             Web Development
                           </NavDropdown.Item>
-                          <NavDropdown.Item as={Link} href='/services/uiux'>
+                          <NavDropdown.Item as={Link} href='/services/ui-ux'>
                             UI & UX Design
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             as={Link}
-                            href='/services/logo&branding'
+                            href='/services/logo-and-branding'
                           >
                             Logo & Branding
                           </NavDropdown.Item>
