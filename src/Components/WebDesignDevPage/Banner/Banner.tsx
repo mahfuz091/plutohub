@@ -93,7 +93,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
                   })}
                 </ol>
               </nav>
-              <h2>{title}</h2>
+              <h1>{title}</h1>
               <div className=' d-flex flex-column align-items-center justify-content-center '>
                 <p>
                   Modern visuals aren't enough. Our website design and development solutions combine strategy, UX, and technology to deliver fast, responsive, and conversion-driven websites that work beautifully across every screen.

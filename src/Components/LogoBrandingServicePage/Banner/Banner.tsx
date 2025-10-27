@@ -93,7 +93,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
                   })}
                 </ol>
               </nav>
-              <h2>{title}</h2>
+              <h1>{title}</h1>
               <div className=' d-flex flex-column align-items-center justify-content-center logo-des'>
                 <p>
 A nice logo isn't enough. Our branding design service creates comprehensive identities that spark recognition, communicate value, and foster long-term trust.                </p>
