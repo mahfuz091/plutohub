@@ -46,7 +46,7 @@ const Header = () => {
                     <NavDropdown.Item as={Link} href='/services' className="dropdown-menu-custm">
                       Our Services
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/web">
+                    <NavDropdown.Item as={Link} href="/services/web-development">
                      Web Development
                     </NavDropdown.Item>
                     <NavDropdown.Item as={Link} href='/services/ui-ux'>
@@ -128,7 +128,7 @@ const Header = () => {
 
                       <li>
                         <NavDropdown title="" id="desktop-services-dropdown">
-                          <NavDropdown.Item as={Link} href="/services/web">
+                          <NavDropdown.Item as={Link} href="/services/web-development">
                             Web Development
                           </NavDropdown.Item>
                           <NavDropdown.Item as={Link} href='/services/ui-ux'>

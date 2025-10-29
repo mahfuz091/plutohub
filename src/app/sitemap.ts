@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/web`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/web-development`,
       lastModified: new Date(),
     },
     {
