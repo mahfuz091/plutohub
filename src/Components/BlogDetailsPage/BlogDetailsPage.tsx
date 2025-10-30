@@ -40,7 +40,7 @@ const BlogDetailsPage = ({
   return (
     <div className='container py-4 blog-details'>
       <div className='row'>
-        <div className='col-xl-3 mb-4'>
+        <div className='col-xl-4 mb-4'>
           <div className='sticky-sidebar'>
             <TableOfContents
               blocks={post.content?.blocks || []}
@@ -49,15 +49,15 @@ const BlogDetailsPage = ({
           </div>
         </div>
 
-        <div className='col-xl-6 mb-4'>
+        <div className='col-xl-8 mb-4'>
           <BlogContent post={post} />
         </div>
 
-        <div className='col-xl-3'>
+        {/* <div className='col-xl-3'>
           <div className='sticky-sidebar'>
             <RightSidebar categories={blogCategories} />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <RelatedBlog

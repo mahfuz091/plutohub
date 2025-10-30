@@ -8,6 +8,7 @@ import Buttons from "../Banner/Buttons";
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -15,53 +16,52 @@ const Header = () => {
   return (
     <>
       {/* Offcanvas (Mobile Menu) */}
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        responsive='lg'
-        placement='end'
-      >
+      <Offcanvas show={show} onHide={handleClose} responsive="lg" placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <Image
-              src='/images/logo.svg'
-              alt='Plutohob'
-              width={110}
-              height={24}
-            />
+            <Image src="/images/logo.svg" alt="Plutohob" width={110} height={24} />
           </Offcanvas.Title>
         </Offcanvas.Header>
+
         <Offcanvas.Body>
-          <div className='mobile-nav'>
+          <div className="mobile-nav">
             <nav>
               <ul>
                 <li>
-                  <Link href='/'>Home</Link>
+                  <Link href="/" onClick={handleClose}>
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link href='/about'>About Us</Link>
+                  <Link href="/about" onClick={handleClose}>
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <NavDropdown title='Services' id='desktop-services-dropdown' >
-                    <NavDropdown.Item as={Link} href='/services' className="dropdown-menu-custm">
+                  <NavDropdown title="Services" id="mobile-services-dropdown">
+                    <NavDropdown.Item as={Link} href="/services" onClick={handleClose}>
                       Our Services
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/web-development">
-                     Web Development
+                    <NavDropdown.Item as={Link} href="/services/web-development" onClick={handleClose}>
+                      Web Development
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href='/services/ui-ux'>
+                    <NavDropdown.Item as={Link} href="/services/ui-ux" onClick={handleClose}>
                       UI & UX Design
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href='/services/logo-and-branding'>
+                    <NavDropdown.Item as={Link} href="/services/logo-and-branding" onClick={handleClose}>
                       Logo & Branding
                     </NavDropdown.Item>
                   </NavDropdown>
                 </li>
                 <li>
-                  <Link href="/blog">Blogs</Link>
+                  <Link href="/blog" onClick={handleClose}>
+                    Blogs
+                  </Link>
                 </li>
                 <li>
-                  <Link href='/contact'>Contact</Link>
+                  <Link href="/contact" onClick={handleClose}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -70,26 +70,21 @@ const Header = () => {
       </Offcanvas>
 
       {/* Mobile Header */}
-      <div className='mobile-header'>
+      <div className="mobile-header">
         <Container>
           <Row>
             <Col>
-              <div className='header-inside'>
-                <div className='mobile-site-logo'>
-                  <Link href='/'>
-                    <Image
-                      src='/images/logo.svg'
-                      alt='Plutohob'
-                      width={110}
-                      height={24}
-                    />
+              <div className="header-inside">
+                <div className="mobile-site-logo">
+                  <Link href="/">
+                    <Image src="/images/logo.svg" alt="Plutohob" width={110} height={24} />
                   </Link>
                 </div>
 
-                <span className='mobile-menu-trigger' onClick={handleShow}>
+                <span className="mobile-menu-trigger" onClick={handleShow}>
                   <Image
-                    src='/images/mobile-menu-trigger.svg'
-                    alt='mobile menu trigger'
+                    src="/images/mobile-menu-trigger.svg"
+                    alt="mobile menu trigger"
                     width={44}
                     height={44}
                   />
@@ -105,60 +100,68 @@ const Header = () => {
         <Container>
           <Row>
             <Col xxl={12}>
-              <div className='header-content d-flex align-items-center justify-content-between'>
-                <div className='site-logo'>
-                  <Link href='/'>
-                    <Image
-                      src='/images/logo.svg'
-                      alt='Plutohob'
-                      width={160}
-                      height={35}
-                    />
+              <div className="header-content d-flex align-items-center justify-content-between">
+                {/* Logo */}
+                <div className="site-logo">
+                  <Link href="/">
+                    <Image src="/images/logo.svg" alt="Plutohob" width={160} height={35} />
                   </Link>
                 </div>
-                <nav>
-                  <ul className='d-flex gap-4 align-items-center'>
-                    <li>
-                      <Link href='/'>Home</Link>
-                    </li>
-                    <div className='d-flex gap-2 align-items-center'>
-                      <li>
-                        <Link href='/services'>Services</Link>
-                      </li>
 
-                      <li>
-                        <NavDropdown title="" id="desktop-services-dropdown">
-                          <NavDropdown.Item as={Link} href="/services/web-development">
-                            Web Development
-                          </NavDropdown.Item>
-                          <NavDropdown.Item as={Link} href='/services/ui-ux'>
-                            UI & UX Design
-                          </NavDropdown.Item>
-                          <NavDropdown.Item
-                            as={Link}
-                            href='/services/logo-and-branding'
-                          >
-                            Logo & Branding
-                          </NavDropdown.Item>
-                        </NavDropdown>
-                      </li>
-                    </div>
+                {/* Navigation */}
+                <nav>
+                  <ul className="d-flex gap-4 align-items-center">
                     <li>
-                      <Link href='/about'>About Us</Link>
+                      <Link href="/">Home</Link>
+                    </li>
+
+                    {/* Hover Dropdown Section */}
+                    <li
+                     
+                      className="position-relative d-flex gap-2 align-items-center"
+                    >
+                      <Link href="/services">Services</Link>
+
+                      <div
+                       onMouseEnter={() => setShowDropdown(true)}
+                      onMouseLeave={() => setShowDropdown(false)}
+                      >
+                        <NavDropdown
+                        title=""
+                        id="desktop-services-dropdown"
+                        show={showDropdown}
+                        className="hover-dropdown"
+                      >
+                        <NavDropdown.Item as={Link} href="/services/web-development">
+                          Web Development
+                        </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} href="/services/ui-ux">
+                          UI & UX Design
+                        </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} href="/services/logo-and-branding">
+                          Logo & Branding
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                      </div>
+                    </li>
+
+                    <li>
+                      <Link href="/about">About Us</Link>
                     </li>
                     <li>
-                      <Link href='/blog'>Blog</Link>
+                      <Link href="/blog">Blog</Link>
                     </li>
                     <li>
-                      <Link href='/contact'>Contact</Link>
+                      <Link href="/contact">Contact</Link>
                     </li>
                   </ul>
                 </nav>
 
-                <div className='header-btn'>
+                {/* Button */}
+                <div className="header-btn">
                   <Buttons
-                    links='https://calendly.com/plutohubagency/30min?month=2025-08'
-                    btnText='Let’s Talk'
+                    links="https://calendly.com/plutohubagency/30min?month=2025-08"
+                    btnText="Let’s Talk"
                   />
                 </div>
               </div>

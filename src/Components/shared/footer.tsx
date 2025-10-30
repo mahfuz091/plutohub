@@ -22,7 +22,7 @@ const Footer = () => {
                   industry <br />
                   leaders. <strong>Lets discuss</strong>
                 </h2>
-                <div className="social-links">
+                <div className=" social-links-footer">
                   <a
                     href="https://www.facebook.com/p/PlutoHub-61569889000814/"
                     target="_blank"
@@ -57,7 +57,7 @@ const Footer = () => {
 
 
             <Col xl={2} lg={2} md={6} xs={6}>
-              <div className="footer-box ">
+              <div className="footer-box uppercase">
                 <h3>Services</h3>
                 <ul className="footer-text">
                   <li><Link href="/services/uiux">UI/UX Design</Link></li>
@@ -73,7 +73,7 @@ const Footer = () => {
 
             <Col xl={2} lg={3} md={12} xs={12}>
               <div className="footer-box ">
-              <h3 className="font-semibold mb-4 ">Services & Legal</h3>
+              <h3 className="font-semibold mb-4 "></h3>
               <ul className=" footer-text">
                 <li><Link href="/services">Webflow Website</Link></li>
                 <li><Link href="/services">WordPress Website</Link></li>
