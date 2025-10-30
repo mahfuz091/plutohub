@@ -107,7 +107,7 @@ $title_color: #00234b;
 
 @media (max-width: 768px){
 .banner_area {
-  height: 50vh;
+  height: 90vh;
   
 }
 
@@ -142,6 +142,7 @@ img.blub-banner {
 
 .banner_content {
   position: relative;
+      z-index: 10;
 }
 
 img.screw-banner {
@@ -1601,11 +1602,18 @@ header {
   }
 
   img.blub-banner {
-    display: none;
+     position: absolute;
+    left: -35px;
+    bottom: 134px;
+    height:55px;
   }
 
   img.screw-banner {
-    display: none;
+    position: absolute;
+  right: 0;
+  bottom: -50px;
+  height:120px;
+  z-index:-1;
   }
 }
 
