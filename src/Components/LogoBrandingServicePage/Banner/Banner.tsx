@@ -74,7 +74,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
           <Col>
             <div className=' web-services'>
               {/* Dynamic Breadcrumb */}
-              <nav className='breadcrumb d-flex justify-content-center align-items-center breadcrumb-web' aria-label='Breadcrumb'>
+              <nav className='breadcrumb-services d-flex justify-content-center align-items-center breadcrumb-web' aria-label='Breadcrumb'>
                 <ol>
                   {breadcrumbs.map((crumb, index) => {
                     const isLast = index === breadcrumbs.length - 1;
