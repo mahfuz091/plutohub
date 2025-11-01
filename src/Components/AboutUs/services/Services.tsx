@@ -152,7 +152,7 @@ const Services = () => {
             />
           </Col>
           <Col sm={6}>
-            <h2 className=' title_animation2'>
+            <h2 className='title_animation2 service-desgin'>
               Plutohub is a product design partner built for impact
             </h2>
             <p>

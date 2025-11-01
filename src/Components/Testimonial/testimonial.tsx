@@ -187,7 +187,7 @@ const TestimonialsSection = () => {
           <Col md={4} xs={12} className="text-end">
             <div className="testimonial-right">
               <div className="trust-pilot">
-                <h5>Our Happy Customer</h5>
+                <h5 className="gray">Our Happy Customer</h5>
               </div>
               <p>
                 <Image
@@ -250,7 +250,7 @@ const TestimonialsSection = () => {
             
           ))}
         </Slider>
-                <div className="d-flex justify-content-end gap-3 nav-mt-arrow ">
+                <div className="d-flex justify-content-end align-items-end justify-content-center justify-content-md-end align-items-center align-items-md-end nav-mt-arrow ">
           <span
             className="nav-arrow"
             onClick={() => sliderRef.current?.slickPrev()}

@@ -19,7 +19,10 @@ const Header = () => {
       <Offcanvas show={show} onHide={handleClose} responsive="lg" placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <Image src="/images/logo.svg" alt="Plutohob" width={110} height={24} />
+            <Link href="/" onClick={handleClose}>
+                    <Image src="/images/logo.svg" alt="Plutohob" width={110} height={24} />
+                  </Link>
+            
           </Offcanvas.Title>
         </Offcanvas.Header>
 

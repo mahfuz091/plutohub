@@ -73,7 +73,7 @@ const Team = () => {
             <h5 className="team-5">
               Thrive, Build, and Belong  at PlutoHub
             </h5>
-            <p>
+            <p className="team-p">
               Step into a workplace where your ideas matter. At PlutoHub, we
               nurture individual talent while working as one bold, creative
               team. Here, your growth, passion, and impact shape tomorrow's best

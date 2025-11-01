@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaXTwitter } from "react-icons/fa6"; 
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer style={{ backgroundImage: "url(/images/footer-bg.jpg)" }}>
@@ -49,59 +49,83 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                  <FaXTwitter color="white" size={22} /> 
+                    <FaXTwitter color="white" size={22} />
                   </a>
                 </div>
               </div>
             </Col>
 
-
-            <Col xl={2} lg={2} md={6} xs={6}>
+            <Col xl={4} lg={4} md={12} xs={12}>
               <div className="footer-box uppercase">
                 <h3>Services</h3>
-                <ul className="footer-text">
-                  <li><Link href="/services/uiux">UI/UX Design</Link></li>
-                <li><Link href="/services/logo&branding">Logo & Branding</Link></li>
-                <li><Link href="/services/web">Website Design</Link></li>
-                <li><Link href="/services">Apps Design</Link></li>
-                <li><Link href="/services">SaaS Design</Link></li>
-                <li><Link href="/services">AI Product Design</Link></li>
-                
-                </ul>
+                <Row>
+                  <Col xs={6}>
+                    <ul className="footer-text list-unstyled">
+                      <li>
+                        <Link href="/services/uiux">UI/UX Design</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/logo&branding">
+                          Logo & Branding
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/web">Website Design</Link>
+                      </li>
+                      <li>
+                        <Link href="/services">Apps Design</Link>
+                      </li>
+                      <li>
+                        <Link href="/services">SaaS Design</Link>
+                      </li>
+                      <li>
+                        <Link href="/services">AI Product Design</Link>
+                      </li>
+                    </ul>
+                  </Col>
+
+                  <Col xs={6}>
+                    <ul className="footer-text list-unstyled">
+                      <li>
+                        <Link href="/services">Webflow Website</Link>
+                      </li>
+                      <li>
+                        <Link href="/services">WordPress Website</Link>
+                      </li>
+                      <li>
+                        <Link href="/services">Shopify Website</Link>
+                      </li>
+                      <li>
+                        <Link href="/privacy-policy">Privacy Policy</Link>
+                      </li>
+                      <li>
+                        <Link href="/terms-and-conditions">
+                          Terms & Conditions
+                        </Link>
+                      </li>
+                    </ul>
+                  </Col>
+                </Row>
               </div>
             </Col>
 
-            <Col xl={2} lg={3} md={12} xs={12}>
-              <div className="footer-box ">
-              <h3 className="font-semibold mb-4 "></h3>
-              <ul className=" footer-text">
-                <li><Link href="/services">Webflow Website</Link></li>
-                <li><Link href="/services">WordPress Website</Link></li>
-                <li><Link href="/services">Shopify Website</Link></li>
-                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
-              </ul>
-            </div>
-            </Col>
-                        <Col xl={2} lg={2} md={6} xs={6}>
-             <div className="footer-box uppercase">
-                 <h3>Quick Links</h3>
+            <Col xl={2} lg={2} md={6} xs={6}>
+              <div className="footer-box uppercase">
+                <h3>Quick Links</h3>
                 <ul className="footer-text">
                   <li>
-                     <Link href="/services">Services</Link>
+                    <Link href="/services">Services</Link>
                   </li>
-                    <Link href="/blog">Blog</Link>
+                  <Link href="/blog" className="blog-footer">Blog</Link>
                   <li>
-                     <Link href="/about">About Us</Link>
+                    <Link href="/about">About Us</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>
                   </li>
-                 
                 </ul>
               </div>
             </Col>
-
           </Row>
         </Container>
       </div>

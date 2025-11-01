@@ -117,7 +117,7 @@ const IndustriesServeCard = () => {
       <Container>
         <Row className="text-center arrow-testi ">
           <Col xl={12}>
-            <div className="testi-navigation d-flex justify-content-end align-items-end gap-3">
+            <div className="testi-navigation -flex justify-content-end align-items-end justify-content-center justify-content-md-end align-items-center align-items-md-end">
              
               <div>
                 {testimonialsData.map((_, index) => (

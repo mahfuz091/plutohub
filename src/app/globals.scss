@@ -107,7 +107,7 @@ $title_color: #00234b;
 
 @media (max-width: 768px){
 .banner_area {
-  height: 90vh;
+  height: 100vh;
   
 }
 
@@ -584,6 +584,8 @@ span.animated-dominate {
       
     }
 
+    
+
     .ser_content {
       padding: 20px 20px 10px;
       h3 {
@@ -593,6 +595,8 @@ span.animated-dominate {
       }
     }
   }
+
+  
 
   .flip_box_back {
     position: absolute;
@@ -650,6 +654,18 @@ span.animated-dominate {
       }
     }
   }
+
+  @media (max-width: 765px) {
+      .flip_box_font {
+        padding: 15px;
+      }
+
+      .flip_box_back{
+        padding: 15px;
+      }
+    }
+
+    
 
   &:hover {
     .flip_box_back {
@@ -899,6 +915,13 @@ span.animated-dominate {
     margin-bottom: 18px;
   }
 
+  
+  @media (max-width: 765px) {
+    h3 {
+      font-size: 28px;
+    }
+  }
+
   p {
     font-size: 16px;
     line-height: 160%;
@@ -953,7 +976,18 @@ footer {
 .footer-box li a {
   color: #d6d6d6;
 }
+.blog-footer{
+  color: #d6d6d6;
+}
 
+@media(max-width:665px){
+  .footer-box li a {
+  font-size:13px;
+}
+.blog-footer{
+  font-size:13px;
+}
+}
 .footer-box ul {
   margin: 0;
   padding: 0;
@@ -1073,6 +1107,7 @@ footer {
 .optional_text2 {
   display: none;
   position: relative;
+  color: white;
 }
 
 @media (max-width: 991px) {
@@ -1093,6 +1128,9 @@ footer {
     font-weight: 400px;
   }
 
+
+
+
   .project_item .pr_content h3 {
     font-size: 20px;
   }
@@ -1104,6 +1142,7 @@ footer {
   .footer-box h2 {
     font-size: 24px;
   }
+  
 
   .footer-box h2 br {
     display: none;
@@ -1164,6 +1203,10 @@ header {
     display: none;
   }
 
+  .footer-copyright p {
+  text-align: center;
+}
+
   .mobile-nav{
     height:80dvh;
   }
@@ -1185,7 +1228,7 @@ header {
 
   .mobile-header {
     position: fixed;
-    top: 0;
+    top: -10px;
     width: 100%;
     z-index: 999;
   }
@@ -1598,7 +1641,7 @@ header {
 }
 @media (max-width: 767px) {
   .banner_content h1 {
-    font-size: 32px;
+    font-size: 38px;
     line-height: 120%;
   }
 
@@ -1606,13 +1649,13 @@ header {
      position: absolute;
     left: -35px;
     bottom: 134px;
-    height:55px;
+    height:100px;
   }
 
   img.screw-banner {
     position: absolute;
   right: 0;
-  bottom: -50px;
+  bottom: -130px;
   height:120px;
   z-index:-1;
   }
@@ -1748,6 +1791,7 @@ ul.slick-dots li {
         font-size: 30px !important;
         margin-top: 20px;
         margin-bottom: 20px;
+        text-align: center;
     }
 }
 
@@ -2020,6 +2064,7 @@ section.testimonials-area {
 @media (max-width: 767px) {
   h2.section-title {
     text-align: center;
+    font-size: 30px;
   }
 
   .trust-pilot {
@@ -2580,8 +2625,16 @@ section.wehelp {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
+  color:white;
+  opacity:0.8;
 }
 
+@media (max-width:765px) {
+  .service p {
+    font-size:15px;
+    color:white;
+  }
+}
 .services h5 {
   font-weight: 600;
   font-size: 44px;
@@ -2606,6 +2659,7 @@ section.wehelp {
 @media (max-width: 767px) {
   .services {
     margin-top: 60px;
+    margin-bottom:60px;
   }
   .services h6 {
     font-size: 300px;
@@ -2678,14 +2732,17 @@ section.service_about_area.about_area {
     font-size: 28px;
   }
   .services h6 {
-    font-size: 20px;
+    font-size: 30px;
     text-align: left;
      color: white;
   }
 
   .services p {
-    font-size: 18px;
+    font-size: 15px;
+    color:white;
   }
+
+
 
   .services-bg,
   .services-shape,
@@ -2748,6 +2805,8 @@ section.drives {
   margin: 0;
   line-height: 1.5;
   font-weight: 400;
+  color: white;
+  opacity:0.8;
 }
 .drives-bg {
   position: absolute;
@@ -2773,8 +2832,13 @@ section.drives {
     display: none !important;
   }
 
+  .service-desgin{
+    font-size:30px;
+  }
+
   .drives h5 {
-    font-size: 28px;
+    font-size: 30px;
+    text-align: center;
   }
   .drives h6 {
     font-size: 20px;
@@ -2783,7 +2847,8 @@ section.drives {
   }
 
   .drives p {
-    font-size: 18px;
+    font-size: 15px;
+    padding-top:10px;
   }
 
   .drive-content h6 {
@@ -2922,6 +2987,10 @@ section.WhyPlutohub {
     overflow: hidden;
   }
 
+  .why_fact_item{
+    padding:18px;
+  }
+
   .aq-thumb {
     display: none !important;
   }
@@ -2932,13 +3001,15 @@ section.WhyPlutohub {
 
   .WhyPlutohub h5 {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.4;
     margin-bottom: 0px;
+
+    text-align:center;
   }
   .fact_item {
     background: #141b29;
-    padding: 30px;
+    padding: 18px;
     height: 100%;
     clip-path: polygon(
       0px 0,
@@ -2987,6 +3058,8 @@ section.WhyPlutohub {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  color:white;
+    opacity:0.8;
 }
 
 .IndustriesServe h5 {
@@ -3080,12 +3153,17 @@ section.WhyPlutohub {
 @media (max-width: 767px) {
   .IndustriesServe h5 {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.4;
     margin-bottom: 20px;
+    text-align:center;
   }
   .IndustriesServe p {
-    font-size: 18px;
+    font-size: 16px;
+    color:white;
+    opacity:0.8;
+    text-align:center;
+    margin-top:-10px;
   }
   .IndustriesServ-no-margin-right {
     padding: 20px 0 20px 0 !important;
@@ -3296,6 +3374,13 @@ section.team {
   display: none !important;
 }
 
+.team h5 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-top: 20px;
+    color:white;
+  }
+
 @media (max-width: 991px) {
   .aq-thumb {
     display: none !important;
@@ -3341,11 +3426,7 @@ section.team {
     font-size: 18px;
   }
 
-  .team h5 {
-    font-size: 32px;
-    line-height: 1.4;
-    margin-top: 20px;
-  }
+  
   .team-5 {
     font-size: 30px !important;
     padding-top: 20px;
@@ -3462,6 +3543,9 @@ section.team {
   }
   .contact-vector-img {
     display: none;
+  }
+   .team p {
+    font-size: 15px;
   }
 }
 
@@ -6636,9 +6720,15 @@ text-transform: uppercase;
   transform: translateY(0);
 }
 
+.team-p{
+  color:white;
+  opacity:0.8;
+}
 
 
-
-
+.gray{
+  color:white;
+  opacity:0.8;
+}
 
 
