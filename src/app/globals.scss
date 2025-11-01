@@ -4756,6 +4756,8 @@ html {
   letter-spacing: 0%;
   opacity: 0.8;
   padding-top: 5px;
+  color:white;
+  opacity:0.8;
 }
 
 @media (max-width: 1024px) {
@@ -4766,7 +4768,11 @@ html {
 
 @media (max-width: 768px) {
   .service-title {
-    font-size: 38px;
+    font-size: 30px;
+  }
+  .service_banner_area {
+    border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   }
 }
 
@@ -4804,6 +4810,13 @@ html {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .logo-branding-section {
+    padding-top: 30px; 
+    text-align: center; 
+  }
+}
+
 .branding-card {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
@@ -4834,6 +4847,13 @@ html {
 
 .ui-ux-contain-main {
   margin-top: 60px;
+}
+
+
+@media (max-width: 768px) {
+  .ui-ux-contain-main {
+    margin-top: 10px;
+  }
 }
 
 .ux-design-heading {
@@ -4885,10 +4905,22 @@ html {
   .sassHeading-content {
     margin: 40px 0 60px 0;
   }
+  @media (max-width: 768px) {
+  .sassHeading-heading {
+    text-align: center; 
+  }
+}
 }
 
 .ai-product {
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .ai-product {
+  text-align: center;
+}
+
 }
 
 .ai-border {
@@ -4908,7 +4940,11 @@ html {
   max-width: 1066px;
   padding-bottom: 25px;
 }
-
+@media (max-width: 768px) {
+  .webflow-heading {
+    text-align: center; 
+  }
+}
 .WordPress {
   border-radius: 60px;
   background: rgba(0, 129, 83, 0.2);
@@ -5077,6 +5113,11 @@ html {
       opacity: 0.8;
     }
   }
+  @media (max-width: 768px) {
+  .process-card {
+    height: auto !important; 
+  }
+}
 }
 
 // web design
@@ -6576,7 +6617,7 @@ html {
     padding-bottom: 80px;
   }
   .service-title {
-    font-size: 32px;
+    font-size: 30px;
   }
   .service-description {
     font-size: 16px;
@@ -6597,7 +6638,9 @@ html {
 
 @media (max-width: 768px) {
   .service_banner_area {
-    height: 300px;
+    height: auto;
+    padding-bottom:40px;
+    padding-top:20px;
   }
   .services-banner {
     padding-top: 100px;
@@ -6614,7 +6657,7 @@ html {
   .Shopify,
   .work-process,
   .SaasDesign {
-    padding: 60px 0;
+    padding: 40px 0;
     border-radius: 0px;
   }
   .process-card {
@@ -6726,9 +6769,20 @@ text-transform: uppercase;
 }
 
 
-.gray{
-  color:white;
-  opacity:0.8;
+.white{
+  color:white !important;
 }
 
+.gray{
+  color:white !important;
+  opacity:0.8 !important;
+}
 
+.data{
+  font-size:18px !important;
+}
+@media (max-width: 1024px) {
+    .data{
+        font-size: 15px !important;
+    }
+}

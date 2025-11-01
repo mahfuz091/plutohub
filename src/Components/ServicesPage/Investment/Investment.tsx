@@ -19,14 +19,14 @@ const Investment = () => {
             <h1 className="section-title">
               Smarter Investment Than Hiring In-House
             </h1>
-            <p className="section-description pt-investment-description">
+            <p className="section-description pt-investment-description gray">
               Hiring and managing an in-house design team means salaries,
               training, software costs, and ongoing overhead. With PlutoHub, you
               get a skilled, ready-to-go team without the extra expenses, and
               with results that speak for themselves.
               <br />
             </p>
-            <p className="">
+            <p className="gray">
               {" "}
               Hint: PlutoHub delivers projects faster than in-house teams and at
               a fraction of the cost of traditional agencies.

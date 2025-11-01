@@ -42,7 +42,7 @@ const LogoBranding = () => {
           <Row className="align-items-center">
             <Col xl={4} className="mb-4 mb-md-0">
               <h2 className="service-title">Logo & Branding</h2>
-              <p className="service-description">
+              <p className="service-description gray">
                 We create brand identities that leave a strong and lasting
                 impression. From distinctive logos to complete visual systems,
                 we make sure every detail reflects your personality and connects
@@ -61,7 +61,7 @@ const LogoBranding = () => {
                   "Social Media Branding",
                 ].map((item, index) => (
                   <Col sm={6} key={index} className="mb-3">
-                    <div className="branding-card d-flex align-items-center">
+                    <div className="branding-card d-flex align-items-center text-start data">
                       <img
                         src="/images/LogoBrandingIcon.svg"
                         alt="icon"

@@ -32,7 +32,7 @@ const UXDesign = () => {
       <Container>
         <div className="ux-design-heading">
           <h1 className="service-title">UI/UX Design</h1>
-          <p className="service-description">
+          <p className="service-description gray">
             Focused on blending usability with style, our designs make every
             click intuitive, every screen engaging, and every interaction align
             seamlessly with your brand.
@@ -52,7 +52,7 @@ const UXDesign = () => {
             />
           </Col>
           <Col xl={7}>
-            <div className="ux-services-grid ui-ux-content">
+            <div className="ux-services-grid ui-ux-content data text-start">
               {uxServices.map((service, index) => (
                 <div
                   key={index}
@@ -67,7 +67,7 @@ const UXDesign = () => {
                     height={24}
                     className="me-3 pt-service"
                   />
-                  <span className="servicename">{service}</span>
+                  <span className="servicename white">{service}</span>
                 </div>
               ))}
             </div>

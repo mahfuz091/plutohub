@@ -65,7 +65,7 @@ const ServicesPageBanner = () => {
       />
       <Container className=' services-banner'>
         <h1 className="section-title">Our Services</h1>
-        <p className="section-description">Your ideas deserve designs that stand out and deliver tangible results. From logos to websites and apps, we make every detail shine.</p>
+        <p className="section-description gray">Your ideas deserve designs that stand out and deliver tangible results. From logos to websites and apps, we make every detail shine.</p>
         
       </Container>
       <div className='spotlight2'></div>

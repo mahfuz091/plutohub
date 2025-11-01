@@ -76,7 +76,7 @@ const WorkProcess = () => {
       <Container>
         <div className="text-center process-heding">
           <h2 className="service-title ">Our Work Process</h2>
-          <p className="service-description">
+          <p className="service-description gray">
             We follow a clear, collaborative process to ensure great results
             every time.
           </p>
@@ -93,7 +93,9 @@ const WorkProcess = () => {
           ))}
         </Slider>
 
-        <div className="d-flex justify-content-end gap-3 mt-4">
+        <div className="d-flex 
+            justify-content-center justify-content-md-end 
+            align-items-center align-items-md-end mt-4">
           <span className="nav-arrow" onClick={handlePrevClick}>
             <MoveLeft size={24} />
           </span>

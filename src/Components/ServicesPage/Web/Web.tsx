@@ -36,7 +36,7 @@ const Web = () => {
           <Row className="align-items-center">
             <Col xl={4} className="mb-4 mb-md-0">
               <h2 className="service-title">Website Design</h2>
-              <p className="service-description">
+              <p className="service-description gray">
                Blending creativity with functionality, our websites capture attention instantly, guide visitors effortlessly, and turn casual browsing into lasting customer connections.
               </p>
             </Col>
@@ -52,7 +52,7 @@ const Web = () => {
                   "CMS Setup & Content Management",
                 ].map((item, index) => (
                   <Col sm={6} key={index} className="mb-3">
-                    <div className="branding-card d-flex align-items-center">
+                    <div className="branding-card d-flex align-items-center data text-start">
                       <img
                         src="/images/LogoBrandingIcon.svg"
                         alt="icon"

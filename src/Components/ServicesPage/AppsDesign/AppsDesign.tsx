@@ -32,7 +32,7 @@ const AppsDesign = () => {
       <Container>
         <div className="ux-design-heading">
           <h1 className="service-title">Apps Design</h1>
-          <p className="service-description">
+          <p className="service-description gray">
             Designed for the small screen but big on impact, our apps deliver smooth interactions, clear navigation, and visuals that keep users engaged on the go.
           </p>
         </div>
@@ -50,7 +50,7 @@ const AppsDesign = () => {
             />
           </Col>
           <Col xl={7}>
-            <div className="ux-services-grid ui-ux-content">
+            <div className="ux-services-grid ui-ux-content data text-start">
               {uxServices.map((service, index) => (
                 <div
                   key={index}
@@ -65,7 +65,7 @@ const AppsDesign = () => {
                     height={24}
                     className="me-3 pt-service"
                   />
-                  <span className="servicename">{service}</span>
+                  <span className="servicename white">{service}</span>
                 </div>
               ))}
             </div>

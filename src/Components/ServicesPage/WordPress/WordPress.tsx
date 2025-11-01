@@ -21,7 +21,7 @@ const WordPress = () => {
               />
           <Container>
       <Row className="d-flex align-items-center g-4">
-        {/* 🖼️ Image Column */}
+      
         <Col xl={6} className="order-2 order-xl-1 text-center">
           <Image
             src="/images/wordpress-services.png"
@@ -33,12 +33,12 @@ const WordPress = () => {
           />
         </Col>
 
-        {/* 📝 Text Column */}
-        <Col xl={6} className="order-1 order-xl-2">
+        
+        <Col xl={6} className="order-1 order-xl-2 text-center text-xl-start">
           <h1 className="service-title">
             WordPress Website <br /> Design
           </h1>
-          <p className="service-description">
+          <p className="service-description gray gray">
             Combining creativity with WordPress's flexibility, we design and
             build sites that are easy to manage, visually engaging, and optimized
             for performance.
@@ -48,7 +48,7 @@ const WordPress = () => {
     </Container>
 
       <Container>
-        <Row className="webflow-services-row">
+        <Row className="webflow-services-row white">
           {[
             ["Custom Theme Design", "Plugin Setup & Integration"],
             ["SEO-Friendly Structure", "Mobile & Tablet Optimization"],
@@ -59,7 +59,7 @@ const WordPress = () => {
                 <Col
                   sm={6}
                   key={colIndex}
-                  className={`service-col ${
+                  className={`service-col data text-start ${
                     rowIndex % 2 === 0 ? "bg-light-row" : "bg-dark-row"
                   }`}
                 >

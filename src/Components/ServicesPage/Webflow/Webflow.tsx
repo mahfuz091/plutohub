@@ -30,7 +30,7 @@ const Webflow = () => {
           />
         <div className="webflow-heading ">
           <h1 className="service-title">Webflow Website Design</h1>
-          <p className="service-description">
+          <p className="service-description gray">
             With Webflow's flexibility and our design expertise, we build custom, responsive websites that look stunning and give you complete control over content updates.
           </p>
         </div>
@@ -46,7 +46,7 @@ const Webflow = () => {
             "Editor Training & Support",
           ].map((item, index) => (
             <Col sm={6} key={index} className="mb-3">
-              <div className="branding-card d-flex align-items-center">
+              <div className="branding-card d-flex align-items-center data text-start">
                 <img
                   src="/images/LogoBrandingIcon.svg"
                   alt="icon"
@@ -54,7 +54,7 @@ const Webflow = () => {
                   width={24}
                   height={24}
                 />
-                <span>{item}</span>
+                <span className="white">{item}</span>
               </div>
             </Col>
           ))}

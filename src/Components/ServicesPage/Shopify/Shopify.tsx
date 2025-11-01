@@ -38,7 +38,7 @@ const Shopify = () => {
         <Col xl={6} className="order-1 order-xl-2">
           <div className="ux-design-heading ai-product">
             <h1 className="service-title">Shopify Website Design</h1>
-            <p className="service-description">
+            <p className="service-description gray">
               From storefront to checkout, our Shopify designs make online
               shopping seamless, visually appealing, and built to convert
               visitors into loyal customers.
@@ -54,9 +54,9 @@ const Shopify = () => {
               "Secure Payment Integration",
               "Conversion-Focused Checkout Design",
             ].map((item, index, arr) => (
-              <Col sm={12} key={index} className="mb-3">
+              <Col sm={12} key={index} className="mb-3 white">
                 <div
-                  className={`d-flex align-items-center ${
+                  className={`d-flex align-items-center data text-start ${
                     index !== arr.length - 1 ? "ai-border" : ""
                   }`}
                 >

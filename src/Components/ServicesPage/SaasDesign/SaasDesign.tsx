@@ -22,7 +22,7 @@ export default function SaasDesign() {
       <Container>
         <div className="sassHeading-heading">
           <h1 className="service-title">SaaS Design</h1>
-          <p className="service-description">
+          <p className="service-description gray">
             Turning complex systems into clear, user-friendly tools, our SaaS
             designs help users focus on getting work done with minimal effort
             and maximum satisfaction.
@@ -49,7 +49,7 @@ export default function SaasDesign() {
             "Consistent Design Systems",
           ].map((item, index) => (
             <Col sm={6} key={index} className="mb-3">
-              <div className="branding-card d-flex align-items-center">
+              <div className="branding-card d-flex align-items-center text-start data">
                 <img
                   src="/images/LogoBrandingIcon.svg"
                   alt="icon"
@@ -57,7 +57,7 @@ export default function SaasDesign() {
                   width={24}
                   height={24}
                 />
-                <span>{item}</span>
+                <span className="white">{item}</span>
               </div>
             </Col>
           ))}
