@@ -7,6 +7,8 @@ import { Col, Row } from 'react-bootstrap'
 
 gsap.registerPlugin(ScrollTrigger)
 
+
+
 const stats = [
   {
     id: 1,
