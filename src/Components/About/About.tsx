@@ -111,7 +111,7 @@ const About = () => {
       <Container>
         <Row>
           <Col sm={4}>
-            <h5 className='sub_title'>About Us</h5>
+            <h5 className='sub_title '>About Us</h5>
             <Image
               ref={aboutShapeRef}
               src='/images/about-shape.png'

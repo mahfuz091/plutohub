@@ -123,7 +123,7 @@ const Services = () => {
         <Row>
           <Col sm={5}>
             <div className='blub-main'>
-              <h5 className='sub_title'>Our Services</h5>
+              <h5 className='sub_title text-start'>Our Services</h5>
               <Image
                 ref={aboutShapeRef}
                 src='/images/blub.svg'

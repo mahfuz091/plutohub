@@ -151,7 +151,7 @@ const ContactUs = () => {
                   : "section-title-wrapper"
               }`}
             >
-              <h1 className='title '>
+              <h1 className='title text-center'>
                 Have a{" "}
                 <span className='green-text'>
                   Pr

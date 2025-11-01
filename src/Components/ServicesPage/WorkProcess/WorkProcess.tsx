@@ -95,7 +95,7 @@ const WorkProcess = () => {
 
         <div className="d-flex 
             justify-content-center justify-content-md-end 
-            align-items-center align-items-md-end mt-4">
+            align-items-center align-items-md-end mt-2 mt-md-4">
           <span className="nav-arrow" onClick={handlePrevClick}>
             <MoveLeft size={24} />
           </span>
