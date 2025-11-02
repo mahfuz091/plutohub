@@ -99,7 +99,7 @@ const Services: React.FC = () => {
       <Container>
         <Row className=" mb-5">
           <Col xl={5}>
-            <h5 className="text-left">Our Services</h5>
+            <h5 className="text-left white">Our Services</h5>
             <Image
               src="/images/services-bg.png"
               width={344}

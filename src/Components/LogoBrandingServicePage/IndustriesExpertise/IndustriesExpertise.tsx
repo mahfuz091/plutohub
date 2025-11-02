@@ -86,7 +86,7 @@ const IndustriesExpertise = () => {
 
         <Slider {...sliderSettings} ref={sliderRef}>
           {industries.map((item, index) => (
-            <div className="industry-card position-relative overflow-hidden rounded-3">
+            <div key={index} className="industry-card position-relative overflow-hidden rounded-3.">
               <Image
                 src={item.img}
                 alt={item.title}
