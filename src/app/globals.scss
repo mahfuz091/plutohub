@@ -274,6 +274,8 @@ span.animated-dominate {
   margin-bottom: 30px;
 }
 
+
+
 .P_about_area {
   padding: 120px 0px;
 
@@ -286,8 +288,15 @@ span.animated-dominate {
   @media (max-width: 768px) {
     padding: 60px 0px;
   }
+  
 }
-
+@media (max-width: 768px) {
+    .title {
+ 
+  line-height: 115%;
+  
+}
+  }
 
 .fact_inner {
   margin-top: 30px;
@@ -490,6 +499,8 @@ span.animated-dominate {
     border-radius: 20px;
   }
 
+ 
+
   .pr_image {
     overflow: hidden;
     border-radius: 10px;
@@ -541,7 +552,11 @@ span.animated-dominate {
     }
   }
 }
-
+ @media (max-width: 768px) {
+  .project_item {
+    padding: 15px;
+  }
+}
 .pt {
   margin-top: 5px;
 }
@@ -779,7 +794,12 @@ span.animated-dominate {
     filter: blur(350px);
   }
 }
-
+@media (max-width: 768px) {
+  .box {
+    padding: 15px;
+    border-radius: 16px;
+  }
+}
 .price_inner {
   height: 100%;
 
@@ -842,6 +862,12 @@ span.animated-dominate {
       margin-bottom: 15px;
     }
 
+    @media(max-width:765){
+      h3{
+        font-size:30px;
+      }
+    }
+
     p {
       font-size: 16px;
       line-height: 160%;
@@ -870,6 +896,8 @@ span.animated-dominate {
       background: rgba(0, 0, 0, 0.21);
       width: 100%;
       margin-top: 70px;
+
+      
 
       h5 {
         color: #fff;
@@ -2054,6 +2082,7 @@ section.testimonials-area {
   .price_inner .tab_content .p_footer {
     flex-direction: column;
     gap: 20px;
+
   }
 }
 @media (max-width: 991px) {
@@ -2065,6 +2094,11 @@ section.testimonials-area {
   h2.section-title {
     text-align: center;
     font-size: 30px;
+  }
+
+  .price_inner .tab_content .p_footer {
+    margin-top:20px;
+    
   }
 
   .trust-pilot {
@@ -2318,6 +2352,7 @@ span.green-text {
   }
   .contact-form-wrapper {
     height: auto;
+    padding: 15px;
   }
 }
 
@@ -2715,7 +2750,7 @@ section.service_about_area.about_area {
 /* Responsive */
 @media (max-width: 991px) {
   .services h5 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .services-bg {
@@ -3447,7 +3482,7 @@ section.team {
   
   .team-5 {
     font-size: 30px !important;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .team-card {
     padding: 7px 7px;
@@ -3564,6 +3599,7 @@ section.team {
   }
    .team p {
     font-size: 15px;
+    margin-top:1px
   }
 }
 
@@ -5268,7 +5304,7 @@ html {
 
 @media (max-width: 1024px) {
   .text-left {
-    font-size: 26px;
+    font-size: 30px;
   }
   .text-right {
     font-size: 36px;
@@ -5277,9 +5313,12 @@ html {
 
 @media (max-width: 768px) {
   .web-design {
-    padding-bottom: 60px;
+    padding-bottom: 0px;
+    .text-left{
+      font-size:24px
+    }
     .text-right {
-      font-size: 26px;
+      font-size: 30px;
     }
   }
   .text-left,
@@ -5379,10 +5418,23 @@ html {
   }
 }
 
+
 @media (max-width: 768px) {
+  .web_Services_fact_item {
+    padding:15px;
+    height: auto;
+    
+  }
 
- }
+  .web_Services_fact_item h6 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
 
+  .web_Services_fact_item p {
+    font-size: 15px;
+  }
+}
 
 .nav-mt-arrow {
   padding-top: 60px;
@@ -5478,10 +5530,11 @@ html {
 @media (max-width: 768px) {
   .web-title {
     font-size: 30px;
+    text-align:center;
   }
   .web-description {
     font-size: 16px;
-
+  text-align:center;
     padding-top: 10px;
   }
 }
@@ -5580,6 +5633,16 @@ html {
   .recent-work-logo {
     padding: 60px 0 60px 0;
   }
+
+  .industries-expertise {
+  padding: 120px 0 120px 0;
+  position: relative;
+  overflow: hidden;
+  .industries-content {
+    max-width: 672px;
+    margin: 60px auto;
+  }
+}
 }
 
 
@@ -5673,6 +5736,7 @@ html {
     font-size: 48px;
     line-height: 120%;
     letter-spacing: 0%;
+    max-width:150px;
   }
 
   p {
@@ -5694,12 +5758,16 @@ html {
     font-size: 30px;
     line-height: 120%;
     letter-spacing: 0%;
+    max-width:320px;
+    text-align:center;
   }
-  p {
+   .number-heading p {
     font-size: 16px;
+    text-align:center;
   }
   .fact_inner {
     margin-top: 0px;
+    
   }
 }
 
@@ -5744,7 +5812,7 @@ html {
 @media (max-width: 768px) {
   .logo-services {
     padding: 60px 0;
-    text-align: center;
+    
 
     .text-left {
       font-size: 22px;
@@ -5863,7 +5931,12 @@ html {
   line-height: 140%;
   margin-bottom: 20px;
 }
-
+@media (max-width: 768px) {
+  .process-title {
+    font-size: 24px;
+    
+  }
+}
 .process-description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -5921,6 +5994,7 @@ html {
     font-size: 48px;
     line-height: 120%;
     letter-spacing: 0%;
+    max-width:120px;
   }
 
   p {
@@ -5937,7 +6011,8 @@ html {
 @media (max-width: 1024px) {
   .Industries-Expertise-heading {
     h2 {
-      font-size: 38px;
+      font-size: 30px;
+         max-width:420px;
     }
 
     p {
@@ -5952,9 +6027,9 @@ html {
   .Industries-Expertise-heading {
     text-align: center;
 
-    h2 {
-      font-size: 28px;
-      line-height: 130%;
+   h2 {
+      font-size: 30px;
+         max-width:420px;
     }
 
     p {
@@ -6151,6 +6226,8 @@ html {
       letter-spacing: 0%;
       padding-top: 10px;
     }
+
+
   }
 
   .service-bg {
@@ -6253,7 +6330,7 @@ html {
       font-size: 16px;
       line-height: 160%;
       opacity: 0.8;
-      text-align: center;
+      
     }
   }
 
@@ -6486,7 +6563,7 @@ html {
         margin-right: 20px;
       }
       @media (max-width: 991px) {
-        width: 300px;
+        width: auto;
       }
     }
     .card-body {
@@ -6668,7 +6745,7 @@ html {
   }
   .logo-branding {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 22px;
   }
   .ux-design,
   .WordPress,
@@ -6803,4 +6880,10 @@ text-transform: uppercase;
     .data{
         font-size: 15px !important;
     }
+}
+
+.mobile-padding {
+  @media (max-width: 768px) {
+    padding: 0 !important;
+  }
 }

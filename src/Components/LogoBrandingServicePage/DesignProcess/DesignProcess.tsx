@@ -108,7 +108,7 @@ const DesignProcess = () => {
           </Col>
 
           <Col xl={5}>
-            <h2 className="text-right web-description">
+            <h2 className="text-right web-description gray">
               We follow a structured branding process that transforms ideas into
               iconic brand identities. From discovery to final delivery, each
               step is crafted to ensure your brand stands out with clarity,
@@ -150,9 +150,9 @@ const DesignProcess = () => {
                   />
                 </div>
                 <div className="process-content mt-4">
-                  <p className="process-step">{item.step}</p>
+                  <p className="process-step white">{item.step}</p>
                   <h3 className="process-title">{item.title}</h3>
-                  <p className="process-description">{item.description}</p>
+                  <p className="process-description gray">{item.description}</p>
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ const DesignProcess = () => {
 
         </div>
         
-        <div className="d-flex justify-content-end gap-3 nav-mt-arrow ">
+        <div className="d-flex justify-content-end justify-content-md-end justify-content-center gap-3 nav-mt-arrow ">
           <span
             className="nav-arrow"
             onClick={() => sliderRef.current?.slickPrev()}

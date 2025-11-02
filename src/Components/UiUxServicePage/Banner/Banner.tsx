@@ -95,7 +95,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
               </nav>
               <h1>{title}</h1>
               <div className=' d-flex flex-column align-items-center justify-content-center uiux-des '>
-                <p>
+                <p className="gray">
 We offer UI/UX design services that focus on creating smooth user journeys, intuitive interfaces, and delivering real business impact. Our user experience design services help increase engagement and customer satisfaction.     </p>
                
               </div>

@@ -17,11 +17,11 @@ const Number = () => {
           <Row>
             <Col md={6}>
               <h2>
-                Number <br /> Don’t lie
+                Number  Don’t lie
               </h2>
             </Col>
             <Col md={6}>
-              <p>
+              <p className="gray">
                 Trusted by hundreds of businesses to deliver websites that
                 perform and grow with them.
               </p>

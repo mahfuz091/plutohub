@@ -112,7 +112,7 @@ const RealResults = () => {
           <div className="uiux-result-header text-center">
 
             <h2>How Our UX/UI Design Services Drive Real Results?</h2>
-            <p>Our UX/UI design services combine strategy, creativity, and data to deliver real business outcomes. We craft user-centric interfaces that boost engagement, improve usability, and drive higher conversions across digital platforms.</p>
+            <p className="gray">Our UX/UI design services combine strategy, creativity, and data to deliver real business outcomes. We craft user-centric interfaces that boost engagement, improve usability, and drive higher conversions across digital platforms.</p>
 
           </div>
 
@@ -126,8 +126,8 @@ const RealResults = () => {
             <Image src={feature.img} alt={feature.title} width={80} height={80} />
           </div>
           <h3 className="">{feature.title}</h3>
-          <p className="">{feature.desc}</p>
-          <ul className="list-unstyled ">
+          <p className="gray">{feature.desc}</p>
+          <ul className="list-unstyled white">
   {feature.list.map((item, idx) => (
     <li key={idx} className="d-flex align-items-center mb-2 list">
       <img
@@ -147,7 +147,7 @@ const RealResults = () => {
    
 </Slider>
 
-       <div className="d-flex justify-content-end gap-3 nav-mt-arrow ">
+       <div className="d-flex justify-content-end justify-content-md-end justify-content-center gap-3 nav-mt-arrow ">
           <span
             className="nav-arrow"
             onClick={() => sliderRef.current?.slickPrev()}

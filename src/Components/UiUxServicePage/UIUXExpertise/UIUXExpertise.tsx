@@ -19,7 +19,7 @@ const UIUXExpertise = () => {
               <h2>Domain-Focused UI/UX Expertise</h2>
             </Col>
             <Col xl={5}>
-              <p>
+              <p className="gray">
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and
                 E-Commerce. Our strategic, design-led approach helps brands

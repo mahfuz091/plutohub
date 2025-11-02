@@ -11,11 +11,11 @@ const Number = () => {
           <Row>
             <Col xl={6}>
               <h2>
-                Number <br /> Don’t lie
+                Number  Don’t lie
               </h2>
             </Col>
             <Col xl={6}>
-              <p>
+              <p className="gray">
                With a proven track record of building strong brands, Plutohub has empowered hundreds of businesses to enhance their identity, foster trust, and achieve lasting recognition in their respective industries.
               </p>
             </Col>

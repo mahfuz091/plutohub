@@ -89,7 +89,7 @@ const Price = () => {
                       <h4>Free audit</h4>
                       <div className='p_middle'>
                         <h3>30 mins call</h3>
-                        <p>
+                        <p className="gray">
                           Let’s kick things off with a quick design preview—no
                           pressure, no strings.
                         </p>

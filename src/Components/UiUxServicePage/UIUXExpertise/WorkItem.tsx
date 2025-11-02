@@ -89,7 +89,7 @@ const WorkItem = () => {
         ))}
       </Slider>
 
-      <div className="d-flex justify-content-end gap-3 nav-mt-arrow ">
+      <div className="d-flex justify-content-end justify-content-md-end justify-content-center gap-3 nav-mt-arrow ">
         <span
           className="nav-arrow"
           onClick={() => sliderRef.current?.slickPrev()}

@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Image from "next/image";
-import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -16,7 +15,11 @@ const services = [
     title: "Built Around Your Business Goals",
     description:
       "We don't just design for looks. Every website we create is aligned with your brand objectives and user needs to drive actual business results.",
-    list: ["Focused on conversions and growth", "Aligned with your brand vision", "Designed for your target audience"],
+    list: [
+      "Focused on conversions and growth",
+      "Aligned with your brand vision",
+      "Designed for your target audience",
+    ],
   },
   {
     id: 2,
@@ -25,7 +28,11 @@ const services = [
     title: "Easy to Use, Easy to Love",
     description:
       "Good design keeps users engaged. We craft seamless, intuitive interfaces that feel natural, allowing people to enjoy using your site.",
-    list: ["Clear structure and navigation", "Mobile-friendly experiences", "Smooth, frustration-free user flows"],
+    list: [
+      "Clear structure and navigation",
+      "Mobile-friendly experiences",
+      "Smooth, frustration-free user flows",
+    ],
   },
   {
     id: 3,
@@ -34,16 +41,24 @@ const services = [
     title: "Built for All Devices",
     description:
       "Whether on a phone, tablet, or desktop, your website should always shine. We make sure it's fast, responsive, and visually sharp on every screen.",
-    list: ["Fully responsive design", "Optimized for all screen sizes", "No app download needed"],
+    list: [
+      "Fully responsive design",
+      "Optimized for all screen sizes",
+      "No app download needed",
+    ],
   },
-   {
+  {
     id: 5,
     number: "Service-4",
     image: "/images/services-web/headaches.png",
     title: "No Headaches, Just Results",
     description:
       "You can relax while we handle the technical stuff. From hosting and security to updates, your site stays stable and high-performing.",
-    list: ["Hassle-free maintenance", "Smooth integrations", "Strong performance and uptime"],
+    list: [
+      "Hassle-free maintenance",
+      "Smooth integrations",
+      "Strong performance and uptime",
+    ],
   },
   {
     id: 4,
@@ -52,9 +67,12 @@ const services = [
     title: "Made to Grow With You",
     description:
       "Your website should evolve as your business does. We build flexible systems that are easy to update and scale as needed.",
-    list: ["Scalable CMS platforms", "Easily updatable content", "Room for future features"],
+    list: [
+      "Scalable CMS platforms",
+      "Easily updatable content",
+      "Room for future features",
+    ],
   },
- 
   {
     id: 6,
     number: "Service-4",
@@ -62,7 +80,11 @@ const services = [
     title: "You're in the Loop",
     description:
       "You’ll never be left guessing. We maintain transparent and collaborative communication throughout the entire process.",
-    list: ["Transparent process", "Feedback-driven design", "Dedicated communication"],
+    list: [
+      "Transparent process",
+      "Feedback-driven design",
+      "Dedicated communication",
+    ],
   },
 ];
 
@@ -76,6 +98,7 @@ const ServicesScroll = () => {
     cards.forEach((card, index) => {
       if (!card) return;
 
+      // Set initial state
       gsap.set(card, {
         y: index * 70,
         filter: "blur(0px)",
@@ -92,12 +115,7 @@ const ServicesScroll = () => {
         },
       });
 
-      timeline.to(card, {
-        scale: 1 - (cards.length - index) * 0.055,
-        ease: "none",
-        duration: 0.5,
-      });
-
+     
       const isLast = index === cards.length - 1;
       if (!isLast) {
         const blurStrength = 5 - index;
@@ -120,10 +138,14 @@ const ServicesScroll = () => {
   return (
     <section className="rd_service_area section_padding pt-0">
       <Container>
-         <div className="differenec-content text-center mb-5">
-          <h1 className="web-title">Why Our UI/UX Design Services Make a Difference?</h1>
-          <p className="web-description">
-            We craft user-centered designs that not only look good but also work beautifully. By combining strategy with seamless interaction, we help your product connect with users and drive real business growth.
+        <div className="differenec-content text-center mb-5">
+          <h1 className="web-title">
+            Why Our UI/UX Design Services Make a Difference?
+          </h1>
+          <p className="web-description gray">
+            We craft user-centered designs that not only look good but also work
+            beautifully. By combining strategy with seamless interaction, we
+            help your product connect with users and drive real business growth.
           </p>
         </div>
         <div className="service_card_inner">
@@ -135,12 +157,8 @@ const ServicesScroll = () => {
               }`}
             >
               <Card.Body>
-                
-
                 <Row className="d-flex align-items-center justify-content-between g-4">
-
-                 
-                  <Col xl={4} className="text-center mb-3 mb-md-0">
+                  <Col xl={4} className="mb-3 mb-md-0">
                     <Image
                       src={feature.image}
                       alt={feature.title}
@@ -151,24 +169,19 @@ const ServicesScroll = () => {
                     />
                   </Col>
 
-                 
-                  <Col xl={4} >
-
-                  <div className="tides">
-                     <h2 className="mb-3">{feature.title}</h2>
-                    <p className="mb-3">{feature.description}</p>
-                  </div>
-                    
-                   
+                  <Col xl={4}>
+                    <div className="tides text-start">
+                      <h2 className="mb-1 mb-md-3">{feature.title}</h2>
+                      <p className="mb-3 gray">{feature.description}</p>
+                    </div>
                   </Col>
 
-                  
                   <Col xl={4}>
-                    <ul className="list-unstyled">
+                    <ul className="list-unstyled text-start">
                       {feature.list.map((item, idx) => (
                         <li
                           key={idx}
-                          className="d-flex align-items-center mb-2 list"
+                          className="d-flex align-items-center justify-content-start mb-2 list"
                         >
                           <Image
                             src="/images/UiUx-Service/right.svg"
@@ -177,7 +190,7 @@ const ServicesScroll = () => {
                             height={24}
                             className="me-2"
                           />
-                          <span>{item}</span>
+                          <span className="text-start white">{item}</span>
                         </li>
                       ))}
                     </ul>

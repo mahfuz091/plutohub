@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Shopify = () => {
   return (
-    <div className="Shopify AI-Product">
+    <div className="Shopify AI-Product mobile-padding">
       <Image
         src="/images/yellow.png"
         alt="yellow ellipse"

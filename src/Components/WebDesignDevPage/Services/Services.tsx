@@ -183,14 +183,15 @@ const Services: React.FC = () => {
           ))}
         </Slider>
 
-        <div className="d-flex justify-content-end gap-3 nav-mt-arrow">
-          <span className="nav-arrow" onClick={() => sliderRef.current?.slickPrev()}>
-            <MoveLeft size={24} />
-          </span>
-          <span className="nav-arrow" onClick={() => sliderRef.current?.slickNext()}>
-            <MoveRight size={24} />
-          </span>
-        </div>
+       <div className="d-flex  justify-content-md-end justify-content-center gap-3 nav-mt-arrow">
+  <span className="nav-arrow" onClick={() => sliderRef.current?.slickPrev()}>
+    <MoveLeft size={24} />
+  </span>
+  <span className="nav-arrow" onClick={() => sliderRef.current?.slickNext()}>
+    <MoveRight size={24} />
+  </span>
+</div>
+
       </Container>
     </section>
   );

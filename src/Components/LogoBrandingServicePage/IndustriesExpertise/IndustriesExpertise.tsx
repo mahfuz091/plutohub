@@ -68,12 +68,12 @@ const IndustriesExpertise = () => {
             <Col xl={6}>
               <h2>
                 Industries
-                <br />
+                
                 Expertise
               </h2>
             </Col>
             <Col xl={6}>
-              <p>
+              <p className="gray">
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and
                 E-Commerce. Our strategic, design-led approach helps brands

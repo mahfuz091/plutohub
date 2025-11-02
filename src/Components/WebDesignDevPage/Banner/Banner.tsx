@@ -94,7 +94,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
                 </ol>
               </nav>
               <h1>{title}</h1>
-              <div className=' d-flex flex-column align-items-center justify-content-center '>
+              <div className=' d-flex flex-column align-items-center justify-content-center gray'>
                 <p>
                   Modern visuals aren't enough. Our website design and development solutions combine strategy, UX, and technology to deliver fast, responsive, and conversion-driven websites that work beautifully across every screen.
                 </p>

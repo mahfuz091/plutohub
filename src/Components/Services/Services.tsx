@@ -51,7 +51,7 @@ const Services = () => {
   }, [])
 
   return (
-    <section className='service_area sec_padding'>
+    <section className='service_area sec_padding mobile-padding'>
       <Container>
         <Row>
           <Col sm={4}>
