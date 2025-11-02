@@ -2,9 +2,9 @@ import ServicesPage from "@/Components/ServicesPage/ServicesPage";
 import { Metadata } from "next";
 import React from "react";
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Our Services: Build Your Brand Online With Us Today",
   description:
-    "Explore Our Comprehensive Services - Web Design, UI/UX, Branding & More | Plutohob",
+    "Ready to scale? Our services transform businesses through expert website development, UI/UX design, and branding. Get the competitive edge you need to succeed.| Plutohob",
 };
 export default function page() {
   return (

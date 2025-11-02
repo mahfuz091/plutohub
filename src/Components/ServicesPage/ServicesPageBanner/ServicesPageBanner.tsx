@@ -64,7 +64,7 @@ const ServicesPageBanner = () => {
         className='banner-center-img'
       />
       <Container className=' services-banner'>
-        <h1 className="section-title">Our Services</h1>
+        <h1 className="section-title">Build Your Digital Foundation UI/UX, Web Dev, and Branding</h1>
         <p className="section-description gray">Your ideas deserve designs that stand out and deliver tangible results. From logos to websites and apps, we make every detail shine.</p>
         
       </Container>

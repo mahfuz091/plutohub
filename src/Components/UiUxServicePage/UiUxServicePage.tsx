@@ -17,7 +17,7 @@ const UiUxServicePage = () => {
           { label: "Services", href: "/services" },
           { label: "UI & UX Design", href: "/services/uiux" },
         ]}
-        title="UI & UX Design"
+        title="Stop Losing Customers | Get UI & UX Design That Converts"
       />
       <Services />
       <RecentWork />

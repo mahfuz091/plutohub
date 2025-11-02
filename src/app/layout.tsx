@@ -19,9 +19,9 @@ const interSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Plutohub", template: "%s - Plutohub" },
+  title: { default: "Development, UI/UX  Branding - Unlock Your Brand's Potential", template: "%s - Plutohub" },
   description:
-    "Plutohub is a leading software development agency specializing in custom web and mobile solutions.",
+    "Need a full-service digital partner? We Provide Web Development, UI/UX, and Branding Services to boost your ROI and business growth. Request a Quote Today!",
   twitter: {
     card: "summary_large_image",
   },

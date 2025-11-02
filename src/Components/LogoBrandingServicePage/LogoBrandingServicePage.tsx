@@ -16,9 +16,9 @@ const LogoBrandingServicePage = () => {
         breadcrumbs={[
           { label: "Home", href: "/" },
 
-          { label: "Logo & Branding", href: "/services/web" },
+          { label: "Logo & Branding", href: "/services/logo-and-branding" },
         ]}
-        title="Logo & Branding"
+        title="Logo & Branding Services Fast, Professional, Affordable"
       />
       <Services/>
       <DesignProcess/>

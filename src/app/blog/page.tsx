@@ -5,8 +5,8 @@ import { blogCategoryList } from "../actions/blog/blogCategory";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Plutohub's Blog",
+  title: "Blog: Web Development, UI Design & Logo Branding Guide",
+  description: "Our blog shares success stories and strategies for web development and UI design. Learn branding lessons that worked. Get inspired and take action. Read now.",
 };
 export const dynamic = "force-dynamic";
 const page = async () => {
