@@ -1,10 +1,24 @@
 import WebDesignDevPage from "@/Components/WebDesignDevPage/WebDesignDevPage";
 import { Metadata } from "next";
 import React from "react";
+
+
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://plutohub.agency"),
+  alternates: {
+    canonical: "/services/web-development",
+  },
   title: "Website Development Services: Build Your Digital Success ",
-  description: "Need results? Professional website development that works. We build SEO-optimized, conversion-focused site that attract your ideal customers and maximize ROI.| Plutohob",
+  description: "Need results? Professional website development that works. We build SEO-optimized, conversion-focused site that attract your ideal customers and maximize ROI.",
+  openGraph: {
+    title: "Website Development Services: Build Your Digital Success ",
+    description: "Need results? Professional website development that works. We build SEO-optimized, conversion-focused site that attract your ideal customers and maximize ROI.",
+  },
 };
+
+
+
 const Web = () => {
   return (
     <div>

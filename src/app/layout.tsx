@@ -18,19 +18,38 @@ const interSans = Inter({
   subsets: ["latin"],
 });
 
+// export const metadata: Metadata = {
+
+//   title: "Development, UI/UX  Branding - Unlock Your Brand's Potential",
+//   description:
+//     "Need a full-service digital partner? We Provide Web Development, UI/UX, and Branding Services to boost your ROI and business growth. Request a Quote Today!",
+//   twitter: {
+//     card: "summary_large_image",
+//   },
+//   icons: {
+//     icon: "/favicon.ico",
+//   },
+// };
 export const metadata: Metadata = {
-  title: { default: "Development, UI/UX  Branding - Unlock Your Brand's Potential", template: "%s - Plutohub" },
+  metadataBase: new URL("https://plutohub.agency"),
+  alternates: {
+    canonical: "/",
+  },
+  title: "Development, UI/UX  Branding - Unlock Your Brand's Potential",
   description:
     "Need a full-service digital partner? We Provide Web Development, UI/UX, and Branding Services to boost your ROI and business growth. Request a Quote Today!",
+  openGraph: {
+    title: "Development, UI/UX  Branding - Unlock Your Brand's Potential",
+    description:
+      "Need a full-service digital partner? We Provide Web Development, UI/UX, and Branding Services to boost your ROI and business growth. Request a Quote Today!",
+  },
   twitter: {
     card: "summary_large_image",
   },
-   icons: {
+  icons: {
     icon: "/favicon.ico",
   },
- 
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,23 +57,23 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang='en'
+      lang="en"
       className={`${interSans.variable} ${plusJakartaSans.variable}`}
     >
       <head>
         {/* Google Site Verification */}
         <meta
-          name='google-site-verification'
-          content='jL50bNw8bkBkNtudsNvptQ0motABgDg2_kSDEylPrxk'
+          name="google-site-verification"
+          content="jL50bNw8bkBkNtudsNvptQ0motABgDg2_kSDEylPrxk"
         />
       </head>
       <body>
         {/*  Google Analytics */}
         <Script
-          src='https://www.googletagmanager.com/gtag/js?id=G-BV2Q0LTKVM'
-          strategy='afterInteractive'
+          src="https://www.googletagmanager.com/gtag/js?id=G-BV2Q0LTKVM"
+          strategy="afterInteractive"
         />
-        <Script id='google-analytics' strategy='afterInteractive'>
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -64,7 +83,7 @@ export default function RootLayout({
         </Script>
 
         {/*  Microsoft Clarity */}
-        <Script id='microsoft-clarity' strategy='afterInteractive'>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

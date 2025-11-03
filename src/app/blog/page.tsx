@@ -5,9 +5,20 @@ import { blogCategoryList } from "../actions/blog/blogCategory";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://plutohub.agency"),
+  alternates: {
+    canonical: "/blog",
+  },
   title: "Blog: Web Development, UI Design & Logo Branding Guide",
-  description: "Our blog shares success stories and strategies for web development and UI design. Learn branding lessons that worked. Get inspired and take action. Read now.",
+  description:
+    "Our blog shares success stories and strategies for web development and UI design. Learn branding lessons that worked. Get inspired and take action. Read now.",
+  openGraph: {
+    title: "Blog: Web Development, UI Design & Logo Branding Guide",
+    description:
+      "Our blog shares success stories and strategies for web development and UI design. Learn branding lessons that worked. Get inspired and take action. Read now.",
+  },
 };
+
 export const dynamic = "force-dynamic";
 const page = async () => {
   const blogsResponse = await postList();
@@ -19,7 +30,6 @@ const page = async () => {
     return <div>Failed to load categories</div>;
   }
 
-  
   const blogsArray = Array.isArray(blogsResponse?.post?.postsWithContentObj)
     ? blogsResponse?.post?.postsWithContentObj.map((blog: any) => ({
         ...blog,
@@ -33,8 +43,6 @@ const page = async () => {
   const categoriesArray = Array.isArray(blogCategoriesResponse.blogCategory)
     ? blogCategoriesResponse.blogCategory
     : [];
-
-  
 
   return <BlogPage blogs={blogsArray} blogCategories={categoriesArray} />;
 };
