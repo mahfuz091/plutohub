@@ -22,7 +22,7 @@ const IndustriesExpertise = () => {
       />
       <Container>
         <div className="industries-content text-center mb-5">
-          <h1 className="web-title">Industries Expertise</h1>
+          <h2 className="web-title">Industries Expertise</h2>
           <p className="web-description gray">
             We build custom websites for Fintech, SaaS, Healthcare, Edtech,
             E-commerce, and more. Designed to engage users and support real

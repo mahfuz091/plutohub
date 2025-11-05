@@ -118,13 +118,13 @@ const DevelopmentProcess = () => {
         
         <Row className="align-items-center mb-5">
           <Col xl={7}>
-            <h5 className="text-left web-title">
+            <h5 className="text-left web-title text-start">
               Our Strategic Branding & <br /> Identity Design Process
             </h5>
           </Col>
 
           <Col xl={5}>
-            <h2 className="text-right web-description">
+            <h2 className="text-right web-description text-start">
               We follow a structured branding process that transforms ideas into
               iconic brand identities. From discovery to final delivery, each
               step is crafted to ensure your brand stands out with clarity,
@@ -134,7 +134,7 @@ const DevelopmentProcess = () => {
         </Row>
 
         
-        <div className="process-tabs d-flex flex-wrap gap-1 mb-4  justify-content-between g-4 xl:g-0">
+        <div className="process-tabs d-flex flex-wrap gap-1 mb-4   g-4 xl:g-0">
 
           {processData.map((item, index) => (
             <button

@@ -27,25 +27,27 @@ const Services: React.FC = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Animate title letters
-    document.querySelectorAll<HTMLElement>(".title_animation2").forEach((heading) => {
-      const text = heading.textContent || "";
-      const wrappedText = text
-        .split("")
-        .map((char) => `<span>${char}</span>`)
-        .join("");
-      heading.innerHTML = wrappedText;
+    document
+      .querySelectorAll<HTMLElement>(".title_animation2")
+      .forEach((heading) => {
+        const text = heading.textContent || "";
+        const wrappedText = text
+          .split("")
+          .map((char) => `<span>${char}</span>`)
+          .join("");
+        heading.innerHTML = wrappedText;
 
-      gsap.from(heading.querySelectorAll("span"), {
-        scrollTrigger: {
-          trigger: ".service_area",
-          start: "top -8%",
-          end: "bottom top",
-        },
-        opacity: 0.3,
-        stagger: 0.2,
-        duration: 0.5,
+        gsap.from(heading.querySelectorAll("span"), {
+          scrollTrigger: {
+            trigger: ".service_area",
+            start: "top -8%",
+            end: "bottom top",
+          },
+          opacity: 0.3,
+          stagger: 0.2,
+          duration: 0.5,
+        });
       });
-    });
 
     // Reveal animation
     if (aboutShapeRef.current && aboutRef.current) {
@@ -141,16 +143,17 @@ const Services: React.FC = () => {
       title: "Webflow Development",
       text: "Want something sleek and smooth? With Webflow, we build responsive websites that feel modern, move beautifully, and don't need heavy backend development.",
     },
-    
   ];
 
   return (
-    <section className="service_about_area about_area services web-design" ref={aboutRef}>
-        
+    <section
+      className="service_about_area about_area services web-design"
+      ref={aboutRef}
+    >
       <Container>
         <Row>
           <Col xl={5}>
-            <h5 className="text-left">Our Services</h5>
+            <h5 className="text-left text-start">Our Services</h5>
             <Image
               src="/images/services-bg.png"
               width={344}
@@ -169,7 +172,7 @@ const Services: React.FC = () => {
           </Col>
 
           <Col xl={6}>
-            <h2 className="title_animation2 text-right">
+            <h2 className="title_animation2 text-right text-start">
               Our Custom Website Design and Development Solutions
             </h2>
           </Col>
@@ -178,20 +181,29 @@ const Services: React.FC = () => {
         <Slider {...sliderSettings} ref={sliderRef} className="mt-5">
           {stats.map((item, index) => (
             <div key={index}>
-              <CardService icon={item.icon} title={item.title} text={item.text} />
+              <CardService
+                icon={item.icon}
+                title={item.title}
+                text={item.text}
+              />
             </div>
           ))}
         </Slider>
 
-       <div className="d-flex  justify-content-md-end justify-content-center gap-3 nav-mt-arrow">
-  <span className="nav-arrow" onClick={() => sliderRef.current?.slickPrev()}>
-    <MoveLeft size={24} />
-  </span>
-  <span className="nav-arrow" onClick={() => sliderRef.current?.slickNext()}>
-    <MoveRight size={24} />
-  </span>
-</div>
-
+        <div className="d-flex  justify-content-md-end justify-content-center gap-3 nav-mt-arrow">
+          <span
+            className="nav-arrow"
+            onClick={() => sliderRef.current?.slickPrev()}
+          >
+            <MoveLeft size={24} />
+          </span>
+          <span
+            className="nav-arrow"
+            onClick={() => sliderRef.current?.slickNext()}
+          >
+            <MoveRight size={24} />
+          </span>
+        </div>
       </Container>
     </section>
   );

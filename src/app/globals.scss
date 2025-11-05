@@ -1055,7 +1055,7 @@ footer {
   line-height: 1.3;
 }
 
-.footer-box h3 {
+.footer-box p {
   color: #fff;
   font-size: 16px;
   margin-bottom: 18px;
@@ -1110,10 +1110,15 @@ footer {
 
 .middle-footer-box {
   display: flex;
+  
   align-items: center;
+
+  img{
+    margin-left:-20px;
+  }
 }
 
-.middle-footer-box-content h4 {
+.middle-footer-box-content span {
   font-size: 23px;
   color: #fff;
 }
@@ -5323,8 +5328,8 @@ html {
 
   @media (max-width: 768px) {
     padding: 60px 0;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     .process-cards {
       padding: 15px;
@@ -5410,7 +5415,7 @@ html {
   .web-design {
     padding-bottom: 0px;
     .text-left{
-      font-size:24px
+      font-size:20px
     }
     .text-right {
       font-size: 30px;
@@ -5516,7 +5521,7 @@ html {
 
 @media (max-width: 768px) {
   .web_Services_fact_item {
-    padding:15px;
+    padding:15px !important;
     height: auto;
     
   }
@@ -5625,11 +5630,11 @@ html {
 @media (max-width: 768px) {
   .web-title {
     font-size: 30px;
-    text-align:center;
+    text-align:left;
   }
   .web-description {
     font-size: 16px;
-  text-align:center;
+  text-align:left;
     padding-top: 10px;
   }
 }
@@ -5827,11 +5832,11 @@ html {
 
 .number-heading {
   h2 {
-    font-weight: 700;
-    font-size: 48px;
+    font-weight: 600;
+    font-size: 44px;
     line-height: 120%;
     letter-spacing: 0%;
-    max-width:150px;
+    max-width:200px;
   }
 
   p {
@@ -5854,11 +5859,11 @@ html {
     line-height: 120%;
     letter-spacing: 0%;
     max-width:320px;
-    text-align:center;
+   
   }
    .number-heading p {
     font-size: 16px;
-    text-align:center;
+    
   }
   .fact_inner {
     margin-top: 0px;
@@ -5954,7 +5959,7 @@ html {
   .design-process {
     .text-left {
       font-weight: 600;
-      font-size: 26px;
+      font-size: 30px;
       line-height: 140%;
       letter-spacing: 0%;
     }
@@ -6041,7 +6046,7 @@ html {
 }
 
 .process-tabs {
-  max-width: 620px;
+  width: fit-content;
   margin: 0 auto 30px auto !important;
   gap: 10px;
   opacity: 1;

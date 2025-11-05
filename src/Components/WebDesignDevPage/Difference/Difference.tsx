@@ -139,9 +139,9 @@ const ServicesScroll = () => {
     <section className="rd_service_area section_padding pt-0">
       <Container>
         <div className="differenec-content text-center mb-5">
-          <h1 className="web-title">
+          <h2 className="web-title">
             Why Our UI/UX Design Services Make a Difference?
-          </h1>
+          </h2>
           <p className="web-description gray">
             We craft user-centered designs that not only look good but also work
             beautifully. By combining strategy with seamless interaction, we

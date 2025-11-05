@@ -57,7 +57,7 @@ const Footer = () => {
 
             <Col xl={4} lg={4} md={12} xs={12}>
               <div className="footer-box uppercase">
-                <h3>Services</h3>
+                <p>Services</p>
                 <Row>
                   <Col xs={6}>
                     <ul className="footer-text list-unstyled">
@@ -111,7 +111,7 @@ const Footer = () => {
 
             <Col xl={2} lg={2} md={6} xs={6}>
               <div className="footer-box uppercase">
-                <h3>Quick Links</h3>
+                <p>Quick Links</p>
                 <ul className="footer-text">
                   <li>
                     <Link href="/services">Services</Link>
@@ -142,7 +142,7 @@ const Footer = () => {
                   alt="Statue"
                 />
                 <div className="middle-footer-box-content">
-                  <h4>USA</h4>
+                  <span>USA</span>
                   <p>
                     750 W Dimond Blvd Ste 103 #204, <br /> Anchorage , Alaska
                     99515 <br />
@@ -166,7 +166,7 @@ const Footer = () => {
                   alt="Statue"
                 />
                 <div className="middle-footer-box-content">
-                  <h4>Portugal</h4>
+                  <span>Portugal</span>
                   <p>
                     R. Das Pedralvas 5 A, <br /> 1500-487, Lisboa <br />{" "}
                     Portugal{" "}

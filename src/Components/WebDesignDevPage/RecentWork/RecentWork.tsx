@@ -14,9 +14,9 @@ const RecentWork = () => {
         className="ellipse-recentwork"
       />
       <Container>
-        <h1 className="text-center  web-title">
+        <h2 className="text-start text-md-center  web-title">
           Our Recent UI/UX Design Works
-        </h1>
+        </h2>
         <WorkItem />
       </Container>
     </div>
