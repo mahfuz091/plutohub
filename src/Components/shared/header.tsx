@@ -16,18 +16,54 @@ const Header = () => {
   return (
     <>
       {/* Offcanvas (Mobile Menu) */}
-      <Offcanvas show={show} onHide={handleClose} responsive="lg" placement="end">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>
-            <Link href="/" onClick={handleClose}>
-                    <Image src="/images/logo.svg" alt="Plutohob" width={110} height={24} />
-                  </Link>
-            
-          </Offcanvas.Title>
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        responsive="lg"
+        placement="end"
+      >
+        <Offcanvas.Header closeButton className="py-3">
+          <div className="d-flex justify-content-between align-items-center w-100">
+            {/* Logo left */}
+            <Link href="/" onClick={handleClose} className="d-inline-block">
+              <Image
+                src="/images/logo.svg"
+                alt="Plutohob"
+                width={110}
+                height={24}
+              />
+            </Link>
+
+            {/* Button right */}
+            <div className="me-2">
+              <Buttons links="/services" btnText="Book a Call" />
+            </div>
+          </div>
         </Offcanvas.Header>
+
+
+        <div className="d-flex  gap-3 optional-nav  mb-3">
+              <Link
+                href="/privacy-policy"
+                onClick={handleClose}
+                className="text-decoration-none "
+              >
+                Privacy Policy
+              </Link>
+              <span>|</span>
+              <Link
+                href="/terms-and-conditions"
+                onClick={handleClose}
+                className="text-decoration-none "
+              >
+                Terms & Conditions
+              </Link>
+            </div>
 
         <Offcanvas.Body>
           <div className="mobile-nav">
+            
+
             <nav>
               <ul>
                 <li>
@@ -42,16 +78,32 @@ const Header = () => {
                 </li>
                 <li>
                   <NavDropdown title="Services" id="mobile-services-dropdown">
-                    <NavDropdown.Item as={Link} href="/services" onClick={handleClose}>
+                    <NavDropdown.Item
+                      as={Link}
+                      href="/services"
+                      onClick={handleClose}
+                    >
                       Our Services
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/web-development" onClick={handleClose}>
+                    <NavDropdown.Item
+                      as={Link}
+                      href="/services/web-development"
+                      onClick={handleClose}
+                    >
                       Web Development
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/ui-ux" onClick={handleClose}>
+                    <NavDropdown.Item
+                      as={Link}
+                      href="/services/ui-ux"
+                      onClick={handleClose}
+                    >
                       UI & UX Design
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} href="/services/logo-and-branding" onClick={handleClose}>
+                    <NavDropdown.Item
+                      as={Link}
+                      href="/services/logo-and-branding"
+                      onClick={handleClose}
+                    >
                       Logo & Branding
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -68,7 +120,23 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+            <div className="sidebar-main">
+      
+        <h6>Let’s Design Your Success Story</h6>
+        <p>
+          No matter the project size, we provide premium design tailored to your
+          goals.
+        </p>
+        <div>
+          <Buttons links="https://calendly.com/plutohubagency/30min?month=2025-08" btnText="Get Qoute" />
+        </div>
+      </div>
+
+      
+
           </div>
+
+          
         </Offcanvas.Body>
       </Offcanvas>
 
@@ -80,7 +148,12 @@ const Header = () => {
               <div className="header-inside">
                 <div className="mobile-site-logo">
                   <Link href="/">
-                    <Image src="/images/logo.svg" alt="Plutohob" width={110} height={24} />
+                    <Image
+                      src="/images/logo.svg"
+                      alt="Plutohob"
+                      width={110}
+                      height={24}
+                    />
                   </Link>
                 </div>
 
@@ -107,7 +180,12 @@ const Header = () => {
                 {/* Logo */}
                 <div className="site-logo">
                   <Link href="/">
-                    <Image src="/images/logo.svg" alt="Plutohob" width={160} height={35} />
+                    <Image
+                      src="/images/logo.svg"
+                      alt="Plutohob"
+                      width={160}
+                      height={35}
+                    />
                   </Link>
                 </div>
 
@@ -119,32 +197,35 @@ const Header = () => {
                     </li>
 
                     {/* Hover Dropdown Section */}
-                    <li
-                     
-                      className="position-relative d-flex gap-2 align-items-center"
-                    >
+                    <li onMouseEnter={() => setShowDropdown(true)}
+                        onMouseLeave={() => setShowDropdown(false)} className="position-relative d-flex gap-2 align-items-center">
                       <Link href="/services">Services</Link>
 
                       <div
-                       onMouseEnter={() => setShowDropdown(true)}
-                      onMouseLeave={() => setShowDropdown(false)}
+                        
                       >
                         <NavDropdown
-                        title=""
-                        id="desktop-services-dropdown"
-                        show={showDropdown}
-                        className="hover-dropdown"
-                      >
-                        <NavDropdown.Item as={Link} href="/services/web-development">
-                          Web Development
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/ui-ux">
-                          UI & UX Design
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} href="/services/logo-and-branding">
-                          Logo & Branding
-                        </NavDropdown.Item>
-                      </NavDropdown>
+                          title=""
+                          id="desktop-services-dropdown"
+                          show={showDropdown}
+                          className="hover-dropdown"
+                        >
+                          <NavDropdown.Item
+                            as={Link}
+                            href="/services/web-development"
+                          >
+                            Web Development
+                          </NavDropdown.Item>
+                          <NavDropdown.Item as={Link} href="/services/ui-ux">
+                            UI & UX Design
+                          </NavDropdown.Item>
+                          <NavDropdown.Item
+                            as={Link}
+                            href="/services/logo-and-branding"
+                          >
+                            Logo & Branding
+                          </NavDropdown.Item>
+                        </NavDropdown>
                       </div>
                     </li>
 

@@ -46,35 +46,7 @@ const Promo = () => {
               }`}
               ref={ref}
             >
-              <svg
-                width='450'
-                height='421'
-                viewBox='0 0 450 421'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M44.7153 230.967L31.8811 156.869C24.9916 117.094 40.8498 76.7945 72.9988 52.3808C99.2222 32.4669 133.095 25.5978 165.005 33.7227L222.502 48.3631M294.344 170.863V280.863M294.344 280.863V390.863M294.344 280.863H420M294.344 280.863H175M294.344 280.863L378.515 198.776M294.344 280.863L89.5 87.8631M294.344 280.863L204.46 374.656M294.344 280.863L386.031 367.753'
-                  stroke='url(#paint0_linear_315_409)'
-                  strokeWidth='60'
-                  strokeLinecap='round'
-                  className='svg-elem-1'
-                />
-                <defs>
-                  <linearGradient
-                    id='paint0_linear_315_409'
-                    x1='219.54'
-                    y1='149.056'
-                    x2='189.238'
-                    y2='370.019'
-                    gradientUnits='userSpaceOnUse'
-                  >
-                    <stop stopColor='#06D6A0' />
-                    <stop offset='0.490644' stopColor='#71E094' />
-                    <stop offset='1' stopColor='#E0EA87' />
-                  </linearGradient>
-                </defs>
-              </svg>
+             <img src="/images/promo.png" alt="promo" />
             </div>
           </Col>
           <Col md={6}>

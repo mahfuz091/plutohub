@@ -125,7 +125,7 @@ const ContactSection = () => {
           <Col xl={4} lg={5}>
             <div className="contact-info">
               <div className="contact-info-inner">
-                <div className="contact-info-top">
+                <div className="contact-info-top text-start">
                   <div className="contact-meta">
                     <div className="contact-meta-left d-flex align-items-center">
                       <Image
@@ -133,7 +133,7 @@ const ContactSection = () => {
                         alt="Shahin"
                         width={56}
                         height={56}
-                        className="me-3" // Bootstrap margin-end for spacing
+                        className="me-3" 
                       />
                       <div className="name">
                         <h4 className="">Shahinul Islam</h4>
