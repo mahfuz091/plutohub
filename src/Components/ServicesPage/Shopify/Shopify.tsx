@@ -36,8 +36,8 @@ const Shopify = () => {
 
         
         <Col xl={6} className="order-1 order-xl-2">
-          <div className="ux-design-heading ai-product">
-            <h1 className="service-title">Shopify Website Design</h1>
+          <div className="ux-design-heading ai-product text-start">
+            <h2 className="service-title">Shopify Website Design</h2>
             <p className="service-description gray">
               From storefront to checkout, our Shopify designs make online
               shopping seamless, visually appealing, and built to convert

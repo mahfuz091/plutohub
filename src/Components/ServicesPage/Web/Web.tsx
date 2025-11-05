@@ -35,8 +35,8 @@ const Web = () => {
         <Container>
           <Row className="align-items-center">
             <Col xl={4} className="mb-4 mb-md-0">
-              <h2 className="service-title">Website Design</h2>
-              <p className="service-description gray">
+              <h2 className="service-title text-start">Website Design</h2>
+              <p className="service-description gray text-start">
                Blending creativity with functionality, our websites capture attention instantly, guide visitors effortlessly, and turn casual browsing into lasting customer connections.
               </p>
             </Col>

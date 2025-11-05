@@ -31,8 +31,8 @@ const UXDesign = () => {
 
       <Container>
         <div className="ux-design-heading">
-          <h1 className="service-title">UI/UX Design</h1>
-          <p className="service-description gray">
+          <h2 className="service-title text-start text-md-center">UI/UX Design</h2>
+          <p className="service-description gray text-start text-md-center">
             Focused on blending usability with style, our designs make every
             click intuitive, every screen engaging, and every interaction align
             seamlessly with your brand.

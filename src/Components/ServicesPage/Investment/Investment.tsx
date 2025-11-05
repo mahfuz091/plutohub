@@ -16,17 +16,17 @@ const Investment = () => {
       <Container>
         <Row className="d-flex align-items-center gap-5 flex-column flex-md-row justify-content-between">
           <Col xl={6} className="invesetment-col">
-            <h1 className="section-title">
+            <h2 className="service-title text-start ">
               Smarter Investment Than Hiring In-House
-            </h1>
-            <p className="section-description pt-investment-description gray">
+            </h2>
+            <p className="text-start section-description pt-investment-description gray">
               Hiring and managing an in-house design team means salaries,
               training, software costs, and ongoing overhead. With PlutoHub, you
               get a skilled, ready-to-go team without the extra expenses, and
               with results that speak for themselves.
               <br />
             </p>
-            <p className="gray">
+            <p className="gray text-start">
               {" "}
               Hint: PlutoHub delivers projects faster than in-house teams and at
               a fraction of the cost of traditional agencies.

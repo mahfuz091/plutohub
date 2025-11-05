@@ -28,8 +28,8 @@ const Webflow = () => {
             layout="responsive"
             className="webflow-content"
           />
-        <div className="webflow-heading ">
-          <h1 className="service-title">Webflow Website Design</h1>
+        <div className="webflow-heading text-start">
+          <h2 className="service-title">Webflow Website Design</h2>
           <p className="service-description gray">
             With Webflow's flexibility and our design expertise, we build custom, responsive websites that look stunning and give you complete control over content updates.
           </p>

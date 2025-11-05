@@ -24,7 +24,7 @@ const Header = () => {
       >
         <Offcanvas.Header closeButton className="py-3">
           <div className="d-flex justify-content-between align-items-center w-100">
-            {/* Logo left */}
+           
             <Link href="/" onClick={handleClose} className="d-inline-block">
               <Image
                 src="/images/logo.svg"
@@ -34,36 +34,33 @@ const Header = () => {
               />
             </Link>
 
-            {/* Button right */}
+            
             <div className="me-2">
               <Buttons links="/services" btnText="Book a Call" />
             </div>
           </div>
         </Offcanvas.Header>
 
-
         <div className="d-flex  gap-3 optional-nav  mb-3">
-              <Link
-                href="/privacy-policy"
-                onClick={handleClose}
-                className="text-decoration-none "
-              >
-                Privacy Policy
-              </Link>
-              <span>|</span>
-              <Link
-                href="/terms-and-conditions"
-                onClick={handleClose}
-                className="text-decoration-none "
-              >
-                Terms & Conditions
-              </Link>
-            </div>
+          <Link
+            href="/privacy-policy"
+            onClick={handleClose}
+            className="text-decoration-none "
+          >
+            Privacy Policy
+          </Link>
+          <span>|</span>
+          <Link
+            href="/terms-and-conditions"
+            onClick={handleClose}
+            className="text-decoration-none "
+          >
+            Terms & Conditions
+          </Link>
+        </div>
 
         <Offcanvas.Body>
           <div className="mobile-nav">
-            
-
             <nav>
               <ul>
                 <li>
@@ -121,22 +118,19 @@ const Header = () => {
               </ul>
             </nav>
             <div className="sidebar-main">
-      
-        <h6>Let’s Design Your Success Story</h6>
-        <p>
-          No matter the project size, we provide premium design tailored to your
-          goals.
-        </p>
-        <div>
-          <Buttons links="https://calendly.com/plutohubagency/30min?month=2025-08" btnText="Get Qoute" />
-        </div>
-      </div>
-
-      
-
+              <h6>Let’s Design Your Success Story</h6>
+              <p>
+                No matter the project size, we provide premium design tailored
+                to your goals.
+              </p>
+              <div>
+                <Buttons
+                  links="https://calendly.com/plutohubagency/30min?month=2025-08"
+                  btnText="Get Qoute"
+                />
+              </div>
+            </div>
           </div>
-
-          
         </Offcanvas.Body>
       </Offcanvas>
 
@@ -197,13 +191,14 @@ const Header = () => {
                     </li>
 
                     {/* Hover Dropdown Section */}
-                    <li onMouseEnter={() => setShowDropdown(true)}
-                        onMouseLeave={() => setShowDropdown(false)} className="position-relative d-flex gap-2 align-items-center">
+                    <li
+                      onMouseEnter={() => setShowDropdown(true)}
+                      onMouseLeave={() => setShowDropdown(false)}
+                      className="position-relative d-flex gap-2 align-items-center"
+                    >
                       <Link href="/services">Services</Link>
 
-                      <div
-                        
-                      >
+                      <div>
                         <NavDropdown
                           title=""
                           id="desktop-services-dropdown"

@@ -46,9 +46,9 @@ const WhatGet = () => {
                 className=" ellipse-workprocess"
               />
       <Container className="what-get">
-        <h1 className="section-title text-center mb-5">
+        <h2 className="service-title text-start text-md-center mb-5">
           What You Get With PlutoHub
-        </h1>
+        </h2>
         <Row>
           {processCards.map((card, index) => (
             <Col md={6} xl={4} className="mb-4" key={index}>

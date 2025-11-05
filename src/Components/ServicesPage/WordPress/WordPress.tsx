@@ -5,47 +5,45 @@ import { Container, Row, Col } from "react-bootstrap";
 const WordPress = () => {
   return (
     <div className="WordPress">
-         <Image
-                src="/images/yellow.png"
-                alt="yellow ellipse"
-                width={400}
-                height={400}
-                className="ellipse ellipse-bottom-left"
-              />
-              <Image
-                src="/images/green.png"
-                alt="green ellipse"
-                width={400}
-                height={400}
-                className="ellipse ui-ux-ellipse-right"
-              />
-          <Container>
-      <Row className="d-flex align-items-center g-4">
-      
-        <Col xl={6} className="order-2 order-xl-1 text-center">
-          <Image
-            src="/images/wordpress-services.png"
-            alt="WordPress"
-            width={567}
-            height={400}
-            layout="responsive"
-            className="img-fluid"
-          />
-        </Col>
+      <Image
+        src="/images/yellow.png"
+        alt="yellow ellipse"
+        width={400}
+        height={400}
+        className="ellipse ellipse-bottom-left"
+      />
+      <Image
+        src="/images/green.png"
+        alt="green ellipse"
+        width={400}
+        height={400}
+        className="ellipse ui-ux-ellipse-right"
+      />
+      <Container>
+        <Row className="d-flex align-items-center g-4">
+          <Col xl={6} className="order-2 order-xl-1 text-center">
+            <Image
+              src="/images/wordpress-services.png"
+              alt="WordPress"
+              width={567}
+              height={400}
+              layout="responsive"
+              className="img-fluid"
+            />
+          </Col>
 
-        
-        <Col xl={6} className="order-1 order-xl-2 text-center text-xl-start">
-          <h1 className="service-title">
-            WordPress Website <br /> Design
-          </h1>
-          <p className="service-description gray gray">
-            Combining creativity with WordPress's flexibility, we design and
-            build sites that are easy to manage, visually engaging, and optimized
-            for performance.
-          </p>
-        </Col>
-      </Row>
-    </Container>
+          <Col xl={6} className="order-1 text-start order-xl-2 text-center text-xl-start">
+            <h2 className="service-title">
+              WordPress Website  Design
+            </h2>
+            <p className="service-description gray gray">
+              Combining creativity with WordPress's flexibility, we design and
+              build sites that are easy to manage, visually engaging, and
+              optimized for performance.
+            </p>
+          </Col>
+        </Row>
+      </Container>
 
       <Container>
         <Row className="webflow-services-row white">

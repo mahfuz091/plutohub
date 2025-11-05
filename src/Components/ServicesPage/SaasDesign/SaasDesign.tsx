@@ -20,8 +20,8 @@ export default function SaasDesign() {
         className="ellipse ui-ux-ellipse-right"
       />
       <Container>
-        <div className="sassHeading-heading">
-          <h1 className="service-title">SaaS Design</h1>
+        <div className="sassHeading-heading text-start">
+          <h2 className="service-title">SaaS Design</h2>
           <p className="service-description gray">
             Turning complex systems into clear, user-friendly tools, our SaaS
             designs help users focus on getting work done with minimal effort

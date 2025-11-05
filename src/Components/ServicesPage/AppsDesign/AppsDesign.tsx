@@ -30,8 +30,8 @@ const AppsDesign = () => {
       />
 
       <Container>
-        <div className="ux-design-heading">
-          <h1 className="service-title">Apps Design</h1>
+        <div className="ux-design-heading text-start text-md-center">
+          <h2 className="service-title">Apps Design</h2>
           <p className="service-description gray">
             Designed for the small screen but big on impact, our apps deliver smooth interactions, clear navigation, and visuals that keep users engaged on the go.
           </p>

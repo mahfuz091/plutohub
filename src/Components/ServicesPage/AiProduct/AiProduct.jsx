@@ -44,8 +44,8 @@ const AiProduct = () => {
 
 
         <Col xl={6} className="order-1 order-xl-2">
-          <div className="ux-design-heading ai-product">
-            <h1 className="service-title">AI Product Design</h1>
+          <div className="ux-design-heading ai-product text-start">
+            <h2 className="service-title">AI Product Design</h2>
             <p className="service-description gray">
               Making advanced technology feel simple, our AI product designs
               translate complex data and algorithms into clear, intuitive
