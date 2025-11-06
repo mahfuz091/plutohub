@@ -6,7 +6,19 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // You can keep domains for simple whitelisting (Cloudinary) 
     domains: ["res.cloudinary.com"],
+    // Add remote patterns for additional external sources
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
   webpack: (config, { isServer }) => {
     if (isServer) {

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 const page = async () => {
   const blogsResponse = await postList();
+  console.log(blogsResponse)
   const blogCategoriesResponse: any = await blogCategoryList();
   console.log(blogsResponse, "post");
 

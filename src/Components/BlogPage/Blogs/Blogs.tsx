@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import Filter from "./Filter";
 import Item from "./Item";
+import NewBlogItem from "./NewBlogItem";
+import { Col, Container, Row } from "react-bootstrap";
 
 type Blog = {
   id: string;
@@ -46,16 +48,31 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
 
   return (
     <div className={`app ${filteredBlogs.length > 0 ? "blog-main" : ""}`}>
-      <div className='container'>
-        <Filter
-          categories={categories.map((c) => c.name)}
-          onSelectCategory={(name) => {
-            const selectedCat = categories.find((c) => c.name === name);
-            handleSelectCategory(selectedCat ? selectedCat.id : "");
-          }}
-        />
+      <div className="container blog-new">
+        <Container className="">
+      <Row className="justify-content-center ">
+        {/* Left: Blog List */}
+        <Col xs={12} md={8} className="pe-md-5 border-end-md">
+          <NewBlogItem />
+        </Col>
 
-        <div className='row justify-content-center'>
+        {/* Right: Filter / Sidebar */}
+        <Col xs={12} md={4} className="ps-md-5 mt-4 mt-md-0">
+          <p className="fw-semibold mb-3 blog-category">Recommended topics</p>
+          <Filter
+            categories={categories.map((c: any) => c.name)}
+            onSelectCategory={(name: string) => {
+              const selectedCat = categories.find(
+                (c: any) => c.name === name
+              );
+              handleSelectCategory(selectedCat ? selectedCat.id : "");
+            }}
+          />
+        </Col>
+      </Row>
+    </Container>
+
+        {/* <div className='row justify-content-center'>
           {filteredBlogs.length === 0 ? (
             <div className='no-data text-center py-5'>
               <h3>No blogs found</h3>
@@ -80,7 +97,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
