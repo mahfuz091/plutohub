@@ -4082,7 +4082,7 @@ section.team {
 .blog-card-text {
   padding: 24px 12px;
 }
-.blog-card-text h1 {
+.blog-card-text h2 {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.2;
@@ -6155,7 +6155,7 @@ html {
   text-align: center;
 }
 
-.benefits .benefits-header h1 {
+.benefits .benefits-header h2 {
   font-weight: 700;
   font-style: Bold;
   font-size: 48px;
@@ -6232,7 +6232,7 @@ html {
     padding: 60px 0;
   }
 
-  .benefits .benefits-header h1 {
+  .benefits .benefits-header h2 {
     font-size: 28px;
   }
 
@@ -6284,15 +6284,15 @@ html {
 
 
 @media (max-width: 1024px) {
-  .benefits .benefits-header h1 {
+  .benefits .benefits-header h2 {
     font-size: 38px;
   }
 }
 
 
 @media (max-width: 768px) {
-  .benefits .benefits-header h1 {
-    font-size: 28px;
+  .benefits .benefits-header h2 {
+    font-size: 30px;
   }
 }
 
@@ -6319,7 +6319,7 @@ html {
        color: white;
     }
 
-    h1 {
+    h2 {
       font-weight: 600;
       font-size: 44px;
       line-height: 140%;
@@ -6598,7 +6598,7 @@ html {
          color: white;
       }
 
-      h1 {
+      h2{
         font-size: 28px;
         padding-top: 8px;
       }

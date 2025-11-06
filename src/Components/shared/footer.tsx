@@ -116,7 +116,9 @@ const Footer = () => {
                   <li>
                     <Link href="/services">Services</Link>
                   </li>
-                  <Link href="/blog" className="blog-footer">Blog</Link>
+                  <Link href="/blog" className="blog-footer">
+                    Blog
+                  </Link>
                   <li>
                     <Link href="/about">About Us</Link>
                   </li>

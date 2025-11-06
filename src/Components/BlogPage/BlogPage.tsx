@@ -45,7 +45,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ blogs, blogCategories }) => {
         ]}
         title="PlutoHub's Blog - Get Latest Insights"
       />
-      <BlogBanner blogs={blogs} categories={blogCategories} />
+      {/* <BlogBanner blogs={blogs} categories={blogCategories} /> */}
       <div id='blog-section' className='blog-h blog-bg'>
         <Blogs blogs={blogs} categories={blogCategories} />
 

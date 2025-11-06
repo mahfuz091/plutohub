@@ -66,7 +66,7 @@ const Benefits = () => {
             <Container>
 
                 <div className="benefits-header text-center">
-                    <h1 className="">Benefits of Our Logo & Branding Services</h1>
+                    <h2 className="">Benefits of Our Logo & Branding Services</h2>
                     <p className="gray">Our branding design service helps you craft a memorable identity that communicates your values and builds trust. From logo creation to full brand systems, we ensure your brand looks sharp and performs with purpose.</p>
                 </div>
 

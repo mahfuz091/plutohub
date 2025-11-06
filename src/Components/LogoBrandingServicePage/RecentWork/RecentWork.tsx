@@ -25,7 +25,7 @@ const RecentWork = () => {
               />
       <Container>
         <div className="industries-content text-center mb-5">
-          <h1 className="web-title">Our Recent UI/UX <br/> Design Works</h1>
+          <h2 className="web-title">Our Recent UI/UX <br/> Design Works</h2>
          
         </div>
 

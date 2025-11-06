@@ -35,7 +35,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
           />
           <div className='blog-card-text'>
             <span>{item.category}</span>
-            <h1>{item.title}</h1>
+            <h2>{item.title}</h2>
           </div>
         </div>
       </Link>

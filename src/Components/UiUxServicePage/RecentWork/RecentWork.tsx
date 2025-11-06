@@ -26,9 +26,9 @@ const RecentWork = () => {
         <Row>
           <Col md={4}>
             <div className="industries-content  mb-5">
-              <h1 className="web-title">
+              <h2 className="web-title">
                 Our Recent UI/UX <br /> Design Works
-              </h1>
+              </h2>
             </div>
           </Col>
           <Col md={8}>

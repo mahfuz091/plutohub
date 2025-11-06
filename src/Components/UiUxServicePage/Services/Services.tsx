@@ -76,7 +76,7 @@ const Services = () => {
         />
         <div className="uiux-services-header text-center">
           <h6>Our Services</h6>
-          <h1>Our Core UI/UX Services at Plutohub</h1>
+          <h2>Our Core UI/UX Services at Plutohub</h2>
         </div>
 
         <Row className="align-items-center uiux-card-service">
