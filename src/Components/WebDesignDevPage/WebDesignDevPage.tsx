@@ -15,22 +15,23 @@ const WebDesignDevPage = () => {
       <Banner
         breadcrumbs={[
           { label: "Home", href: "/" },
-         
+
+          { label: "Services", href: "/services" },
+
           { label: "Website design & development", href: "/services/web" },
         ]}
         title="Website Development Launch Your Online Success"
       />
-      <Services/>
-      <DevelopmentProcess/>
+      <Services />
+      <DevelopmentProcess />
       <div className="common-bg">
-        <RecentWork/>
-        <ServicesScroll/>
+        <RecentWork />
+        <ServicesScroll />
       </div>
 
-      <IndustriesExpertise/>
-      <Number/>
-      <FaqSection/>
-      
+      <IndustriesExpertise />
+      <Number />
+      <FaqSection />
     </div>
   );
 };

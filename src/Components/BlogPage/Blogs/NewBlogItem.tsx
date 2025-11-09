@@ -9,6 +9,7 @@ import {
   Eye,
   MessageCircle,
 } from "lucide-react";
+import Link from "next/link";
 
 interface BlogItem {
   authorName: string;
@@ -22,6 +23,16 @@ interface BlogItem {
 }
 
 const blogs: BlogItem[] = [
+  {
+    authorName: "Saurav Mandal",
+    authorAvatar: "https://i.pravatar.cc/32?img=1",
+    title: "Do Hard Things if You Want an Easy Life",
+    subtitle: "The one skill that changes everything",
+    date: "Jun 14",
+    views: 22000,
+    comments: 861,
+    thumbnail: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
+  },
   {
     authorName: "Saurav Mandal",
     authorAvatar: "https://i.pravatar.cc/32?img=1",
@@ -69,13 +80,14 @@ const NewBlogItem: React.FC = () => {
   return (
     <div className="container ">
       {blogs.map((blog, index) => (
+        <Link href="#" key={index}>
         <div
           key={index}
-          className="d-flex justify-content-between align-items-center p-3   blog-card-new mb-3"
+          className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"
         >
-          {/* Left Content */}
+         
           <div className="flex-grow-1 me-3">
-            {/* Author Info */}
+          
             <div className="d-flex align-items-center mb-2">
               <Image
                 src={blog.authorAvatar}
@@ -87,11 +99,11 @@ const NewBlogItem: React.FC = () => {
               <span className="author_name ">{blog.authorName}</span>
             </div>
 
-            {/* Title + Subtitle */}
+            
             <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
             <p className=" mb-2 title-description">{blog.subtitle}</p>
 
-            {/* Metadata */}
+    
             <div className="d-flex align-items-center gap-3  small">
               <span className="d-flex align-items-center gap-1">
                 <Star size={14} /> {blog.date}
@@ -103,8 +115,8 @@ const NewBlogItem: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Thumbnail + Icons */}
-          <div className="d-flex flex-column align-items-end">
+          
+          <div className="">
             <Image
               src={blog.thumbnail}
               alt={blog.title}
@@ -115,6 +127,7 @@ const NewBlogItem: React.FC = () => {
             
           </div>
         </div>
+        </Link>
       ))}
     </div>
   );

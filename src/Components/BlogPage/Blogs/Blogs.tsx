@@ -4,6 +4,7 @@ import Filter from "./Filter";
 import Item from "./Item";
 import NewBlogItem from "./NewBlogItem";
 import { Col, Container, Row } from "react-bootstrap";
+import RecentBlog from "./RecentBlog";
 
 type Blog = {
   id: string;
@@ -48,29 +49,35 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
 
   return (
     <div className={`app ${filteredBlogs.length > 0 ? "blog-main" : ""}`}>
-      <div className="container blog-new">
-        <Container className="">
-      <Row className="justify-content-center ">
-        {/* Left: Blog List */}
-        <Col xs={12} md={8} className="pe-md-5 border-end-md">
-          <NewBlogItem />
-        </Col>
+      <div className=" blog-new">
+        <div className="blog-new">
+          <Container>
+            <Row className="justify-content-center">
+              <Col xs={12} md={8} className="pe-md-5 border-end-md">
+                <NewBlogItem />
+              </Col>
 
-        {/* Right: Filter / Sidebar */}
-        <Col xs={12} md={4} className="ps-md-5 mt-4 mt-md-0">
-          <p className="fw-semibold mb-3 blog-category">Recommended topics</p>
-          <Filter
-            categories={categories.map((c: any) => c.name)}
-            onSelectCategory={(name: string) => {
-              const selectedCat = categories.find(
-                (c: any) => c.name === name
-              );
-              handleSelectCategory(selectedCat ? selectedCat.id : "");
-            }}
-          />
-        </Col>
-      </Row>
-    </Container>
+              <Col xs={12} md={4} className="ps-md-5 mt-4 mt-md-0">
+                <div className="sidebar-sticky">
+                  <RecentBlog />
+
+                  <p className="fw-semibold mb-3 blog-category mt-4">
+                    Recommended topics
+                  </p>
+                  <Filter
+                    categories={categories.map((c: any) => c.name)}
+                    onSelectCategory={(name: string) => {
+                      const selectedCat = categories.find(
+                        (c: any) => c.name === name
+                      );
+                      handleSelectCategory(selectedCat ? selectedCat.id : "");
+                    }}
+                  />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
 
         {/* <div className='row justify-content-center'>
           {filteredBlogs.length === 0 ? (

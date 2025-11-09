@@ -57,24 +57,27 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
   }, []);
 
   return (
-    <section className='about_banner_area about'>
+    <section className="about_banner_area about">
       <div
-        className='hero-image'
+        className="hero-image"
         style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
       ></div>
       <Image
-        src='/images/AboutBannerEl.png'
+        src="/images/AboutBannerEl.png"
         width={500}
         height={500}
-        alt='screw'
-        className='banner-center-img'
+        alt="screw"
+        className="banner-center-img"
       />
-      <Container className='pt-web-desgin'>
-        <Row className='d-flex justify-content-center align-items-center text-center'>
+      <Container className="pt-web-desgin">
+        <Row className="d-flex justify-content-center align-items-center text-center">
           <Col>
-            <div className=' web-services'>
+            <div className=" web-services">
               {/* Dynamic Breadcrumb */}
-              <nav className='breadcrumb-services d-flex justify-content-center align-items-center breadcrumb-web' aria-label='Breadcrumb'>
+              <nav
+                className="breadcrumb-services d-flex justify-content-center align-items-center breadcrumb-web"
+                aria-label="Breadcrumb"
+              >
                 <ol>
                   {breadcrumbs.map((crumb, index) => {
                     const isLast = index === breadcrumbs.length - 1;
@@ -94,17 +97,19 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
                 </ol>
               </nav>
               <h1>{title}</h1>
-              <div className=' d-flex flex-column align-items-center justify-content-center uiux-des '>
+              <div className=" d-flex flex-column align-items-center justify-content-center uiux-des ">
                 <p className="gray">
-We offer UI/UX design services that focus on creating smooth user journeys, intuitive interfaces, and delivering real business impact. Our user experience design services help increase engagement and customer satisfaction.     </p>
-               
+                  We offer UI/UX design services that focus on creating smooth
+                  user journeys, intuitive interfaces, and delivering real
+                  business impact. Our user experience design services help
+                  increase engagement and customer satisfaction.{" "}
+                </p>
               </div>
             </div>
           </Col>
-          
         </Row>
       </Container>
-      <div className='spotlight2'></div>
+      <div className="spotlight2"></div>
     </section>
   );
 };

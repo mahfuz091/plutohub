@@ -8,7 +8,6 @@ import RecentWork from "./RecentWork/RecentWork";
 import IndustriesExpertise from "./IndustriesExpertise/IndustriesExpertise";
 import Benefits from "./Benefits/Benefits";
 
-
 const LogoBrandingServicePage = () => {
   return (
     <div>
@@ -16,17 +15,19 @@ const LogoBrandingServicePage = () => {
         breadcrumbs={[
           { label: "Home", href: "/" },
 
+          { label: "Services", href: "/services" },
+
           { label: "Logo & Branding", href: "/services/logo-and-branding" },
         ]}
         title="Logo & Branding Services Fast, Professional, Affordable"
       />
-      <Services/>
-      <DesignProcess/>
-      <RecentWork/>
-      <Benefits/>
-      <IndustriesExpertise/>
-      <Number/>
-      <FaqSection/>
+      <Services />
+      <DesignProcess />
+      <RecentWork />
+      <Benefits />
+      <IndustriesExpertise />
+      <Number />
+      <FaqSection />
     </div>
   );
 };
