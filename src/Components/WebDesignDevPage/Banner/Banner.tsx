@@ -72,8 +72,8 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
       <Container className='pt-web-desgin'>
         <Row className='d-flex justify-content-center align-items-center text-center'>
           <Col>
-            <div className=' web-services'>
-              {/* Dynamic Breadcrumb */}
+            <div className=' web-services' style={{ position: "relative", zIndex: 20 }}>
+          
               <nav className='breadcrumb-services d-flex justify-content-center align-items-center breadcrumb-web' aria-label='Breadcrumb'>
                 <ol>
                   {breadcrumbs.map((crumb, index) => {

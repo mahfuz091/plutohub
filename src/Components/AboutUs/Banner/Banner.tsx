@@ -57,25 +57,29 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
   }, []);
 
   return (
-    <section className='about_banner_area about'>
+    <section className="about_banner_area about">
       <div
-        className='hero-image'
+        className="hero-image"
         style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
       ></div>
       <Image
-        src='/images/AboutBannerEl.png'
+        src="/images/AboutBannerEl.png"
         width={500}
         height={500}
-        alt='screw'
-        className='banner-center-img'
+        alt="screw"
+        className="banner-center-img"
       />
-      <Container className='pt'>
-        <Row className='d-flex justify-content-center align-items-center'>
+      <Container className="pt">
+        <Row className="d-flex justify-content-center align-items-center">
           <Col>
-            <div className=' '>
-              {/* Dynamic Breadcrumb */}
-              <nav className='breadcrumb text-center text-md-start' aria-label='Breadcrumb'>
-                <ol >
+            <div className="" style={{ position: "relative", zIndex: 20 }}>
+              
+              <nav
+                className="breadcrumb text-center text-md-start"
+                aria-label="Breadcrumb"
+                style={{ position: "relative", zIndex: 20 }}
+              >
+                <ol>
                   {breadcrumbs.map((crumb, index) => {
                     const isLast = index === breadcrumbs.length - 1;
                     return (
@@ -93,25 +97,31 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
                   })}
                 </ol>
               </nav>
-              <h1 className="text-center text-md-start">{title}</h1>
-              
+
+              <h1
+                className="text-center text-md-start"
+                style={{ position: "relative", zIndex: 20 }}
+              >
+                {title}
+              </h1>
             </div>
           </Col>
+
           <Col
             sm={3}
-            className='d-flex justify-content-center align-items-center about_banner_image '
+            className="d-flex justify-content-center align-items-center about_banner_image "
             style={{ opacity: 0.4 }}
           >
             <Image
-              src='/images/about-p.png'
+              src="/images/about-p.png"
               width={290}
               height={355}
-              alt='screw'
+              alt="screw"
             />
           </Col>
         </Row>
       </Container>
-      <div className='spotlight2'></div>
+      <div className="spotlight2"></div>
     </section>
   );
 };

@@ -152,7 +152,7 @@ const ContactUs = () => {
               }`}
             >
               {pathname === "/" ? (
-                <h2 className="title text-center">
+                <h2 className="title text-center" style={{ position: "relative", zIndex: 20 }}>
                   Have a{" "}
                   <span className="green-text">
                     Pr
@@ -167,7 +167,7 @@ const ContactUs = () => {
                   Idea?
                 </h2>
               ) : (
-                <h1 className="title text-center">
+                <h1 className="title text-center" style={{ position: "relative", zIndex: 20 }}>
                   Have a{" "}
                   <span className="green-text">
                     Pr

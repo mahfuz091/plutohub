@@ -64,7 +64,7 @@ const ServicesPageBanner: React.FC = () => {
       />
 
       <Container className='services-banner'>
-        <Row className='d-flex justify-content-center align-items-center text-center'>
+        <Row className='d-flex justify-content-center align-items-center text-center' style={{ position: "relative", zIndex: 20 }}>
           <Col>
          
             <nav
@@ -88,7 +88,7 @@ const ServicesPageBanner: React.FC = () => {
               </ol>
             </nav>
 
-            {/* --- Banner Title and Description --- */}
+          
             <h1 className="section-title">
               Build Your Digital Foundation — UI/UX, Web Dev, and Branding
             </h1>

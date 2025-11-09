@@ -70,7 +70,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
         className='banner-center-img'
       />
       <Container className='pt-web-desgin'>
-        <Row className='d-flex justify-content-center align-items-center text-center'>
+        <Row className='d-flex justify-content-center align-items-center text-center' style={{ position: "relative", zIndex: 20 }}>
           <Col>
             <div className=' web-services'>
               {/* Dynamic Breadcrumb */}
