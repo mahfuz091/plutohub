@@ -1138,7 +1138,7 @@ footer {
 .social-links {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  
 }
 
 .social-links a svg {
@@ -4151,17 +4151,28 @@ section.team {
 }
 .blog-Category {
   display: inline-block;
-  padding: 4px 10px;
+  padding: 6px 14px;
   border-radius: 100px;
-  background: #4b6bfb;
-  color: #fff;
+
+  
+  background: rgba(255, 255, 255, 0.12); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+
+  /* ✨ Text & Shadow */
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 
   margin-bottom: 16px;
+  transition: all 0.3s ease;
 }
+
+
 .blog-explain {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .table-of-content-main {
@@ -4183,7 +4194,7 @@ section.team {
 
 .social-links {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   gap: 16px;
   background: rgba(44, 44, 44, 0.4);
@@ -4191,6 +4202,7 @@ section.team {
   backdrop-filter: blur(20px);
   padding: 12px 16px;
   border-radius: 16px;
+  width: fit-content;
 }
 
 .social-links a svg {
@@ -4241,6 +4253,8 @@ section.team {
   background-color: #06d6a0;
 }
 
+
+
 .blog-explain p {
   color: #fff !important;
   padding-top: 20px;
@@ -4254,9 +4268,20 @@ section.team {
 }
 
 .blog-explain-text-1 {
-  padding-top: 20px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  font-size: 20px;
 }
+
+
+@media (max-width: 765px) {
+  .responsive-text {
+    padding-top: 5px;
+    padding-bottom: 2px;
+    font-size: 16px;
+  }
+}
+
 
 .app-design {
   opacity: 1;
@@ -4304,7 +4329,7 @@ section.team {
 }
 
 .blog-explain-2 {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .blog-explain-2 p {
   opacity: 0.7;
@@ -4653,12 +4678,14 @@ section.team {
 .blog-header {
   font-weight: bold;
   color: #fff;
+  padding: 10px 0 !important;
 }
 
 .blog-paragraph {
   margin: 0.5rem 0;
   color: #fff;
   line-height: 1.6;
+  padding: 8px 0;
   a {
     color: #06d6a0;
     text-decoration: underline;
@@ -4703,8 +4730,23 @@ section.team {
   height: 16px;
 }
 
+.blog-image-thumbail {
+padding-top: 15px;
+padding-bottom: 10px;
+margin: 1rem 0;
+}
+
+.blog-image-thumbail img {
+  max-height: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 .blog-image {
   margin: 1rem 0;
+  padding: 15px 0;
 }
 
 .blog-image img {

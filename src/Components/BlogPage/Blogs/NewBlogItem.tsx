@@ -80,7 +80,7 @@ const NewBlogItem: React.FC = () => {
   return (
     <div className="container ">
       {blogs.map((blog, index) => (
-        <Link href="#" key={index}>
+        <Link href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c" key={index}>
         <div
           key={index}
           className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import Link from "next/link";
 
 interface BlogItem {
   authorName: string;
@@ -67,7 +68,7 @@ const RecentBlog = () => {
                 <span className="author_name ">{blog.authorName}</span>
               </div>
 
-              <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
+              <Link href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c"><h5 className="mb-1 mt-3 title-blog">{blog.title}</h5></Link>
 
               <div className="d-flex align-items-center gap-3  small">
                 <span className="d-flex align-items-center gap-1">

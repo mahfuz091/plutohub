@@ -39,6 +39,7 @@ const BlogDetailsPage = ({
 }: BlogDetailsPageProps) => {
   return (
     <div className='container py-4 blog-details'>
+      
       <div className='row'>
         <div className='col-xl-4 mb-4'>
           <div className='sticky-sidebar'>
@@ -48,6 +49,7 @@ const BlogDetailsPage = ({
             />
           </div>
         </div>
+        
 
         <div className='col-xl-8 mb-4'>
           <BlogContent post={post} />
