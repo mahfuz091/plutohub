@@ -17,17 +17,32 @@ interface BlogContentProps {
     bannerImage: string;
     content: { blocks: any[] };
     createdAt: Date;
-    author: { id: string; name: string; email: string; profileImage: string };
-    BlogCategory: { id: string; name: string };
-    Comment: { id: string }[];
-    metaDescription:string;
+    author: {
+      id: string;
+      name: string;
+      email: string;
+      profileImage?: string;
+    };
+    BlogCategory: {
+      id: string;
+      name: string;
+    };
+    Comment: {
+      id: string;
+      name: string;
+      email: string;
+      content: string;
+      createdAt: string;
+      profileImage?: string;
+    }[];
+    metaDescription?: string;
   };
 }
 
 const BlogContent = ({ post }: BlogContentProps) => {
   const initialState = { success: false, msg: "" };
 
-  console.log(post,'uuuuu')
+  console.log(post, "uuuuu");
 
   const [state, fromAction, isLoading] = useActionState(
     createComment,
@@ -174,7 +189,15 @@ const BlogContent = ({ post }: BlogContentProps) => {
     }
   };
   // console.log(post.Comment);
-
+  const getDaysAgo = (date: string) => {
+    const diffMs = new Date().getTime() - new Date(date).getTime();
+    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    if (days === 0) return "Today";
+    if (days === 1) return "1 day ago";
+    if (days < 7) return `${days} days ago`;
+    const weeks = Math.floor(days / 7);
+    return `${weeks} week${weeks > 1 ? "s" : ""} ago`;
+  };
   return (
     <div className="blogContentWrapper">
       <div className="blogContent">
@@ -263,53 +286,116 @@ const BlogContent = ({ post }: BlogContentProps) => {
               <p className="writer-post white">{post.author?.email}</p>
             </div>
 
-            <div className="blog-comment">
-              <h4 className="reply-title">Leave a Reply</h4>
-              <form action={fromAction}>
-                <input
-                  type="text"
-                  defaultValue={post.id}
-                  name="postId"
-                  hidden
-                />
-                <div className="form-group">
-                  <label>
-                    Full Name<span>*</span>
-                  </label>
+            <div className="">
+              <div className="blog-comment">
+                <h4 className="reply-title">Leave a Reply</h4>
+                <form action={fromAction}>
                   <input
                     type="text"
-                    id="fullName"
-                    name="name"
-                    placeholder="e.g. Adam Smith"
+                    defaultValue={post.id}
+                    name="postId"
+                    hidden
                   />
-                </div>
-                <div className="form-group">
-                  <label>
-                    Email Address<span>*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="emailAddress"
-                    name="email"
-                    placeholder="you@example.com"
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Write a comment</label>
-                  <textarea
-                    id="comment"
-                    name="content"
-                    placeholder="Tell us more about your thought"
-                    rows={3}
-                  ></textarea>
-                </div>
+                  <div className="row">
+                    <div className="form-group col-12 col-md-6 mb-3">
+                      <label>
+                        Full Name<span>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="fullName"
+                        name="name"
+                        placeholder="e.g. Adam Smith"
+                      />
+                    </div>
+                    <div className="form-group col-12 col-md-6 mb-3">
+                      <label>
+                        Email Address<span>*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="emailAddress"
+                        name="email"
+                        placeholder="you@example.com"
+                      />
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label>Write a comment</label>
+                    <textarea
+                      id="comment"
+                      name="content"
+                      placeholder="Tell us more about your thought"
+                      rows={1}
+                    ></textarea>
+                  </div>
 
-                <div className="submit-btn">
-                  <button type="submit" className="theme_btn">
-                    Submit your Comment
-                  </button>
+                  <div className="submit-btn">
+                    <button
+                      type="submit"
+                      className="theme_btn-3 d-flex align-items-center justify-content-center"
+                      disabled={isLoading}
+                      style={{
+                        opacity: isLoading ? 0.7 : 1,
+                        cursor: isLoading ? "not-allowed" : "pointer",
+                      }}
+                    >
+                      {isLoading ? (
+                        <>
+                          <span
+                            className="spinner-border spinner-border-sm me-2"
+                            role="status"
+                            aria-hidden="true"
+                          ></span>
+                          Submitting...
+                        </>
+                      ) : (
+                        "Submit your Comment"
+                      )}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div className="">
+              {post?.Comment && post.Comment.length > 0 && (
+                <div className="comments-list mt-5">
+                  <h4 className="reply-title mb-4">
+                    {post.Comment.length}{" "}
+                    {post.Comment.length > 1 ? "Comments" : "Comment"}
+                  </h4>
+
+                  {[...post.Comment].reverse().map((comment) => (
+                    <div
+                      key={comment.id}
+                      className="comment-item d-flex gap-3 align-items-start mb-4"
+                    >
+                      {/* Avatar or Initial */}
+                      <div className="comment-avatar rounded-circle bg-secondary d-flex justify-content-center align-items-center text-white fw-bold">
+                        {comment.profileImage ? (
+                          <img
+                            src={comment.profileImage}
+                            alt={comment.name}
+                            className="rounded-circle"
+                          />
+                        ) : (
+                          comment.name.charAt(0).toUpperCase()
+                        )}
+                      </div>
+
+                      {/* Comment Body */}
+                      <div className="comment-body">
+                        <h6 className="mb-1 text-white">{comment.name}</h6>
+                        <small className=" d-block mb-2 text-white">
+                          {getDaysAgo(comment.createdAt)}
+                        </small>
+                        <p className="text-light mb-0">{comment.content}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </form>
+              )}
             </div>
           </div>
         </div>

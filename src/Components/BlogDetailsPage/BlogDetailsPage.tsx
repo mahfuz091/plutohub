@@ -16,7 +16,15 @@ interface BlogDetailsPageProps {
     createdAt: Date;
     author: { id: string; name: string; email: string; profileImage: string };
     BlogCategory: { id: string; name: string };
-    Comment: { id: string }[];
+    Comment: {
+      id: string;
+      name: string;
+      email: string;
+      content: string;
+      createdAt: string;
+      profileImage?: string;
+    }[];
+    metaDescription?: string;
   };
   blogCategories: {
     id: string;
@@ -41,7 +49,7 @@ const BlogDetailsPage = ({
     <div className='container py-4 blog-details'>
       
       <div className='row'>
-        <div className='col-xl-4 mb-4'>
+        <div className='col-xl-3 mb-4'>
           <div className='sticky-sidebar'>
             <TableOfContents
               blocks={post.content?.blocks || []}
@@ -51,7 +59,7 @@ const BlogDetailsPage = ({
         </div>
         
 
-        <div className='col-xl-8 mb-4'>
+        <div className='col-xl-9 mb-4'>
           <BlogContent post={post} />
         </div>
 
