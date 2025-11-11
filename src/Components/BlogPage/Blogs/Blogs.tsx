@@ -36,6 +36,9 @@ type BlogsProps = {
 const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
   const [filteredBlogs, setFilteredBlogs] = useState<Blog[]>(blogs);
 
+
+  
+
   const handleSelectCategory = (categoryId: string) => {
     if (!categoryId) {
       setFilteredBlogs(blogs);
@@ -47,26 +50,27 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
     }
   };
 
+  console.log(filteredBlogs,'filter data')
+
   return (
     <div className={` ${filteredBlogs.length > 0 ? "" : ""}`}>
-   
-        <div className="blog-new">
-          <Container>
-            <Row className="justify-content-center ">
-              <Col xs={12} md={8} className="pe-md-5 border-end-md ">
-                <NewBlogItem />
-              </Col>
+      <div className="blog-new">
+        <Container>
+          <Row className="justify-content-center ">
+            <Col xs={12} md={8} className="pe-md-5 border-end-md ">
+              <NewBlogItem filterData={filteredBlogs} />
 
-              <Col xs={12} md={4} className="ps-md-5 mt-4 mt-md-0 ">
-                <div className="sidebar-sticky ">
-                  <RecentBlog />
+            </Col>
 
-                  
-                  <div className="">
-                    <p className="fw-semibold mb-3 blog-category mt-3 mt-md-5 ">
+            <Col xs={12} md={4} className="ps-md-5 mt-4 mt-md-0 ">
+              <div className="sidebar-sticky ">
+                <RecentBlog  recentBlogs={blogs}/>
+
+                <div className="">
+                  <p className="fw-semibold mb-3 blog-category mt-3 mt-md-5 ">
                     Recommended topics
                   </p>
-                    <Filter
+                  <Filter
                     categories={categories.map((c: any) => c.name)}
                     onSelectCategory={(name: string) => {
                       const selectedCat = categories.find(
@@ -75,14 +79,14 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
                       handleSelectCategory(selectedCat ? selectedCat.id : "");
                     }}
                   />
-                  </div>
                 </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
-        {/* <div className='row justify-content-center'>
+      {/* <div className='row justify-content-center'>
           {filteredBlogs.length === 0 ? (
             <div className='no-data text-center py-5'>
               <h3>No blogs found</h3>
@@ -108,7 +112,6 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
             </div>
           )}
         </div> */}
-    
     </div>
   );
 };

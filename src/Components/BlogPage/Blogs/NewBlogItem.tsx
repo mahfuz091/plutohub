@@ -2,149 +2,112 @@
 
 import React from "react";
 import Image from "next/image";
-import {
-  Bookmark,
-  MoreHorizontal,
-  Star,
-  Eye,
-  MessageCircle,
-  Calendar,
-} from "lucide-react";
 import Link from "next/link";
+import { Calendar, MessageCircle } from "lucide-react";
 
-interface BlogItem {
-  authorName: string;
-  authorAvatar: string;
-  title: string;
-  subtitle: string;
-  date: string;
-  views: number;
-  comments: number;
-  thumbnail: string;
+interface Author {
+  name: string;
+  profileImage: string;
 }
 
-const blogs: BlogItem[] = [
-  {
-    authorName: "Saurav Mandal",
-    authorAvatar: "https://i.pravatar.cc/32?img=1",
-    title: "Do Hard Things if You Want an Easy Life",
-    subtitle: "The one skill that changes everything",
-    date: "Jun 14",
-    views: 22000,
-    comments: 861,
-    thumbnail:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
-  },
-  {
-    authorName: "Saurav Mandal",
-    authorAvatar: "https://i.pravatar.cc/32?img=1",
-    title: "Do Hard Things if You Want an Easy Life",
-    subtitle: "The one skill that changes everything",
-    date: "Jun 14",
-    views: 22000,
-    comments: 861,
-    thumbnail:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
-  },
+interface BlogCategory {
+  id: string;
+  name: string;
+}
 
-  {
-    authorName: "Aisha Rahman",
-    authorAvatar: "https://i.pravatar.cc/32?img=3",
-    title: "5 Habits That Will Change Your Life Forever",
-    subtitle: "Tiny changes, big results.",
-    date: "Jul 8",
-    views: 15300,
-    comments: 674,
-    thumbnail:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500",
-  },
-  {
-    authorName: "David Chen",
-    authorAvatar: "https://i.pravatar.cc/32?img=4",
-    title: "Why Developers Should Write More, Not Less",
-    subtitle: "Writing helps you think clearly — here’s why.",
-    date: "Aug 3",
-    views: 9100,
-    comments: 432,
-    thumbnail:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
-  },
-  {
-    authorName: "David Chen",
-    authorAvatar: "https://i.pravatar.cc/32?img=4",
-    title: "Why Developers Should Write More, Not Less",
-    subtitle: "Writing helps you think clearly — here’s why.",
-    date: "Aug 3",
-    views: 9100,
-    comments: 432,
-    thumbnail:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
-  },
-  {
-    authorName: "David Chen",
-    authorAvatar: "https://i.pravatar.cc/32?img=4",
-    title: "Why Developers Should Write More, Not Less",
-    subtitle: "Writing helps you think clearly — here’s why.",
-    date: "Aug 3",
-    views: 9100,
-    comments: 432,
-    thumbnail:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
-  },
-];
+interface Blog {
+  id: string;
+  title: string;
+  postSlug: string;
+  shortDesc: string;
+  bannerImage: string;
+  bannerAltText: string;
+  createdAt: string | Date;
+  Comment?: any[];
+  author?: Author;
+  BlogCategory?: BlogCategory;
+  metaDescription:string
+}
 
-const NewBlogItem: React.FC = () => {
+interface NewBlogItemProps {
+  filterData: Blog[];
+}
+
+const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
+  if (!filterData || filterData.length === 0) {
+    return (
+      <div className="text-center py-5">
+        <h5>No blogs found </h5>
+      </div>
+    );
+  }
+
   return (
-    <div className=" ">
-      {blogs.map((blog, index) => (
+    <div>
+      {filterData.map((blog, index) => (
         <div
-          key={index}
+          key={blog.id || index}
           className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"
         >
-          
+         
           <Link
-            href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c"
-            key={index}
-            className="order-1 order-md-2 "
+            href={`/blog/${blog.postSlug}`}
+            className="order-1 order-md-2"
           >
-            <div className="  blog-thumbnail">
+            <div className="blog-thumbnail">
               <img
-                src={blog.thumbnail}
-                alt={blog.title}             
-                className="img-fluid rounded mb-2 thumbnail-img "
+                src={blog.bannerImage}
+                alt={blog.bannerAltText || blog.title}
+                className="img-fluid rounded mb-2 thumbnail-img"
               />
             </div>
           </Link>
 
-         
+          
           <div className="flex-grow-1 me-3 order-2 order-md-1">
+           
             <div className="d-flex align-items-center mb-2">
-              <Image
-                src={blog.authorAvatar}
-                alt={blog.authorName}
-                width={30}
-                height={30}
-                className="rounded-circle me-3"
-              />
-              <span className="author_name">{blog.authorName}</span>
+              {blog.author?.profileImage && (
+                <Image
+                  src={blog.author.profileImage}
+                  alt={blog.author.name}
+                  width={30}
+                  height={30}
+                  className="rounded-circle me-3"
+                />
+              )}
+              <span className="author_name">
+                {blog.author?.name || "Unknown Author"}
+              </span>
             </div>
 
-            <Link
-              href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c"
-              key={index}
-            >
+            
+            <Link href={`/blog/${blog.postSlug}`}>
               <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
             </Link>
 
-            <p className="mb-2 title-description">{blog.subtitle}</p>
+            
+            <p className="mb-2 title-description">{blog.metaDescription}</p>
 
-            <div className="d-flex align-items-center gap-3 small">
+           
+            <div className="d-flex align-items-center gap-3 small flex-wrap">
               <span className="d-flex align-items-center gap-1 blog-date">
-                <Calendar size={14} className="me-1" /> {blog.date}
+                <Calendar size={14} className="me-1" />
+                {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                })}
               </span>
 
+              {blog.BlogCategory && (
+                <span className="badge bg-light text-dark border rounded-pill px-2">
+                  {blog.BlogCategory.name}
+                </span>
+              )}
+
               <span className="d-flex align-items-center gap-1">
-                <MessageCircle size={14} /> {blog.comments}
+                <MessageCircle size={14} />
+                {blog.Comment?.length || 0}
               </span>
             </div>
           </div>

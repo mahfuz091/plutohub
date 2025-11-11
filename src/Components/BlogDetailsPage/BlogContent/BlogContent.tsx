@@ -20,11 +20,14 @@ interface BlogContentProps {
     author: { id: string; name: string; email: string; profileImage: string };
     BlogCategory: { id: string; name: string };
     Comment: { id: string }[];
+    metaDescription:string;
   };
 }
 
 const BlogContent = ({ post }: BlogContentProps) => {
   const initialState = { success: false, msg: "" };
+
+  console.log(post,'uuuuu')
 
   const [state, fromAction, isLoading] = useActionState(
     createComment,
@@ -179,7 +182,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
         <h1 className="blog-title">{post.title}</h1>
 
-        <p className="blog-explain-text-1 white">{post.shortDesc}</p>
+        <p className="blog-explain-text-1 white">{post.metaDescription}</p>
 
         <div className="blog-author-meta">
           <div className="blog-author-meta-gap">
