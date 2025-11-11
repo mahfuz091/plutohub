@@ -8,6 +8,7 @@ import {
   Star,
   Eye,
   MessageCircle,
+  Calendar,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -31,7 +32,8 @@ const blogs: BlogItem[] = [
     date: "Jun 14",
     views: 22000,
     comments: 861,
-    thumbnail: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
+    thumbnail:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
   },
   {
     authorName: "Saurav Mandal",
@@ -41,9 +43,10 @@ const blogs: BlogItem[] = [
     date: "Jun 14",
     views: 22000,
     comments: 861,
-    thumbnail: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
+    thumbnail:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500",
   },
-  
+
   {
     authorName: "Aisha Rahman",
     authorAvatar: "https://i.pravatar.cc/32?img=3",
@@ -52,7 +55,8 @@ const blogs: BlogItem[] = [
     date: "Jul 8",
     views: 15300,
     comments: 674,
-    thumbnail: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500",
+    thumbnail:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500",
   },
   {
     authorName: "David Chen",
@@ -62,72 +66,89 @@ const blogs: BlogItem[] = [
     date: "Aug 3",
     views: 9100,
     comments: 432,
-    thumbnail: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
+    thumbnail:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
   },
   {
-    authorName: "Nadia Hasan",
-    authorAvatar: "https://i.pravatar.cc/32?img=5",
-    title: "Minimalism Isn’t About Having Less, It’s About Making Room for More",
-    subtitle: "Learn how to live intentionally and create space for what matters.",
-    date: "Sep 1",
-    views: 12500,
-    comments: 589,
-    thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500",
+    authorName: "David Chen",
+    authorAvatar: "https://i.pravatar.cc/32?img=4",
+    title: "Why Developers Should Write More, Not Less",
+    subtitle: "Writing helps you think clearly — here’s why.",
+    date: "Aug 3",
+    views: 9100,
+    comments: 432,
+    thumbnail:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
+  },
+  {
+    authorName: "David Chen",
+    authorAvatar: "https://i.pravatar.cc/32?img=4",
+    title: "Why Developers Should Write More, Not Less",
+    subtitle: "Writing helps you think clearly — here’s why.",
+    date: "Aug 3",
+    views: 9100,
+    comments: 432,
+    thumbnail:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500",
   },
 ];
 
 const NewBlogItem: React.FC = () => {
   return (
-    <div className="container ">
+    <div className=" ">
       {blogs.map((blog, index) => (
-        <Link href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c" key={index}>
         <div
           key={index}
           className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"
         >
-         
-          <div className="flex-grow-1 me-3">
           
+          <Link
+            href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c"
+            key={index}
+            className="order-1 order-md-2 "
+          >
+            <div className="  blog-thumbnail">
+              <img
+                src={blog.thumbnail}
+                alt={blog.title}             
+                className="img-fluid rounded mb-2 thumbnail-img "
+              />
+            </div>
+          </Link>
+
+         
+          <div className="flex-grow-1 me-3 order-2 order-md-1">
             <div className="d-flex align-items-center mb-2">
               <Image
                 src={blog.authorAvatar}
                 alt={blog.authorName}
-                width={50}
-                height={50}
-                className="rounded-circle me-2"
+                width={30}
+                height={30}
+                className="rounded-circle me-3"
               />
-              <span className="author_name ">{blog.authorName}</span>
+              <span className="author_name">{blog.authorName}</span>
             </div>
 
-            
-            <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
-            <p className=" mb-2 title-description">{blog.subtitle}</p>
+            <Link
+              href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c"
+              key={index}
+            >
+              <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
+            </Link>
 
-    
-            <div className="d-flex align-items-center gap-3  small">
-              <span className="d-flex align-items-center gap-1">
-                <Star size={14} /> {blog.date}
+            <p className="mb-2 title-description">{blog.subtitle}</p>
+
+            <div className="d-flex align-items-center gap-3 small">
+              <span className="d-flex align-items-center gap-1 blog-date">
+                <Calendar size={14} className="me-1" /> {blog.date}
               </span>
-             
+
               <span className="d-flex align-items-center gap-1">
                 <MessageCircle size={14} /> {blog.comments}
               </span>
             </div>
           </div>
-
-          
-          <div className="">
-            <Image
-              src={blog.thumbnail}
-              alt={blog.title}
-              width={220}
-              height={120}
-              className="rounded mb-2"
-            />
-            
-          </div>
         </div>
-        </Link>
       ))}
     </div>
   );

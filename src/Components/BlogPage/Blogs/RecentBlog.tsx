@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Calendar, Star } from "lucide-react";
 import Link from "next/link";
 
 interface BlogItem {
@@ -52,7 +52,7 @@ const blogs: BlogItem[] = [
 const RecentBlog = () => {
   return (
     <div className=" ">
-      <h5 className="mb-4 white">Staff Picks</h5>
+      <h5 className="mb-2 mb-md-4 white ">Recent Blogs</h5>
       <div className=" ">
         {blogs.map((blog, index) => (
           <div key={index} className="   recent-blog-card-new  mb-3">
@@ -71,8 +71,8 @@ const RecentBlog = () => {
               <Link href="/blog/11-modern-responsive-web-page-design-tips-for-2025#_hySmvQ39c"><h5 className="mb-1 mt-3 title-blog">{blog.title}</h5></Link>
 
               <div className="d-flex align-items-center gap-3  small">
-                <span className="d-flex align-items-center gap-1">
-                  <Star size={14} /> {blog.date}
+                <span className="d-flex align-items-center gap-1 blog-date">
+                  <Calendar size={14} className="me-1" /> {blog.date}
                 </span>
               </div>
             </div>

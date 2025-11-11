@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { CircleMinus, CirclePlus, Facebook, Linkedin, Instagram } from "lucide-react";
+import { CircleMinus, CirclePlus, Facebook, Linkedin, Instagram, CircleCheckBig } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 
 interface TOCProps {
@@ -53,9 +53,9 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
             <li key={header.index} className={`toc-level-${header.data.level} mb-1`}>
               <a
                 href={`#${header.id}`}
-                className="text-blue-400 hover:underline nav-pills-custom"
+                className="text-blue-400 hover:underline nav-pills-custom d-flex gap-2 "
               >
-                {header.data.text}
+               <span><CircleCheckBig height={16} /></span> {header.data.text}
               </a>
             </li>
           ))}

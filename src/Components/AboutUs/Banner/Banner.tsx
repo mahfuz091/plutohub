@@ -115,7 +115,7 @@ const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
             <Image
               src="/images/about-p.png"
               width={290}
-              height={355}
+              height={325}
               alt="screw"
             />
           </Col>
