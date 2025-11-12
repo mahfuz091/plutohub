@@ -11,7 +11,7 @@ interface ShareButtonsProps {
 const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
   const [shareUrl, setShareUrl] = useState("");
 
-  // dynamically set blog URL
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       const url = `${window.location.origin}/blog/${postSlug}`;
@@ -22,8 +22,8 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
   if (!shareUrl) return null;
 
   return (
-    <div className="flex gap-4 items-center mt-4">
-      {/* ✅ Facebook */}
+    <div className="flex gap-2 items-center  social-links">
+      
       <a
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
           shareUrl
@@ -36,7 +36,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         <Facebook size={22} />
       </a>
 
-      {/* ✅ X (Twitter) */}
+     
       <a
         href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
           shareUrl
@@ -49,7 +49,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         <FaXTwitter size={22} />
       </a>
 
-      {/* ✅ LinkedIn */}
+     
       <a
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
           shareUrl
@@ -62,7 +62,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         <Linkedin size={22} />
       </a>
 
-      {/* ⚠️ Instagram - open profile only */}
+      
       <a
         href="https://www.instagram.com/"
         target="_blank"
