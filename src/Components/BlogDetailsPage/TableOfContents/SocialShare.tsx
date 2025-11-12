@@ -31,7 +31,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on Facebook"
-        className="hover:text-blue-500 transition"
+        className="hover:text-white transition"
       >
         <Facebook size={22} />
       </a>
@@ -44,7 +44,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on X"
-        className="hover:text-sky-400 transition"
+        className=" transition"
       >
         <FaXTwitter size={22} />
       </a>
@@ -57,7 +57,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on LinkedIn"
-        className="hover:text-blue-400 transition"
+        className=" transition"
       >
         <Linkedin size={22} />
       </a>
@@ -68,7 +68,7 @@ const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="hover:text-pink-500 transition"
+        className=" transition"
       >
         <Instagram size={22} />
       </a>
