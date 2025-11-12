@@ -1,7 +1,7 @@
 "use client";
-
 import { useState, useRef, useEffect } from "react";
-import { CircleMinus, CirclePlus, CircleCheckBig } from "lucide-react";
+import { CircleMinus, CirclePlus, Facebook, Linkedin, Instagram, CircleCheckBig } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import ShareButtons from "./SocialShare";
 
 interface TOCProps {
@@ -18,6 +18,7 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
     .map((block, index) => ({ ...block, index }))
     .filter((block) => block.type === "header" && block.data.level === 2);
 
+  
   useEffect(() => {
     if (contentRef.current) {
       setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : "0px");
@@ -25,8 +26,9 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
   }, [isOpen, headers.length]);
 
   return (
-    <div className="table-of-content-main text-white">
-      <div className="table-of-content mb-6">
+    <div className="table-of-content-main">
+      
+      <div className="table-of-content">
         <h5
           className="d-flex justify-content-between align-items-center toc-header"
           onClick={() => setIsOpen(!isOpen)}
@@ -38,28 +40,30 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
           </span>
         </h5>
 
+        
         <ul
           ref={contentRef}
           className="toc-list mt-2"
           style={{
-            height,
+            height: height,
             overflow: "hidden",
             transition: "height 0.4s ease",
           }}
         >
           {headers.map((header) => (
-            <li key={header.index} className="mb-1">
+            <li key={header.index} className={`toc-level-${header.data.level} mb-1`}>
               <a
                 href={`#${header.id}`}
-                className="text-blue-400 hover:underline nav-pills-custom d-flex gap-2"
+                className="text-blue-400 hover:underline nav-pills-custom d-flex gap-2 "
               >
-                <CircleCheckBig height={16} /> {header.data.text}
+               <span><CircleCheckBig height={16} /></span> {header.data.text}
               </a>
             </li>
           ))}
         </ul>
       </div>
 
+    
       <ShareButtons postSlug={postSlug} />
     </div>
   );
