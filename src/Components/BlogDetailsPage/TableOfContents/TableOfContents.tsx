@@ -1,7 +1,12 @@
 "use client";
+
 import { useState, useRef, useEffect } from "react";
-import { CircleMinus, CirclePlus, Facebook, Linkedin, Instagram, CircleCheckBig } from "lucide-react";
-import { FaXTwitter } from "react-icons/fa6";
+import {
+  CircleMinus,
+  CirclePlus,
+  CircleCheckBig,
+} from "lucide-react";
+import ShareButtons from "./SocialShare";
 
 interface TOCProps {
   blocks: any[];
@@ -13,11 +18,12 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
   const contentRef = useRef<HTMLUListElement>(null);
   const [height, setHeight] = useState("0px");
 
+  // extract all headers (level 2)
   const headers = blocks
     .map((block, index) => ({ ...block, index }))
     .filter((block) => block.type === "header" && block.data.level === 2);
 
-  // Measure height of content for smooth animation
+  // smooth collapse animation
   useEffect(() => {
     if (contentRef.current) {
       setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : "0px");
@@ -25,9 +31,9 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
   }, [isOpen, headers.length]);
 
   return (
-    <div className="table-of-content-main">
-      {/* TOC Box */}
-      <div className="table-of-content">
+    <div className="table-of-content-main text-white">
+      {/* Table of Contents */}
+      <div className="table-of-content mb-6">
         <h5
           className="d-flex justify-content-between align-items-center toc-header"
           onClick={() => setIsOpen(!isOpen)}
@@ -44,39 +50,26 @@ const TableOfContents = ({ blocks, postSlug }: TOCProps) => {
           ref={contentRef}
           className="toc-list mt-2"
           style={{
-            height: height,
+            height,
             overflow: "hidden",
             transition: "height 0.4s ease",
           }}
         >
           {headers.map((header) => (
-            <li key={header.index} className={`toc-level-${header.data.level} mb-1`}>
+            <li key={header.index} className="mb-1">
               <a
                 href={`#${header.id}`}
-                className="text-blue-400 hover:underline nav-pills-custom d-flex gap-2 "
+                className="text-blue-400 hover:underline nav-pills-custom d-flex gap-2"
               >
-               <span><CircleCheckBig height={16} /></span> {header.data.text}
+                <CircleCheckBig height={16} /> {header.data.text}
               </a>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Social Links */}
-      <div className="social-links">
-        <a href="https://www.facebook.com/p/PlutoHub-61569889000814/" target="_blank">
-          <Facebook color="white" />
-        </a>
-        <a href="https://www.instagram.com/plutohub.agency/" target="_blank">
-          <Instagram color="white" />
-        </a>
-        <a href="https://www.linkedin.com/company/105067253" target="_blank">
-          <Linkedin color="white" />
-        </a>
-        <a href="https://x.com/PlutohubAgency" target="_blank">
-          <FaXTwitter color="white" size={22} />
-        </a>
-      </div>
+      {/* ✅ Social Share Buttons */}
+      <ShareButtons postSlug={postSlug} />
     </div>
   );
 };

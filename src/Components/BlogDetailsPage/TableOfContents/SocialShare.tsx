@@ -1,64 +1,79 @@
 "use client";
 
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 
-const SocialShare = () => {
-  // Open popup window
-  const socialWindow = (url: string) => {
-    const left = (window.screen.width - 570) / 2;
-    const top = (window.screen.height - 570) / 2;
-    const params = `menubar=no,toolbar=no,status=no,width=570,height=570,top=${top},left=${left}`;
-    window.open(url, "ShareWindow", params);
-  };
+interface ShareButtonsProps {
+  postSlug: string;
+}
 
-  // Handle click
-  const handleShare = (platform: string) => {
-    const pageUrl = encodeURIComponent(window.location.href);
+const ShareButtons = ({ postSlug }: ShareButtonsProps) => {
+  const [shareUrl, setShareUrl] = useState("");
 
-    // Try to get OG description, fallback to empty
-    const text = encodeURIComponent(
-      document.querySelector("meta[property='og:description']")?.getAttribute("content") || ""
-    );
-
-    let shareUrl = "";
-
-    switch (platform) {
-      case "facebook":
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-        break;
-      case "twitter":
-        shareUrl = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${text}`;
-        break;
-      case "linkedin":
-        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}`;
-        break;
-      case "x":
-        shareUrl = `https://x.com/intent/tweet?url=${pageUrl}&text=${text}`;
-        break;
-      default:
-        return;
+  // dynamically set blog URL
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const url = `${window.location.origin}/blog/${postSlug}`;
+      setShareUrl(url);
     }
+  }, [postSlug]);
 
-    socialWindow(shareUrl);
-  };
+  if (!shareUrl) return null;
 
   return (
-    <div className="social-links flex gap-4">
-      <button onClick={() => handleShare("facebook")}>
-        <Facebook color="white" size={22} />
-      </button>
-      <button onClick={() => handleShare("twitter")}>
-        <Twitter color="white" size={22} />
-      </button>
-      <button onClick={() => handleShare("linkedin")}>
-        <Linkedin color="white" size={22} />
-      </button>
-      <button onClick={() => handleShare("x")}>
-        <FaXTwitter color="white" size={22} />
-      </button>
+    <div className="flex gap-4 items-center mt-4">
+      {/* ✅ Facebook */}
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          shareUrl
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on Facebook"
+        className="hover:text-blue-500 transition"
+      >
+        <Facebook size={22} />
+      </a>
+
+      {/* ✅ X (Twitter) */}
+      <a
+        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+          shareUrl
+        )}&text=${encodeURIComponent("Check out this article!")}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on X"
+        className="hover:text-sky-400 transition"
+      >
+        <FaXTwitter size={22} />
+      </a>
+
+      {/* ✅ LinkedIn */}
+      <a
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+          shareUrl
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on LinkedIn"
+        className="hover:text-blue-400 transition"
+      >
+        <Linkedin size={22} />
+      </a>
+
+      {/* ⚠️ Instagram - open profile only */}
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        className="hover:text-pink-500 transition"
+      >
+        <Instagram size={22} />
+      </a>
     </div>
   );
 };
 
-export default SocialShare;
+export default ShareButtons;

@@ -188,7 +188,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
         return null;
     }
   };
-  // console.log(post.Comment);
+
   const getDaysAgo = (date: string) => {
     const diffMs = new Date().getTime() - new Date(date).getTime();
     const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
@@ -360,7 +360,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
             <div className="">
               {post?.Comment && post.Comment.length > 0 && (
-                <div className="comments-list mt-5">
+                <div className="comments-list mt-2 mt-md-5">
                   <h4 className="reply-title mb-4">
                     {post.Comment.length}{" "}
                     {post.Comment.length > 1 ? "Comments" : "Comment"}
@@ -387,10 +387,10 @@ const BlogContent = ({ post }: BlogContentProps) => {
                       {/* Comment Body */}
                       <div className="comment-body">
                         <h6 className="mb-1 text-white">{comment.name}</h6>
-                        <small className=" d-block mb-2 text-white">
+                        <small className=" d-block mb-1 text-white">
                           {getDaysAgo(comment.createdAt)}
                         </small>
-                        <p className="text-light mb-0">{comment.content}</p>
+                        <p className="gray mb-0">{comment.content}</p>
                       </div>
                     </div>
                   ))}

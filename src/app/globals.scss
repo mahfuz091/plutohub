@@ -253,7 +253,6 @@ span.animated-dominate {
   }
 }
 
-
 .theme_btn-3 {
   font-size: 16px;
   font-weight: 600;
@@ -1214,7 +1213,6 @@ footer {
 .social-links {
   display: flex;
   gap: 10px;
-  
 }
 
 .social-links a svg {
@@ -2370,8 +2368,6 @@ input::placeholder,
 textarea::placeholder {
   color: #999999;
 }
-
-
 
 input:focus,
 textarea:focus {
@@ -3723,7 +3719,7 @@ section.team {
   margin-bottom: 20px;
   font-weight: 500;
   width: 100%;
-  z-index:5;
+  z-index: 5;
 }
 
 .breadcrumb ol {
@@ -3989,7 +3985,7 @@ section.team {
 
 .filter button {
   padding: 6px 20px;
-  
+
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.13);
@@ -4009,12 +4005,10 @@ section.team {
 }
 @media (max-width: 765px) {
   .filter {
-    
     gap: 8px;
   }
 
   .filter button {
-    
     font-size: 14px;
     padding: 7px 12px;
   }
@@ -4100,9 +4094,9 @@ section.team {
 
 .blog-card-text span {
   display: inline-block;
-  padding: 4px 10px;
+  padding: 2px 10px;
   border-radius: 100px;
-  background: #4b6bfb;
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -4130,11 +4124,11 @@ section.team {
   margin-bottom: 120px;
 }
 
-@media (max-width:765px) {
- .blog-new {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
+@media (max-width: 765px) {
+  .blog-new {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .blog-card-link {
@@ -4176,7 +4170,7 @@ section.team {
   padding-left: 0;
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
 
 .toc-list li {
@@ -4201,9 +4195,10 @@ section.team {
   padding-left: 17px;
 }
 .toc-level-2 a {
-    padding-left: 0px;
-    font-size: 14px;
-    line-height: 1.7;
+  padding-left: 0px;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 700;
 }
 
 .toc-level-3 a {
@@ -4250,12 +4245,10 @@ section.team {
   display: inline-block;
   padding: 2px 10px !important;
   border-radius: 100px;
-
-  
-  background: rgba(255, 255, 255, 0.12); 
-  backdrop-filter: blur(10px); 
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   /* ✨ Text & Shadow */
   color: #ffffff;
@@ -4266,7 +4259,6 @@ section.team {
   margin-bottom: 16px;
   transition: all 0.3s ease;
 }
-
 
 .blog-explain {
   padding-top: 30px;
@@ -4282,12 +4274,12 @@ section.team {
 }
 
 .table-of-content {
-    padding: 20px 10px;
-    border-radius: 24px;
-    background: rgba(44, 44, 44, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+  padding: 20px 10px;
+  border-radius: 24px;
+  background: rgba(44, 44, 44, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .social-links {
@@ -4351,8 +4343,6 @@ section.team {
   background-color: #06d6a0;
 }
 
-
-
 .blog-explain p {
   color: #fff !important;
   padding-top: 20px;
@@ -4366,11 +4356,10 @@ section.team {
 }
 
 .blog-explain-text-1 {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 6px;
-  font-size: 20px;
+  font-size: 17px;
 }
-
 
 @media (max-width: 765px) {
   .responsive-text {
@@ -4378,8 +4367,10 @@ section.team {
     padding-bottom: 2px;
     font-size: 16px;
   }
+  .blog-explain-text-1 {
+    font-size: 14px;
+  }
 }
-
 
 .app-design {
   opacity: 1;
@@ -4522,6 +4513,14 @@ section.team {
     border-bottom: 2px solid #00513c;
   }
 }
+
+@media (max-width: 765px) {
+  .blog-comment {
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 7px;
+  }
+}
 .reply-title {
   font-weight: 600;
   font-size: 22px;
@@ -4560,38 +4559,33 @@ section.team {
     width: 269px;
     height: 191px;
     object-fit: contain;
-}
-
-
-.thumbnail-img {
- 
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-  .blog-thumbnail {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
   }
-}
 
+  .thumbnail-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
 
-
+  @media (max-width: 768px) {
+    .blog-thumbnail {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 
   .author_name {
     color: white;
     font-weight: 600;
-    font-size:16px;
+    font-size: 16px;
   }
 
   .title-blog {
     font-weight: 700;
     font-size: 25px;
-  
+
     color: white;
     line-height: 35px;
     max-width: 100%;
@@ -4609,26 +4603,17 @@ section.team {
     line-height: 25px;
   }
 
-  @media (max-width:765px) {
+  @media (max-width: 765px) {
     padding: 15px;
-    .title-blog{
+    .title-blog {
       font-size: 20px;
       line-height: 30px;
     }
-    .title-description{
+    .title-description {
       font-size: 15px;
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 .recent-blog-card-new {
   opacity: 1;
@@ -4638,7 +4623,7 @@ section.team {
   .author_name {
     color: white;
     font-weight: 700;
-    font-size:16px;
+    font-size: 16px;
   }
 
   .title-blog {
@@ -4659,21 +4644,20 @@ section.team {
     font-size: 15px;
   }
 
-  @media (max-width:765px) {
+  @media (max-width: 765px) {
     padding: 0px;
-    .title-blog{
+    .title-blog {
       font-size: 18px;
       line-height: 30px;
     }
-    .title-description{
+    .title-description {
       font-size: 15px;
     }
   }
- 
 }
- .blog-date{
-    font-size: 14px;
-  }
+.blog-date {
+  font-size: 14px;
+}
 @media (min-width: 768px) {
   .border-end-md {
     border-right: 1px solid #736e6e;
@@ -4844,7 +4828,6 @@ section.team {
 }
 
 .blog-paragraph {
-  margin: 0.5rem 0;
   color: #fff;
   line-height: 1.6;
   padding: 8px 0;
@@ -4893,9 +4876,9 @@ section.team {
 }
 
 .blog-image-thumbail {
-padding-top: 15px;
-padding-bottom: 10px;
-margin: 1rem 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 1rem 0;
 }
 
 .blog-image-thumbail img {
@@ -4964,13 +4947,50 @@ margin: 1rem 0;
   padding: 0.5rem;
 }
 
-.blogContent h2 {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 140%;
+.blogContent h1 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.4;
   padding-bottom: 0px;
 }
+.blogContent h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.6;
+  padding-bottom: 0px;
+}
+.blogContent h3 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.6;
+  padding-bottom: 0px;
+}
+@media (max-width: 992px) {
+  .blogContent h1 {
+    font-size: 30px;
+  }
+  .blogContent h2 {
+    font-size: 26px;
+  }
+  .blogContent h3 {
+    font-size: 22px;
+  }
+}
 
+@media (max-width: 600px) {
+  .blogContent h1 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .blogContent h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .blogContent h3 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
 .check-black {
   accent-color: black;
   width: 16px;
@@ -7150,10 +7170,9 @@ html {
 
 :root {
   --main: #04c28f;
-  --bg: #0d1117; 
+  --bg: #0d1117;
   --muted: #c0c0c0;
 }
-
 
 .pluto-loader-screen {
   position: fixed;
@@ -7194,17 +7213,33 @@ html {
   animation: floatParticle 2.5s ease-in-out infinite alternate;
 }
 
-.particle-1 { top: -15px; left: 0; animation-delay: 0s; }
-.particle-2 { top: 10px; right: -20px; animation-delay: 0.5s; }
-.particle-3 { bottom: -15px; left: 20px; animation-delay: 1s; }
-.particle-4 { top: -10px; right: 10px; animation-delay: 1.2s; }
+.particle-1 {
+  top: -15px;
+  left: 0;
+  animation-delay: 0s;
+}
+.particle-2 {
+  top: 10px;
+  right: -20px;
+  animation-delay: 0.5s;
+}
+.particle-3 {
+  bottom: -15px;
+  left: 20px;
+  animation-delay: 1s;
+}
+.particle-4 {
+  top: -10px;
+  right: 10px;
+  animation-delay: 1.2s;
+}
 
 /* progress bar */
 .pluto-progress-bar {
   width: 250px;
   height: 6px;
   border-radius: 100px;
-  background: rgba(4,194,143,0.15);
+  background: rgba(4, 194, 143, 0.15);
   margin-top: 40px;
   overflow: hidden;
 }
@@ -7214,9 +7249,8 @@ html {
   height: 100%;
   background: var(--main);
   border-radius: 100px;
-  animation: progressGrow 2.5s ease-in-out infinite;
+  animation: progressGrow 2.5s ease-in-out forwards;
 }
-
 
 .pluto-loader-text {
   margin-top: 16px;
@@ -7227,24 +7261,41 @@ html {
   letter-spacing: 0.5px;
 }
 
-
 @keyframes floatLogo {
-  0% { transform: translateY(15px); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes floatParticle {
-  0% { transform: translateY(0) scale(0.8); opacity: 0.6; }
-  50% { transform: translateY(-8px) scale(1); opacity: 1; }
-  100% { transform: translateY(-15px) scale(1.2); opacity: 0.6; }
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-8px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 0.6;
+  }
 }
 
 @keyframes progressGrow {
-  0% { width: 0%; }
-  50% { width: 70%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 95%;
+  }
 }
-
 
 .blogContentWrapper {
   color: #fff;
@@ -7253,30 +7304,38 @@ html {
 .comment-item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .comment-avatar {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   font-size: 18px;
   text-transform: uppercase;
   flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .comment-avatar img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .comment-body h6 {
   margin-bottom: 4px;
   font-weight: 600;
+  font-size: 17px;
 }
 
 .comment-body p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
+  color: #ccc;
 }
 
 .comments-list {
@@ -7286,5 +7345,50 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+@media (max-width: 992px) {
+  .comments-list {
+    padding: 20px;
+  }
+
+  .comment-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .comment-body h6 {
+    font-size: 16px;
+  }
+
+  .comment-body p {
+    font-size: 13.5px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .comments-list {
+    padding: 15px;
+  }
+
+  .comment-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .comment-avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .comment-body h6 {
+    font-size: 15px;
+  }
+
+  .comment-body p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
 
 

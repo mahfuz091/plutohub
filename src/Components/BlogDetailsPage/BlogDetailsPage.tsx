@@ -46,7 +46,7 @@ const BlogDetailsPage = ({
   allBlogs,
 }: BlogDetailsPageProps) => {
   return (
-    <div className='container py-4 blog-details'>
+    <div className='container  blog-details'>
       
       <div className='row'>
         <div className='col-xl-3 mb-4'>
@@ -54,6 +54,7 @@ const BlogDetailsPage = ({
             <TableOfContents
               blocks={post.content?.blocks || []}
               postSlug={post.postSlug}
+             
             />
           </div>
         </div>
