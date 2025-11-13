@@ -66,14 +66,14 @@ const IndustriesExpertise = () => {
         <div className="Industries-Expertise-heading mb-5">
           <Row>
             <Col xl={6}>
-              <h2>
+              <h2 className="text-start text-md-center">
                 Industries
                 
                 Expertise
               </h2>
             </Col>
             <Col xl={6}>
-              <p className="gray">
+              <p className="gray text-start text-md-center">
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and
                 E-Commerce. Our strategic, design-led approach helps brands
@@ -92,7 +92,7 @@ const IndustriesExpertise = () => {
                 alt={item.title}
                 height={420}
                 width={400}
-                className=" "
+                className=" slide-img"
               />
               <div className="industry-overlay position-absolute bottom-0   text-white py-3">
                 <h5 className="mb-0">{item.title}</h5>
@@ -101,7 +101,7 @@ const IndustriesExpertise = () => {
           ))}
         </Slider>
 
-        <div className="d-flex justify-content-end gap-3 nav-mt-arrow ">
+        <div className="d-flex justify-content-center justify-content-md-end gap-3 nav-mt-arrow ">
           <span
             className="nav-arrow"
             onClick={() => sliderRef.current?.slickPrev()}

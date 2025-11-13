@@ -10,12 +10,12 @@ const Number = () => {
         <div className="Industries-Expertise-heading ">
           <Row>
             <Col xl={6}>
-              <h2>
+              <h2 className="text-start">
                 Number  Don’t lie
               </h2>
             </Col>
             <Col xl={6}>
-              <p className="gray">
+              <p className="gray text-start">
                With a proven track record of building strong brands, Plutohub has empowered hundreds of businesses to enhance their identity, foster trust, and achieve lasting recognition in their respective industries.
               </p>
             </Col>

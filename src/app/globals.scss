@@ -6036,7 +6036,7 @@ html {
     padding: 0;
   }
   .logo-number {
-    padding-top: 0px;
+    padding-top: 60px;
     padding-bottom: 0px;
   }
 }
@@ -6247,7 +6247,8 @@ html {
 }
 @media (max-width: 768px) {
   .process-title {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 7px;
   }
 }
 .process-description {
@@ -6447,6 +6448,7 @@ html {
   .benefits .benefits-header p {
     font-size: 14px;
     padding-bottom: 20px;
+    margin-top:-12px;
   }
 
   .benefits .process-card {
@@ -7402,4 +7404,48 @@ html {
   .mobile-top {
     margin-top: -50px;
   }
+}
+
+
+@media (max-width:765px){
+  .slick-slide img {
+    height: auto;
+  }
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 1px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+  background-color: #00b67a;
+  color: #fff;
+  border-color: #00b67a;
+  opacity: 0.9;
+}
+
+.pagination-active-btn {
+  background-color: #00b67a;
+  color: #fff;
+  border-color: #00b67a;
+}
+
+.pagination-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

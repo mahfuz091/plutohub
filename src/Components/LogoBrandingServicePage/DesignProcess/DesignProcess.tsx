@@ -100,7 +100,7 @@ const DesignProcess = () => {
               />
       <Container>
         
-        <Row className="align-items-center mb-5">
+        <Row className="align-items-center mb-3 mb-md-5">
           <Col xl={7}>
             <h5 className="text-left web-title">
               Our Strategic Branding & <br /> Identity Design Process
@@ -118,7 +118,7 @@ const DesignProcess = () => {
         </Row>
 
         
-        <div className="process-tabs d-flex gap-1 mb-4  justify-content-between flex-wrap">
+        <div className="process-tabs d-flex gap-2 mb-4   flex-wrap">
 
           {processData.map((item, index) => (
             <button
@@ -149,7 +149,7 @@ const DesignProcess = () => {
                     className="rounded-3"
                   />
                 </div>
-                <div className="process-content mt-4">
+                <div className="process-content mt-2 mt-md-4">
                   <p className="process-step white">{item.step}</p>
                   <h3 className="process-title">{item.title}</h3>
                   <p className="process-description gray">{item.description}</p>

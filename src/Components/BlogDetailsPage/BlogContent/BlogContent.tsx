@@ -1,13 +1,12 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { CalendarDays, MessageCircleMore, CircleCheckBig } from "lucide-react";
 import Image from "next/image";
-import { Tab } from "react-bootstrap";
 import Buttons from "../../Banner/Buttons";
-
-import { useActionState, useEffect } from "react";
 import { createComment } from "../../../app/actions/blog/blog.actions";
 import { toast } from "sonner";
+import { useActionState } from "react";
 
 interface BlogContentProps {
   post: {
@@ -41,24 +40,26 @@ interface BlogContentProps {
 
 const BlogContent = ({ post }: BlogContentProps) => {
   const initialState = { success: false, msg: "" };
-
-  console.log(post, "uuuuu");
-
   const [state, fromAction, isLoading] = useActionState(
     createComment,
     initialState
   );
 
+  const [visibleComments, setVisibleComments] = useState(5);
+
   useEffect(() => {
     if (state.msg) {
       if (state.success) {
-        toast.success(state?.msg);
+        toast.success(state.msg);
       } else {
-        toast.error(state?.msg);
+        toast.error(state.msg);
       }
     }
   }, [state]);
-  console.log(state);
+
+  const loadMoreComments = () => {
+    setVisibleComments((prev) => prev + 5);
+  };
 
   const renderItem = (item: any) => {
     if (typeof item === "string") return item;
@@ -74,7 +75,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
       case "header": {
         const HeaderTag: any = `h${block.data.level || 2}`;
         return (
-          <HeaderTag key={index} id={block?.id} className="blog-header ">
+          <HeaderTag key={index} id={block?.id} className="blog-header">
             {block.data.text}
           </HeaderTag>
         );
@@ -82,9 +83,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
       case "paragraph": {
         const text = block.data.text;
-
-        if (!text || text.replace(/<br\s*\/?>/gi, "").trim() === "")
-          return null;
+        if (!text || text.replace(/<br\s*\/?>/gi, "").trim() === "") return null;
 
         return (
           <p
@@ -97,7 +96,6 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
       case "list": {
         const items = block.data?.items || [];
-
         if (block.data.style === "ordered") {
           return (
             <ol key={index} className="blog-ol">
@@ -141,9 +139,6 @@ const BlogContent = ({ post }: BlogContentProps) => {
               src={block.data.file.url}
               alt={block.data.caption || "Blog Image"}
             />
-            {/* {block.data.caption && (
-              <p className='blog-caption'>{block.data.caption}</p>
-            )} */}
           </div>
         ) : null;
 
@@ -198,13 +193,12 @@ const BlogContent = ({ post }: BlogContentProps) => {
     const weeks = Math.floor(days / 7);
     return `${weeks} week${weeks > 1 ? "s" : ""} ago`;
   };
+
   return (
     <div className="blogContentWrapper">
       <div className="blogContent">
         <span className="blog-Category">{post.BlogCategory?.name}</span>
-
         <h1 className="blog-title">{post.title}</h1>
-
         <p className="blog-explain-text-1 white">{post.metaDescription}</p>
 
         <div className="blog-author-meta">
@@ -227,14 +221,6 @@ const BlogContent = ({ post }: BlogContentProps) => {
               day: "numeric",
             })}
           </span>
-
-          {/* <span className='blog-author-meta-gap'>
-            <MessageCircleMore />
-
-            {post.Comment && post.Comment.length
-              ? post.Comment.length
-              : "No Comments"}
-          </span> */}
         </div>
 
         <div className="blog-explain blog-image-thumbail">
@@ -249,7 +235,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
           <h6>Mobile App Design</h6>
           <p className="gray">
             We Create Unique Digital Experiences For Global Brands By
-            Integrating AI, Innovative Design, And advanced Technology.
+            Integrating AI, Innovative Design, And Advanced Technology.
           </p>
           <ul className="white">
             <li>
@@ -267,6 +253,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
         <hr />
 
+      
         <div className="blog-comment-main">
           <div className="row gx-4 gy-3 align-items-center">
             <div className="col-12 col-md-auto text-center text-md-start">
@@ -275,7 +262,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
                 height={150}
                 width={150}
                 alt="Author"
-                className=" rounded-circle"
+                className="rounded-circle"
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -358,6 +345,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
               </div>
             </div>
 
+           
             <div className="">
               {post?.Comment && post.Comment.length > 0 && (
                 <div className="comments-list mt-2 mt-md-5">
@@ -366,34 +354,47 @@ const BlogContent = ({ post }: BlogContentProps) => {
                     {post.Comment.length > 1 ? "Comments" : "Comment"}
                   </h4>
 
-                  {[...post.Comment].reverse().map((comment) => (
-                    <div
-                      key={comment.id}
-                      className="comment-item d-flex gap-3 align-items-start mb-4"
-                    >
-                      {/* Avatar or Initial */}
-                      <div className="comment-avatar rounded-circle bg-secondary d-flex justify-content-center align-items-center text-white fw-bold">
-                        {comment.profileImage ? (
-                          <img
-                            src={comment.profileImage}
-                            alt={comment.name}
-                            className="rounded-circle"
-                          />
-                        ) : (
-                          comment.name.charAt(0).toUpperCase()
-                        )}
-                      </div>
+                  {[...post.Comment]
+                    .reverse()
+                    .slice(0, visibleComments)
+                    .map((comment) => (
+                      <div
+                        key={comment.id}
+                        className="comment-item d-flex gap-3 align-items-start mb-4"
+                      >
+                        <div className="comment-avatar rounded-circle bg-secondary d-flex justify-content-center align-items-center text-white fw-bold">
+                          {comment.profileImage ? (
+                            <img
+                              src={comment.profileImage}
+                              alt={comment.name}
+                              className="rounded-circle"
+                            />
+                          ) : (
+                            comment.name.charAt(0).toUpperCase()
+                          )}
+                        </div>
 
-                      {/* Comment Body */}
-                      <div className="comment-body">
-                        <h6 className="mb-1 text-white">{comment.name}</h6>
-                        <small className=" d-block mb-1 text-white">
-                          {getDaysAgo(comment.createdAt)}
-                        </small>
-                        <p className="gray mb-0">{comment.content}</p>
+                        <div className="comment-body">
+                          <h6 className="mb-1 text-white">{comment.name}</h6>
+                          <small className="d-block mb-1 text-white">
+                            {getDaysAgo(comment.createdAt)}
+                          </small>
+                          <p className="gray mb-0">{comment.content}</p>
+                        </div>
                       </div>
+                    ))}
+
+                  
+                  {visibleComments < post.Comment.length && (
+                    <div className="text-center mt-4">
+                      <button
+                        onClick={loadMoreComments}
+                        className="theme_btn-3 d-inline-flex align-items-center justify-content-center px-4 py-2"
+                      >
+                        Load More Comments
+                      </button>
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
             </div>
