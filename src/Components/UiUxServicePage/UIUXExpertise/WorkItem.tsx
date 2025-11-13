@@ -79,7 +79,7 @@ const WorkItem = () => {
             className="project_item"
           >
             <div className="pr_image">
-              <Image src={item.img} alt={item.title} height={330} width={333} />
+              <Image src={item.img} alt={item.title} height={350} width={333} />
             </div>
             <div className="pr_content-web">
               <h3 className="ph-text">{item.title}</h3>

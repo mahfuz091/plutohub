@@ -74,7 +74,7 @@ const Services = () => {
           height={500}
           className="ellipse ellipse-top-mid"
         />
-        <div className="uiux-services-header text-center">
+        <div className="uiux-services-header text-start text-md-center">
           <h6>Our Services</h6>
           <h2>Our Core UI/UX Services at Plutohub</h2>
         </div>

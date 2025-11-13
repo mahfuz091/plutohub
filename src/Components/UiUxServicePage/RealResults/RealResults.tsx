@@ -46,7 +46,7 @@ const features = [
 ];
 
 const RealResults = () => {
-    const settings = {
+  const settings = {
     dots: false,
     infinite: false,
     speed: 500,
@@ -74,7 +74,7 @@ const RealResults = () => {
 
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-   const handleTabClick = (index) => {
+  const handleTabClick = (index) => {
     setCurrentSlide(index);
     sliderRef.current?.slickGoTo(index);
 
@@ -87,67 +87,71 @@ const RealResults = () => {
 
   return (
     <div className="result-uiux">
-
       <Image
-                          src="/images/idu.png"
-                          alt="yellow ellipse"
-                          width={1200}
-                          height={800}
-                          className=" ellipse-benefits"
-                        />
-                        <Image src="/images/LogoBranding/benefits-vector.png"
-                          alt="yellow ellipse"
-                          width={390}
-                          height={403}
-                          className=" ellipse-benefits-vector"
-                        />
-                        <Image src="/images/contact-vector.png"
-                          alt="yellow ellipse"
-                          width={390}
-                          height={403}
-                          className="ellipse-benefits-vector-2"
-                        />
-
-        <Container>
-          <div className="uiux-result-header text-center">
-
-            <h2>How Our UX/UI Design Services Drive Real Results?</h2>
-            <p className="gray">Our UX/UI design services combine strategy, creativity, and data to deliver real business outcomes. We craft user-centric interfaces that boost engagement, improve usability, and drive higher conversions across digital platforms.</p>
-
-          </div>
-
- <Slider {...settings} ref={sliderRef}>
-      {features.map((feature) => (
-        <div
-          key={feature.id}
-          className="result-card"
-        >
-          <div className="">
-            <Image src={feature.img} alt={feature.title} width={80} height={80} />
-          </div>
-          <h3 className="">{feature.title}</h3>
-          <p className="gray">{feature.desc}</p>
-          <ul className="list-unstyled white">
-  {feature.list.map((item, idx) => (
-    <li key={idx} className="d-flex align-items-center mb-2 list">
-      <img
-        src="/images/UiUx-Service/right.svg"
-        alt="check"
-        width={24}
-        height={24}
-        className="me-2" 
+        src="/images/idu.png"
+        alt="yellow ellipse"
+        width={1200}
+        height={800}
+        className=" ellipse-benefits"
       />
-      <span className="">{item}</span>
-    </li>
-  ))}
-</ul>
+      <Image
+        src="/images/LogoBranding/benefits-vector.png"
+        alt="yellow ellipse"
+        width={390}
+        height={403}
+        className=" ellipse-benefits-vector"
+      />
+      <Image
+        src="/images/contact-vector.png"
+        alt="yellow ellipse"
+        width={390}
+        height={403}
+        className="ellipse-benefits-vector-2"
+      />
 
+      <Container>
+        <div className="uiux-result-header text-start text-md-center">
+          <h2 className="text-start text-md-center">How Our UX/UI Design Services Drive Real Results?</h2>
+          <p className="gray">
+            Our UX/UI design services combine strategy, creativity, and data to
+            deliver real business outcomes. We craft user-centric interfaces
+            that boost engagement, improve usability, and drive higher
+            conversions across digital platforms.
+          </p>
         </div>
-      ))}
-   
-</Slider>
 
-       <div className="d-flex justify-content-end justify-content-md-end justify-content-center gap-3 nav-mt-arrow ">
+        <Slider {...settings} ref={sliderRef}>
+          {features.map((feature) => (
+            <div key={feature.id} className="result-card">
+              <div className="">
+                <Image
+                  src={feature.img}
+                  alt={feature.title}
+                  width={80}
+                  height={80}
+                />
+              </div>
+              <h3 className="">{feature.title}</h3>
+              <p className="gray">{feature.desc}</p>
+              <ul className="list-unstyled white">
+                {feature.list.map((item, idx) => (
+                  <li key={idx} className="d-flex align-items-center mb-2 list">
+                    <img
+                      src="/images/UiUx-Service/right.svg"
+                      alt="check"
+                      width={24}
+                      height={24}
+                      className="me-2"
+                    />
+                    <span className="">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </Slider>
+
+        <div className="d-flex justify-content-end justify-content-md-end justify-content-center gap-3 nav-mt-arrow mobile-top">
           <span
             className="nav-arrow"
             onClick={() => sliderRef.current?.slickPrev()}
@@ -161,13 +165,8 @@ const RealResults = () => {
             <MoveRight size={24} />
           </span>
         </div>
-
-
-
-    </Container>
-
+      </Container>
     </div>
-    
   );
 };
 
