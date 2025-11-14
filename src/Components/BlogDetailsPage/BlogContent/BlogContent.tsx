@@ -320,7 +320,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
                   <div className="submit-btn">
                     <button
                       type="submit"
-                      className="theme_btn-3 d-flex align-items-center justify-content-center"
+                      className="theme_btn-3 d-inline-flex align-items-center justify-content-center px-4 py-2"
                       disabled={isLoading}
                       style={{
                         opacity: isLoading ? 0.7 : 1,

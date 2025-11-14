@@ -4064,6 +4064,12 @@ section.team {
 .blog-card-main {
   padding-top: 40px;
 }
+@media (max-width:765px) {
+  .blog-card-main{
+   padding-top: 20px;
+  }
+  
+}
 .blog-card {
   padding: 0;
   height: 470px;
@@ -4867,6 +4873,9 @@ section.team {
   .blogContent h2 {
     font-size: 25px;
   }
+  .related-blogs{
+    padding:45px 0;
+  }
 }
 
 .blog-header {
@@ -4937,7 +4946,7 @@ section.team {
 }
 
 .blog-image-thumbail img {
-  max-height: 600px;
+  max-height: 450px;
   width: 100%;
   height: auto;
   border-radius: 6px;
