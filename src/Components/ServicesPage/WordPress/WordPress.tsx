@@ -33,10 +33,10 @@ const WordPress = () => {
           </Col>
 
           <Col xl={6} className="order-1 text-start order-xl-2 text-center text-xl-start">
-            <h2 className="service-title">
+            <h2 className="service-title text-start text-md-center">
               WordPress Website  Design
             </h2>
-            <p className="service-description gray gray">
+            <p className="service-description gray gray text-start text-md-center">
               Combining creativity with WordPress's flexibility, we design and
               build sites that are easy to manage, visually engaging, and
               optimized for performance.

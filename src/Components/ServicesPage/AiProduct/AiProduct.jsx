@@ -12,7 +12,7 @@ const AiProduct = () => {
     "Usability Testing & Iteration",
   ];
   return (
-    <div className="ux-design AI-Product">
+    <div className="ux-design AI-Product ai-product-p">
       <Image
         src="/images/yellow.png"
         alt="yellow ellipse"

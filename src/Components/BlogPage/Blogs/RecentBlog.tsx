@@ -41,12 +41,12 @@ const RecentBlog: React.FC<RecentBlogProps> = ({ recentBlogs }) => {
     .slice(0, 4);
   return (
     <div className=" ">
-      <h5 className="mb-2 mb-md-4 white ">Recent Blogs</h5>
+      <h5 className="mb-4 mb-md-4 white mt-4 mt-md-0 ">Recent Blogs</h5>
       <div className=" ">
         {latestBlogs.map((blog) => (
           <div key={blog.id} className="   recent-blog-card-new  mb-3">
-            <div className="flex-grow-1 me-3">
-              <div className="d-flex align-items-center mb-2">
+            <div className="flex-grow-1 me-3 mt-4">
+              <div className="d-flex align-items-center mb-1 mb-md-2">
                 <Image
                   src={blog.author.profileImage}
                   alt={blog.author.name}
@@ -61,10 +61,10 @@ const RecentBlog: React.FC<RecentBlogProps> = ({ recentBlogs }) => {
               </div>
 
               <Link href={`/blog/${blog.postSlug}`}>
-                <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
+                <h5 className="my-1   title-blog">{blog.title}</h5>
               </Link>
 
-              <div className="d-flex align-items-center gap-3  small">
+              <div className="d-flex align-items-center gap-3  small mt-2 mt-md-0">
                 <span className="d-flex align-items-center gap-1 blog-date">
                   <Calendar size={14} className="me-1" />
                   {new Date(blog.createdAt).toLocaleDateString("en-US", {

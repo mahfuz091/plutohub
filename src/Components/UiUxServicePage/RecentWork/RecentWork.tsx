@@ -14,7 +14,7 @@ const industries = [
 
 const RecentWork = () => {
   return (
-    <div className="  recent-work-uiux">
+    <div className="  recent-work-uiux mb-5 mb-md-0">
       <Image
         src="/images/yellow.png"
         alt="yellow ellipse"
@@ -25,7 +25,7 @@ const RecentWork = () => {
       <Container>
         <Row>
           <Col md={4}>
-            <div className="industries-content  mb-5">
+            <div className="industries-content  mb-4 mb-md-5">
               <h2 className="web-title">
                 Our Recent UI/UX <br /> Design Works
               </h2>

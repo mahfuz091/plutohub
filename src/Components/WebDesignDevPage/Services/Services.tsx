@@ -49,7 +49,7 @@ const Services: React.FC = () => {
         });
       });
 
-    // Reveal animation
+   
     if (aboutShapeRef.current && aboutRef.current) {
       gsap.set(aboutShapeRef.current, { opacity: 0, y: 30, scale: 0.9 });
       gsap.to(aboutShapeRef.current, {
@@ -178,7 +178,7 @@ const Services: React.FC = () => {
           </Col>
         </Row>
 
-        <Slider {...sliderSettings} ref={sliderRef} className="mt-5">
+        <Slider {...sliderSettings} ref={sliderRef} className="mt-3 mt-md-5">
           {stats.map((item, index) => (
             <div key={index}>
               <CardService

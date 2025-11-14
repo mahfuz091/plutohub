@@ -15,8 +15,6 @@ const processData = [
       "We begin by understanding your goals, target audience, and competitors. This helps us shape a website strategy that's focused, goal-oriented, and user-centric.",
   },
 
-
-
   {
     id: 2,
     image: "/images/Market.png",
@@ -49,55 +47,52 @@ const processData = [
     description:
       "Next, we organize your content and plan the site structure. This ensures easy navigation and a seamless user experience.",
   },
-  
-  
 ];
 
 const DevelopmentProcess = () => {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
- const sliderSettings = {
-  dots: false,
-  arrows: false,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 1.5,
-  slidesToScroll: 1,
-  centerMode: true,               
-  centerPadding: "0px",           
-  focusOnSelect: false,
-  beforeChange: (_, next) => setCurrentSlide(next),
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 2,
-        centerMode: false,
+  const sliderSettings = {
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    focusOnSelect: false,
+    beforeChange: (_, next) => setCurrentSlide(next),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
       },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1.5,
-        centerMode: false,
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1.5,
+          centerMode: false,
+        },
       },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        centerMode: false,
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   const handleTabClick = (index) => {
     setCurrentSlide(index);
     sliderRef.current?.slickGoTo(index);
-    
+
     setTimeout(() => {
       document
         .querySelector(".design-process .slick-list")
@@ -107,16 +102,15 @@ const DevelopmentProcess = () => {
 
   return (
     <div className="design-process web-pro">
-        <Image
-                src="/images/idu.png"
-                alt="yellow ellipse"
-                width={1800}
-                height={1300}
-                className="ellipse-recentwork"
-              />
+      <Image
+        src="/images/idu.png"
+        alt="yellow ellipse"
+        width={1800}
+        height={1300}
+        className="ellipse-recentwork"
+      />
       <Container>
-        
-        <Row className="align-items-center mb-5">
+        <Row className="align-items-center mb-3 mb-md-5">
           <Col xl={7}>
             <h5 className="text-left web-title text-start">
               Our Strategic Branding & <br /> Identity Design Process
@@ -133,9 +127,7 @@ const DevelopmentProcess = () => {
           </Col>
         </Row>
 
-        
-        <div className="process-tabs d-flex flex-wrap gap-1 mb-4   g-4 xl:g-0">
-
+        <div className="process-tabs d-flex flex-wrap gap-1  mb-md-4   g-4 xl:g-0">
           {processData.map((item, index) => (
             <button
               key={item.id}
@@ -149,46 +141,40 @@ const DevelopmentProcess = () => {
           ))}
         </div>
 
-      
         <div className="pr-card">
-            <Slider {...sliderSettings} ref={sliderRef}>
-          {processData.map((item) => (
-            <div key={item.id}>
-              <div className="process-cards mx-auto">
-                <Row>
-                    <Col xl={6}><div className="process-image">
-                  <Image
-                    src={item.image}
-                    alt={item.image}
-                    width={800}
-                    height={300}
-
-                    layout="responsive"
-                   
-                    className="rounded-3"
-                  />
-                </div></Col>
+          <Slider {...sliderSettings} ref={sliderRef}>
+            {processData.map((item) => (
+              <div key={item.id}>
+                <div className="process-cards mx-auto">
+                  <Row>
                     <Col xl={6}>
-                    <div className="process-content mt-4">
-                  <p className="process-step">{item.step}</p>
-                  <h3 className="process-title">{item.title}</h3>
-                  <p className="process-description">{item.description}</p>
-                </div>
+                      <div className="process-image">
+                        <Image
+                          src={item.image}
+                          alt={item.image}
+                          width={800}
+                          height={300}
+                          layout="responsive"
+                          className="rounded-3"
+                        />
+                      </div>
                     </Col>
-                </Row>
-                
-                
+                    <Col xl={6}>
+                      <div className="process-content mt-4">
+                        <p className="process-step">{item.step}</p>
+                        <h3 className="process-title">{item.title}</h3>
+                        <p className="process-description">
+                          {item.description}
+                        </p>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-
+            ))}
+          </Slider>
         </div>
-        
-        
       </Container>
-
-      
     </div>
   );
 };

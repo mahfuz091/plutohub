@@ -75,8 +75,8 @@ const WorkProcess = () => {
       />
       <Container>
         <div className="text-center process-heding text-start text-md-center">
-          <h2 className="service-title ">Our Work Process</h2>
-          <p className="service-description gray">
+          <h2 className="service-title text-start text-md-center">Our Work Process</h2>
+          <p className="service-description gray text-start text-md-center">
             We follow a clear, collaborative process to ensure great results
             every time.
           </p>

@@ -21,7 +21,7 @@ const IndustriesExpertise = () => {
         className="ellipse-industries-expertise"
       />
       <Container>
-        <div className="industries-content text-center mb-5">
+        <div className="industries-content text-center mb-4 mb-md-5">
           <h2 className="web-title">Industries Expertise</h2>
           <p className="web-description gray">
             We build custom websites for Fintech, SaaS, Healthcare, Edtech,

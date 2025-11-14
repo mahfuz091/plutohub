@@ -16,10 +16,10 @@ const UIUXExpertise = () => {
         <div className="Industries-Expertise-heading ">
           <Row className="d-flex justify-content-between">
             <Col xl={4}>
-              <h2 className="text-start text-md-center">Domain-Focused UI/UX Expertise</h2>
+              <h2 className="text-start ">Domain-Focused UI/UX Expertise</h2>
             </Col>
             <Col xl={5}>
-              <p className="gray text-start text-md-center">
+              <p className="gray text-start ">
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and
                 E-Commerce. Our strategic, design-led approach helps brands

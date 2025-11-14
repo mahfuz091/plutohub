@@ -24,7 +24,7 @@ const FaqSection = () => {
 
   return (
     <section
-      className="faq-section"
+      className="faq-section py-5 py-md-0"
       style={{ backgroundImage: "url(/images/faq-bg.png)" }}
     >
       <Container>

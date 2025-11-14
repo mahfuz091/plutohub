@@ -30,7 +30,7 @@ body {
 
   @media (max-width: 767px) {
     font-size: 16px;
-    line-height: 28px;
+    line-height: 1.2;
   }
 }
 
@@ -2557,7 +2557,7 @@ h2.accordion-header button span {
   }
 
   section.faq-section {
-    padding: 60px 0;
+    padding: 20px 0;
   }
 
   accordion-body {
@@ -2799,7 +2799,7 @@ section.wehelp {
 @media (max-width: 767px) {
   .services {
     margin-top: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
   .services h6 {
     font-size: 300px;
@@ -2869,7 +2869,7 @@ section.service_about_area.about_area {
 
 @media (max-width: 767px) {
   .services h5 {
-    font-size: 28px;
+    font-size: 20px;
   }
   .services h6 {
     font-size: 30px;
@@ -3321,7 +3321,12 @@ section.WhyPlutohub {
     margin-top: 0px;
   }
 }
-
+@media (max-width:765px) {
+  
+.IndustriesServe {
+  padding-top: 30px;
+}
+}
 section.team {
   background-image: url("/images/idu.png");
   background-position: center top;
@@ -3691,7 +3696,7 @@ section.team {
 }
 @media (max-width: 767px) {
   .contact-py {
-    padding-top: 20px;
+    padding-top: 45px;
     padding-bottom: 40px;
   }
   .contact-vector-img {
@@ -4241,7 +4246,16 @@ section.team {
     gap: 8px;
     align-items: center;
   }
+
+  
 }
+
+@media (max-width:765px) {
+  .blog-author-meta{
+     gap:10px
+  }
+   
+  }
 .blog-Category {
   display: inline-block;
   padding: 2px 10px !important;
@@ -4370,6 +4384,7 @@ section.team {
   }
   .blog-explain-text-1 {
     font-size: 14px;
+    padding-top: 0;
   }
 }
 
@@ -4411,6 +4426,29 @@ section.team {
 
     font-size: 16.49px;
   }
+
+  @media (max-width: 765px) {
+  .app-design {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .app-design h6 {
+    font-size: 20px;
+  }
+
+  .app-design p {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .app-design ul li {
+    font-size: 14px;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+}
+
 
   .blog-author-meta-gap {
     display: flex;
@@ -4597,7 +4635,7 @@ section.team {
     font-size: 25px;
 
     color: white;
-    line-height: 35px;
+    line-height: 1.5;
     max-width: 100%;
   }
 
@@ -4658,7 +4696,7 @@ section.team {
     padding: 0px;
     .title-blog {
       font-size: 18px;
-      line-height: 30px;
+      line-height: 1.5;
     }
     .title-description {
       font-size: 15px;
@@ -4847,6 +4885,13 @@ section.team {
   }
 }
 
+@media (max-width:765px){
+  .blog-paragraph{
+    padding: 0 ;
+  }
+}
+
+
 .blog-ol {
   list-style-type: decimal;
   margin: 0.5rem 0 0.5rem 1.5rem;
@@ -4995,6 +5040,7 @@ section.team {
   .blogContent h2 {
     font-size: 20px;
     line-height: 1.4;
+    font-weight: 700;
   }
   .blogContent h3 {
     font-size: 18px;
@@ -5553,7 +5599,7 @@ html {
   }
 
   @media (max-width: 768px) {
-    padding: 60px 0;
+    padding: 45px 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
@@ -6598,7 +6644,7 @@ html {
 
 @media (max-width: 768px) {
   .uiux-expertise {
-    padding: 60px 0;
+    padding: 45px 0;
   }
 }
 
@@ -6702,7 +6748,7 @@ html {
 
 @media (max-width: 768px) {
   .result-uiux {
-    padding: 70px 0;
+    padding: 45px 0;
 
     .uiux-result-header {
       padding-bottom: 25px;
@@ -7039,7 +7085,7 @@ html {
   }
   .logo-branding {
     padding-top: 60px;
-    padding-bottom: 22px;
+    padding-bottom: 40px;
   }
   .ux-design,
   .WordPress,
@@ -7169,7 +7215,7 @@ html {
 
 .mobile-padding {
   @media (max-width: 768px) {
-    padding: 0 !important;
+    padding: 20px 0  40px 0 !important;
   }
 }
 
@@ -7401,9 +7447,9 @@ html {
 }
 
 @media (max-width: 665px) {
-  .mobile-top {
-    margin-top: -50px;
-  }
+  // .mobile-top {
+  //   margin-top: -50px;
+  // }
 }
 
 
@@ -7450,3 +7496,9 @@ html {
   cursor: not-allowed;
 }
 
+@media (max-width:765px) {
+  .ai-product-p{
+  padding-top: 20px  !important;
+  padding-bottom: 50px  !important;
+}
+}
