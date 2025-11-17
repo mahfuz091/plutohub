@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { MetadataRoute } from "next";
 import { postList } from "./actions/blog/blog.actions";
 
