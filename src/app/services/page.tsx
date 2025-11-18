@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Ready to scale? Our services transform businesses through expert website development, UI/UX design, and branding. Get the competitive edge you need to succeed.",
     images: [
       {
-        url: "/images/logo.svg", // local image from public folder
+        url: "/images/opengraph/services.png", // local image from public folder
         alt: "My OG Image",
       },
     ],
