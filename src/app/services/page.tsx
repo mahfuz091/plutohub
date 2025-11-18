@@ -12,8 +12,14 @@ export const metadata: Metadata = {
     "Ready to scale? Our services transform businesses through expert website development, UI/UX design, and branding. Get the competitive edge you need to succeed.",
   openGraph: {
     title: "Our Services: Build Your Brand Online With Us Today",
-  description:
-    "Ready to scale? Our services transform businesses through expert website development, UI/UX design, and branding. Get the competitive edge you need to succeed.",
+    description:
+      "Ready to scale? Our services transform businesses through expert website development, UI/UX design, and branding. Get the competitive edge you need to succeed.",
+    images: [
+      {
+        url: "/images/logo.svg", // local image from public folder
+        alt: "My OG Image",
+      },
+    ],
   },
 };
 export default function page() {
