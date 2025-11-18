@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Need results? Professional website development that works. We build SEO-optimized, conversion-focused site that attract your ideal customers and maximize ROI.",
     images: [
       {
-        url: "/images/logo.svg", // local image from public folder
+        url: "/images/opengraph/service-web-development.png", // local image from public folder
         alt: "My OG Image",
       },
     ],
