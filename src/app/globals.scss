@@ -83,7 +83,7 @@ $title_color: #00234b;
 
 // banner_area css
 .banner_area {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +107,7 @@ $title_color: #00234b;
 
 @media (max-width: 768px) {
   .banner_area {
-    height: 100vh;
+    height: 100dvh;
   }
 
   .banner_content h1 {
