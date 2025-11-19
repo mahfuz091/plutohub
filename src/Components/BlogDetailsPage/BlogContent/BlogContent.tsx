@@ -204,11 +204,11 @@ const BlogContent = ({ post }: BlogContentProps) => {
         <div className="blog-author-meta">
           <div className="blog-author-meta-gap">
             <Image
-              src={post?.author?.profileImage || "/images/shahin.png"}
+              src={post?.author?.profileImage || "/images/user-circle.png"}
               width={36}
               height={36}
               alt="Author"
-              className="rounded-circle"
+              className="rounded-circle bg-white"
               style={{ objectFit: "cover" }}
             />
             <span className="text-white">{post.author?.name}</span>
@@ -258,11 +258,11 @@ const BlogContent = ({ post }: BlogContentProps) => {
           <div className="row gx-4 gy-3 align-items-center">
             <div className="col-12 col-md-auto text-center text-md-start">
               <Image
-                src={post?.author?.profileImage || "/images/shahin.png"}
+                src={post?.author?.profileImage || "/images/user-circle.png"}
                 height={150}
                 width={150}
                 alt="Author"
-                className="rounded-circle"
+                className="rounded-circle bg-white"
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -284,7 +284,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
                     hidden
                   />
                   <div className="row">
-                    <div className="form-group col-12 col-md-6 mb-3">
+                    <div className="form-group col-12 col-md-6 ">
                       <label>
                         Full Name<span>*</span>
                       </label>
@@ -295,7 +295,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
                         placeholder="e.g. Adam Smith"
                       />
                     </div>
-                    <div className="form-group col-12 col-md-6 mb-3">
+                    <div className="form-group col-12 col-md-6 ">
                       <label>
                         Email Address<span>*</span>
                       </label>
@@ -365,7 +365,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
                         <div className="comment-avatar rounded-circle bg-secondary d-flex justify-content-center align-items-center text-white fw-bold">
                           {comment.profileImage ? (
                             <img
-                              src={comment.profileImage}
+                              src={comment.profileImage }
                               alt={comment.name}
                               className="rounded-circle"
                             />

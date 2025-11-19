@@ -26,8 +26,9 @@ const UiUxServicePage = () => {
       <div className="overflow-hidden">
         <ContactSection />
       </div>
-
-      <FaqSection />
+      <div className="pt-4 pt-md-0">
+        <FaqSection />
+      </div>
     </div>
   );
 };

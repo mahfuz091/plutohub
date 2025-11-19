@@ -27,7 +27,9 @@ const LogoBrandingServicePage = () => {
       <Benefits />
       <IndustriesExpertise />
       <Number />
+      <div className="pt-5 pt-md-0">
       <FaqSection />
+      </div>
     </div>
   );
 };

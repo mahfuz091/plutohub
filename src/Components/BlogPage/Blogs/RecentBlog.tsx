@@ -48,11 +48,11 @@ const RecentBlog: React.FC<RecentBlogProps> = ({ recentBlogs }) => {
             <div className="flex-grow-1 me-3 mt-4">
               <div className="d-flex align-items-center mb-1 mb-md-2">
                 <Image
-                  src={blog.author.profileImage}
+                  src={blog.author.profileImage || "/images/user-circle.png"}
                   alt={blog.author.name}
                   width={30}
                   height={30}
-                  className="rounded-circle me-2"
+                  className="rounded-circle me-2 bg-white"
                 />
                 <span className="author_name ">
                   {" "}

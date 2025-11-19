@@ -114,13 +114,13 @@ const ContactUs = () => {
         alt="screw"
         className="contact-vector-img"
       />
-      <Image
+      {/* <Image
         src="/images/AboutBannerEl.png"
         width={500}
         height={500}
         alt="screw"
         className="contact-center-img"
-      />
+      /> */}
       <Image
         src="/images/contact2-bg.png"
         width={500}
@@ -138,7 +138,7 @@ const ContactUs = () => {
 
       <div
         className="hero-image"
-        style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+        
       ></div>
 
       <Container className="contact-py">
@@ -336,7 +336,7 @@ const ContactUs = () => {
                   <Col xl={12}>
                     <div className="form-group">
                       <button
-                        className="theme_btn flex items-center gap-2"
+                        className="theme_btn flex items-center gap-2 mt-3"
                         type="submit"
                         disabled={loading}
                       >

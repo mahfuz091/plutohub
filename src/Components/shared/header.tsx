@@ -5,17 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { Col, Container, Offcanvas, Row, NavDropdown } from "react-bootstrap";
 import Buttons from "../Banner/Buttons";
-
+import { usePathname } from "next/navigation";
+import { Layers } from "lucide-react";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-
+  const pathname = usePathname();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const isActive = (path) =>
+    path === "/" ? pathname === path : pathname.startsWith(path);
 
   return (
     <>
-      {/* Offcanvas (Mobile Menu) */}
+     
       <Offcanvas
         show={show}
         onHide={handleClose}
@@ -24,7 +27,6 @@ const Header = () => {
       >
         <Offcanvas.Header closeButton className="py-3">
           <div className="d-flex justify-content-between align-items-center w-100">
-           
             <Link href="/" onClick={handleClose} className="d-inline-block">
               <Image
                 src="/images/logo.svg"
@@ -34,7 +36,6 @@ const Header = () => {
               />
             </Link>
 
-            
             <div className="me-2">
               <Buttons links="/services" btnText="Book a Call" />
             </div>
@@ -42,20 +43,12 @@ const Header = () => {
         </Offcanvas.Header>
 
         <div className="d-flex  gap-3 optional-nav  mb-3">
-          <Link
-            href="/privacy-policy"
-            onClick={handleClose}
-            className="text-decoration-none "
-          >
-            Privacy Policy
+          <Link href="/services/web-development" onClick={handleClose}>
+            Web Development
           </Link>
           <span>|</span>
-          <Link
-            href="/terms-and-conditions"
-            onClick={handleClose}
-            className="text-decoration-none "
-          >
-            Terms & Conditions
+          <Link href="/services/ui-ux" onClick={handleClose}>
+            UI & UX Design
           </Link>
         </div>
 
@@ -165,13 +158,12 @@ const Header = () => {
         </Container>
       </div>
 
-      {/* Desktop Header */}
+      {/* DESKTOP HEADER */}
       <header>
         <Container>
           <Row>
             <Col xxl={12}>
               <div className="header-content d-flex align-items-center justify-content-between">
-                {/* Logo */}
                 <div className="site-logo">
                   <Link href="/">
                     <Image
@@ -183,60 +175,85 @@ const Header = () => {
                   </Link>
                 </div>
 
-                {/* Navigation */}
                 <nav>
                   <ul className="d-flex gap-4 align-items-center">
                     <li>
-                      <Link href="/">Home</Link>
+                      <Link
+                        href="/"
+                        className={isActive("/") ? "active-link" : ""}
+                      >
+                        Home
+                      </Link>
                     </li>
 
-                    {/* Hover Dropdown Section */}
                     <li
+                      className="custom-dropdown d-flex align-items-center gap-2"
                       onMouseEnter={() => setShowDropdown(true)}
                       onMouseLeave={() => setShowDropdown(false)}
-                      className="position-relative d-flex gap-2 align-items-center"
                     >
-                      <Link href="/services">Services</Link>
+                      <Link
+                        href="/services"
+                        className={
+                          isActive("/services")
+                            ? "active-link d-flex align-items-center gap-2"
+                            : "d-flex align-items-center gap-1"
+                        }
+                      >
+                        Services
+                        <Layers
+                          size={16}
+                          className={`dropdown-icon  ${showDropdown ? "" : ""}`}
+                        />
+                      </Link>
 
-                      <div>
-                        <NavDropdown
-                          title=""
-                          id="desktop-services-dropdown"
-                          show={showDropdown}
-                          className="hover-dropdown"
-                        >
-                          <NavDropdown.Item
-                            as={Link}
-                            href="/services/web-development"
-                          >
+                      <ul
+                        className={`dropdown-menu-custom ${
+                          showDropdown ? "show" : ""
+                        }`}
+                      >
+                        <li>
+                          <Link href="/services/web-development">
                             Web Development
-                          </NavDropdown.Item>
-                          <NavDropdown.Item as={Link} href="/services/ui-ux">
-                            UI & UX Design
-                          </NavDropdown.Item>
-                          <NavDropdown.Item
-                            as={Link}
-                            href="/services/logo-and-branding"
-                          >
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/services/ui-ux">UI & UX Design</Link>
+                        </li>
+                        <li>
+                          <Link href="/services/logo-and-branding">
                             Logo & Branding
-                          </NavDropdown.Item>
-                        </NavDropdown>
-                      </div>
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
 
                     <li>
-                      <Link href="/about">About Us</Link>
+                      <Link
+                        href="/about"
+                        className={isActive("/about") ? "active-link" : ""}
+                      >
+                        About Us
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/blog">Blog</Link>
+                      <Link
+                        href="/blog"
+                        className={isActive("/blog") ? "active-link" : ""}
+                      >
+                        Blog
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/contact">Contact</Link>
+                      <Link
+                        href="/contact"
+                        className={isActive("/contact") ? "active-link" : ""}
+                      >
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                 </nav>
 
-                {/* Button */}
                 <div className="header-btn">
                   <Buttons
                     links="https://calendly.com/plutohubagency/30min?month=2025-08"

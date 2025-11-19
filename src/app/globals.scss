@@ -1076,7 +1076,7 @@ span.animated-dominate {
 }
 
 .uppercase {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 footer {
@@ -1094,8 +1094,8 @@ footer {
 
 .footer-box p {
   color: #fff;
-  font-size: 16px;
-  margin-bottom: 18px;
+  font-size: 20px;
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
@@ -2347,7 +2347,8 @@ a.primary-icon svg {
   font-size: 16px;
   color: #fff;
   display: block;
-  margin-bottom: 3px;
+  margin-top: 20px;
+  margin-bottom: 7px;
 }
 
 .contact-form-wrapper {
@@ -2360,9 +2361,9 @@ textarea {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #ffffff2b;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
-  padding: 15px 0;
+  padding: 0px 0 10px 0;
 }
 
 input::placeholder,
@@ -3321,11 +3322,10 @@ section.WhyPlutohub {
     margin-top: 0px;
   }
 }
-@media (max-width:765px) {
-  
-.IndustriesServe {
-  padding-top: 30px;
-}
+@media (max-width: 765px) {
+  .IndustriesServe {
+    padding-top: 30px;
+  }
 }
 section.team {
   background-image: url("/images/idu.png");
@@ -4064,11 +4064,10 @@ section.team {
 .blog-card-main {
   padding-top: 40px;
 }
-@media (max-width:765px) {
-  .blog-card-main{
-   padding-top: 20px;
+@media (max-width: 765px) {
+  .blog-card-main {
+    padding-top: 20px;
   }
-  
 }
 .blog-card {
   padding: 0;
@@ -4132,14 +4131,14 @@ section.team {
 }
 
 .blog-new {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 @media (max-width: 765px) {
   .blog-new {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -4252,16 +4251,13 @@ section.team {
     gap: 8px;
     align-items: center;
   }
-
-  
 }
 
-@media (max-width:765px) {
-  .blog-author-meta{
-     gap:10px
+@media (max-width: 765px) {
+  .blog-author-meta {
+    gap: 10px;
   }
-   
-  }
+}
 .blog-Category {
   display: inline-block;
   padding: 2px 10px !important;
@@ -4434,27 +4430,26 @@ section.team {
   }
 
   @media (max-width: 765px) {
-  .app-design {
-    padding: 12px;
-    border-radius: 12px;
-  }
+    .app-design {
+      padding: 12px;
+      border-radius: 12px;
+    }
 
-  .app-design h6 {
-    font-size: 20px;
-  }
+    .app-design h6 {
+      font-size: 20px;
+    }
 
-  .app-design p {
-    font-size: 14px;
-    padding-top: 10px;
-  }
+    .app-design p {
+      font-size: 14px;
+      padding-top: 10px;
+    }
 
-  .app-design ul li {
-    font-size: 14px;
-    gap: 8px;
-    margin-bottom: 8px;
+    .app-design ul li {
+      font-size: 14px;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
   }
-}
-
 
   .blog-author-meta-gap {
     display: flex;
@@ -4528,7 +4523,7 @@ section.team {
     line-height: 120%;
     letter-spacing: 0;
     color: #ffffff;
-    padding-top: 24px;
+    
     display: block;
   }
 
@@ -4601,15 +4596,14 @@ section.team {
   color: white;
 
   .blog-thumbnail {
-    width: 269px;
-    height: 191px;
-    object-fit: contain;
+    width: 270px;
   }
 
   .thumbnail-img {
     width: 100%;
     height: 100%;
     border-radius: 12px;
+    object-fit: contain;
   }
 
   @media (max-width: 768px) {
@@ -4873,8 +4867,8 @@ section.team {
   .blogContent h2 {
     font-size: 25px;
   }
-  .related-blogs{
-    padding:45px 0;
+  .related-blogs {
+    padding: 45px 0;
   }
 }
 
@@ -4894,12 +4888,11 @@ section.team {
   }
 }
 
-@media (max-width:765px){
-  .blog-paragraph{
-    padding: 0 ;
+@media (max-width: 765px) {
+  .blog-paragraph {
+    padding: 0;
   }
 }
-
 
 .blog-ol {
   list-style-type: decimal;
@@ -6503,7 +6496,7 @@ html {
   .benefits .benefits-header p {
     font-size: 14px;
     padding-bottom: 20px;
-    margin-top:-12px;
+    margin-top: -12px;
   }
 
   .benefits .process-card {
@@ -7173,7 +7166,7 @@ html {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .dropdown-menu.show {
@@ -7224,7 +7217,7 @@ html {
 
 .mobile-padding {
   @media (max-width: 768px) {
-    padding: 20px 0  40px 0 !important;
+    padding: 20px 0 40px 0 !important;
   }
 }
 
@@ -7275,7 +7268,7 @@ html {
   font-size: 32px;
   font-weight: 800;
   letter-spacing: 1px;
-  
+
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 20px rgba(4, 194, 143, 0.6);
 
@@ -7365,11 +7358,16 @@ html {
 }
 
 @keyframes growBar {
-  0% { width: 0%; }
-  70% { width: 75%; }
-  100% { width: 95%; }
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 75%;
+  }
+  100% {
+    width: 95%;
+  }
 }
-
 
 .blogContentWrapper {
   color: #fff;
@@ -7470,8 +7468,7 @@ html {
   // }
 }
 
-
-@media (max-width:765px){
+@media (max-width: 765px) {
   .slick-slide img {
     height: auto;
   }
@@ -7514,9 +7511,109 @@ html {
   cursor: not-allowed;
 }
 
-@media (max-width:765px) {
-  .ai-product-p{
-  padding-top: 20px  !important;
-  padding-bottom: 50px  !important;
+@media (max-width: 765px) {
+  .ai-product-p {
+    padding-top: 20px !important;
+    padding-bottom: 50px !important;
+  }
 }
+
+.active-link {
+  color: #04c28f !important;
+}
+nav a {
+  position: relative;
+
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+nav a:hover {
+  color: #04c28f;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+nav a:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+.custom-dropdown {
+  position: relative;
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 220px;
+  background: rgba(44, 44, 44, 0.8);
+  border-radius: 10px;
+  padding: 10px 0;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0px !important;
+}
+
+.dropdown-menu-custom.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  
+}
+
+.dropdown-menu-custom li {
+  padding: 0px 20px;
+  
+}
+
+.dropdown-menu-custom li a {
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+.dropdown-menu-custom li:hover a {
+  color: #04c28f;
+  padding-left: 5px;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+
+@media (max-width: 991px) {
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .sidebar-main {
+    margin-top: auto;  
+    margin-bottom: 180px;
+  }
+
+  .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }

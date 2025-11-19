@@ -37,7 +37,7 @@ const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 5;
 
-  // Pagination logic
+
   const totalPages = Math.ceil(filterData.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
@@ -84,15 +84,15 @@ const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
 
           <div className="flex-grow-1 me-3 order-2 order-md-1">
             <div className="d-flex align-items-center mb-2">
-              {blog.author?.profileImage && (
+              
                 <Image
-                  src={blog.author.profileImage}
+                  src={blog.author.profileImage || "/images/user-circle.png"}
                   alt={blog.author.name}
                   width={30}
                   height={30}
-                  className="rounded-circle me-3"
+                  className="rounded-circle me-3 bg-white"
                 />
-              )}
+              
               <span className="author_name">
                 {blog.author?.name || "Unknown Author"}
               </span>

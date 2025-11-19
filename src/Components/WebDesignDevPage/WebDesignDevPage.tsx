@@ -31,7 +31,9 @@ const WebDesignDevPage = () => {
 
       <IndustriesExpertise />
       <Number />
-      <FaqSection />
+      <div className="pt-5 pt-md-0">
+        <FaqSection />
+      </div>
     </div>
   );
 };
