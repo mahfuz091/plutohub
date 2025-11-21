@@ -1306,12 +1306,26 @@ header nav ul li a {
   font-size: 18px;
 }
 
-header {
+// header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   padding: 15px 0;
+//   z-index: 9;
+// }
+.header {
   position: fixed;
   width: 100%;
   top: 0;
   padding: 15px 0;
   z-index: 9;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+
+.header.shrink {
+  padding: 0px 0; 
+
 }
 
 .header-content {
@@ -7553,7 +7567,7 @@ nav a:hover::before {
   top: 40px;
   left: 0;
   width: 220px;
-  background: rgba(44, 44, 44, 0.8);
+  background: rgba(44, 44, 44, 0.95);
   border-radius: 10px;
   padding: 10px 0;
   
