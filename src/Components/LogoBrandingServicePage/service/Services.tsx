@@ -99,7 +99,7 @@ const Services: React.FC = () => {
       <Container>
         <Row className=" mb-5">
           <Col xl={5}>
-            <h5 className="text-left white text-start text-md-center">Our Services</h5>
+            <h5 className="text-left white text-start ">Our Services</h5>
             <Image
               src="/images/services-bg.png"
               width={344}
@@ -126,7 +126,7 @@ const Services: React.FC = () => {
           </Col>
 
           <Col xl={7}>
-            <h2 className="title_animation2 text-right text-start text-md-center">
+            <h2 className="title_animation2 text-right text-start ">
              Our Expert Branding and Identity Design Services
             </h2>
           </Col>

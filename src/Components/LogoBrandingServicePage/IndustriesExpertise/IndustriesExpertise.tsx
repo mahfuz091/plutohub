@@ -66,14 +66,14 @@ const IndustriesExpertise = () => {
         <div className="Industries-Expertise-heading mb-5">
           <Row>
             <Col xl={6}>
-              <h2 className="text-start text-md-center">
+              <h2 className="text-start ">
                 Industries
                 
                 Expertise
               </h2>
             </Col>
             <Col xl={6}>
-              <p className="gray text-start text-md-center">
+              <p className="gray text-start ">
                 We deliver impactful branding and identity design services to
                 industries such as Fintech, SaaS, Edtech, Healthcare, and
                 E-Commerce. Our strategic, design-led approach helps brands

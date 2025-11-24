@@ -62,15 +62,15 @@ const Footer = () => {
                   <Col xs={6}>
                     <ul className="footer-text list-unstyled">
                       <li>
-                        <Link href="/services/uiux">UI/UX Design</Link>
+                        <Link href="/services/ui-ux">UI/UX Design</Link>
                       </li>
                       <li>
-                        <Link href="/services/logo&branding">
+                        <Link href="/services/logo-and-branding">
                           Logo & Branding
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/web">Website Design</Link>
+                        <Link href="/services/web-development">Web Development</Link>
                       </li>
                       <li>
                         <Link href="/services">Apps Design</Link>

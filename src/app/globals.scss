@@ -4881,7 +4881,7 @@ section.team {
 .blog-paragraph {
   color: #fff;
   line-height: 1.6;
-  padding: 8px 0;
+  padding: 0px 0;
   a {
     color: #06d6a0;
     text-decoration: underline;
@@ -7616,4 +7616,10 @@ nav a:hover::before {
     flex-direction: column;
     height: 100%;
   }
+}
+.two-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

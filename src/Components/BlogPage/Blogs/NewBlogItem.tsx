@@ -27,6 +27,7 @@ interface Blog {
   author?: Author;
   BlogCategory?: BlogCategory;
   metaDescription: string;
+  content?: any;
 }
 
 interface NewBlogItemProps {
@@ -36,7 +37,6 @@ interface NewBlogItemProps {
 const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 5;
-
 
   const totalPages = Math.ceil(filterData.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
@@ -65,70 +65,78 @@ const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
 
   return (
     <div>
-      
-      {currentBlogs.map((blog, index) => (
-        <div
-          key={blog.id || index}
-          className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"
-        >
-          
-          <Link href={`/blog/${blog.postSlug}`} className="order-1 order-md-2">
-            <div className="blog-thumbnail">
-              <img
-                src={blog.bannerImage}
-                alt={blog.bannerAltText || blog.title}
-                className="img-fluid rounded mb-2 thumbnail-img"
-              />
-            </div>
-          </Link>
+      {currentBlogs.map((blog, index) => {
+       
+        const firstParagraph =
+          blog?.content?.blocks?.find((b: any) => b.type === "paragraph")
+            ?.data?.text || "";
 
-          <div className="flex-grow-1 me-3 order-2 order-md-1">
-            <div className="d-flex align-items-center mb-2">
-              
+        return (
+          <div
+            key={blog.id || index}
+            className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"
+          >
+            
+            <Link href={`/blog/${blog.postSlug}`} className="order-1 order-md-2">
+              <div className="blog-thumbnail">
+                <img
+                  src={blog.bannerImage}
+                  alt={blog.bannerAltText || blog.title}
+                  className="img-fluid rounded mb-2 thumbnail-img"
+                />
+              </div>
+            </Link>
+
+           
+            <div className="flex-grow-1 me-3 order-2 order-md-1">
+              <div className="d-flex align-items-center mb-2">
                 <Image
-                  src={blog.author.profileImage || "/images/user-circle.png"}
-                  alt={blog.author.name}
+                  src={blog.author?.profileImage || "/images/user-circle.png"}
+                  alt={blog.author?.name || "Author"}
                   width={30}
                   height={30}
                   className="rounded-circle me-3 bg-white"
                 />
-              
-              <span className="author_name">
-                {blog.author?.name || "Unknown Author"}
-              </span>
-            </div>
-
-            <Link href={`/blog/${blog.postSlug}`}>
-              <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
-            </Link>
-
-            <p className="mb-2 title-description">{blog.metaDescription}</p>
-
-            <div className="d-flex align-items-center gap-3 small flex-wrap">
-              <span className="d-flex align-items-center gap-1 blog-date">
-                <Calendar size={14} className="me-1" />
-                {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })}
-              </span>
-
-              {blog.BlogCategory && (
-                <span className="badge bg-light text-dark border rounded-pill px-2">
-                  {blog.BlogCategory.name}
+                <span className="author_name">
+                  {blog.author?.name || "Unknown Author"}
                 </span>
-              )}
+              </div>
 
-              <span className="d-flex align-items-center gap-1">
-                <MessageCircle size={14} />
-                {blog.Comment?.length || 0}
-              </span>
+              <Link href={`/blog/${blog.postSlug}`}>
+                <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
+              </Link>
+
+             
+              <p className="mb-2 title-description two-line-text">
+                {firstParagraph}
+              </p>
+
+              <div className="d-flex align-items-center gap-3 small flex-wrap">
+                <span className="d-flex align-items-center gap-1 blog-date">
+                  <Calendar size={14} className="me-1" />
+                  {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </span>
+
+                {blog.BlogCategory && (
+                  <span className="badge bg-light text-dark border rounded-pill px-2">
+                    {blog.BlogCategory.name}
+                  </span>
+                )}
+
+                <span className="d-flex align-items-center gap-1">
+                  <MessageCircle size={14} />
+                  {blog.Comment?.length || 0}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
-      
+      {/* Pagination */}
       {totalPages > 1 && (
         <div className="pagination-container">
           <button
