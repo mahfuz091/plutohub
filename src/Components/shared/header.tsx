@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Col, Container, Offcanvas, Row, NavDropdown } from "react-bootstrap";
@@ -15,6 +15,22 @@ const Header = () => {
   const handleShow = () => setShow(true);
   const isActive = (path) =>
     path === "/" ? pathname === path : pathname.startsWith(path);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   return (
     <>
@@ -159,7 +175,8 @@ const Header = () => {
       </div>
 
       {/* DESKTOP HEADER */}
-      <header>
+   <header className={isScrolled ? "header shrink" : "header"}>
+
         <Container>
           <Row>
             <Col xxl={12}>
