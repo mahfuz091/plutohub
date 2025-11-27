@@ -52,14 +52,16 @@ const BlogContent = ({ post }: BlogContentProps) => {
   useEffect(() => {
     
 
-    
-
-      if (state.msg) {
+    if (state.success){
+ if (state.msg) {
         
         toast.success(state.msg);
       } else {
         toast.error(state.msg);
       }
+    }
+
+     
     
   }, [state]);
 

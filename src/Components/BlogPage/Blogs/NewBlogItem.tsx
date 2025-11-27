@@ -42,7 +42,7 @@ const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = filterData.slice(indexOfFirstBlog, indexOfLastBlog);
-
+console.log(currentBlogs);
   const handleNext = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
   };
@@ -128,7 +128,7 @@ const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
 
                 <span className="d-flex align-items-center gap-1">
                   <MessageCircle size={14} />
-                  {blog.Comment?.length || 0}
+                 {blog.Comment?.filter((c: any) => c.approved === true).length || 0}
                 </span>
               </div>
             </div>

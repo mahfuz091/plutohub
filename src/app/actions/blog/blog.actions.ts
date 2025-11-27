@@ -48,6 +48,7 @@ export const postList = async (): Promise<
             content: true,
             createdAt: true,
             updatedAt: true,
+                approved:true,
           },
         },
       },
