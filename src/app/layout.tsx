@@ -7,6 +7,7 @@ import Footer from "../Components/shared/footer";
 import Layout from "../Components/Layout/Layout";
 import Header from "../Components/shared/header";
 import Script from "next/script";
+import { Toaster } from "sonner";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -94,6 +95,7 @@ export default function RootLayout({
         </Script>
 
         <Layout>
+          <Toaster />
           <Header />
           {children}
           <Footer />

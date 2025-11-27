@@ -5,8 +5,9 @@ import { CalendarDays, MessageCircleMore, CircleCheckBig } from "lucide-react";
 import Image from "next/image";
 import Buttons from "../../Banner/Buttons";
 import { createComment } from "../../../app/actions/blog/blog.actions";
-import { toast } from "sonner";
+
 import { useActionState } from "react";
+import { Toaster, toast } from 'sonner';
 
 interface BlogContentProps {
   post: {
@@ -33,6 +34,7 @@ interface BlogContentProps {
       content: string;
       createdAt: string;
       profileImage?: string;
+      approved?: boolean;
     }[];
     metaDescription?: string;
   };
@@ -48,13 +50,17 @@ const BlogContent = ({ post }: BlogContentProps) => {
   const [visibleComments, setVisibleComments] = useState(5);
 
   useEffect(() => {
-    if (state.msg) {
-      if (state.success) {
+    
+
+    
+
+      if (state.msg) {
+        
         toast.success(state.msg);
       } else {
         toast.error(state.msg);
       }
-    }
+    
   }, [state]);
 
   const loadMoreComments = () => {
@@ -83,7 +89,8 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
       case "paragraph": {
         const text = block.data.text;
-        if (!text || text.replace(/<br\s*\/?>/gi, "").trim() === "") return null;
+        if (!text || text.replace(/<br\s*\/?>/gi, "").trim() === "")
+          return null;
 
         return (
           <p
@@ -193,9 +200,10 @@ const BlogContent = ({ post }: BlogContentProps) => {
     const weeks = Math.floor(days / 7);
     return `${weeks} week${weeks > 1 ? "s" : ""} ago`;
   };
-
+  console.log(post.Comment, "comment all");
   return (
     <div className="blogContentWrapper">
+      <Toaster position="bottom-right"  />
       <div className="blogContent">
         <span className="blog-Category">{post.BlogCategory?.name}</span>
         <h1 className="blog-title">{post.title}</h1>
@@ -253,7 +261,6 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
         <hr />
 
-      
         <div className="blog-comment-main">
           <div className="row gx-4 gy-3 align-items-center">
             <div className="col-12 col-md-auto text-center text-md-start">
@@ -345,58 +352,63 @@ const BlogContent = ({ post }: BlogContentProps) => {
               </div>
             </div>
 
-           
             <div className="">
-              {post?.Comment && post.Comment.length > 0 && (
-                <div className="comments-list mt-2 mt-md-5">
-                  <h4 className="reply-title mb-4">
-                    {post.Comment.length}{" "}
-                    {post.Comment.length > 1 ? "Comments" : "Comment"}
-                  </h4>
+              {post?.Comment &&
+                post.Comment.filter((c) => c.approved === true).length > 0 && (
+                  <div className="comments-list mt-2 mt-md-5">
+                    <h4 className="reply-title mb-4">
+                      {post.Comment.filter((c) => c.approved === true).length}{" "}
+                      {post.Comment.filter((c) => c.approved === true).length >
+                      1
+                        ? "Comments"
+                        : "Comment"}
+                    </h4>
 
-                  {[...post.Comment]
-                    .reverse()
-                    .slice(0, visibleComments)
-                    .map((comment) => (
-                      <div
-                        key={comment.id}
-                        className="comment-item d-flex gap-3 align-items-start mb-4"
-                      >
-                        <div className="comment-avatar rounded-circle bg-secondary d-flex justify-content-center align-items-center text-white fw-bold">
-                          {comment.profileImage ? (
-                            <img
-                              src={comment.profileImage }
-                              alt={comment.name}
-                              className="rounded-circle"
-                            />
-                          ) : (
-                            comment.name.charAt(0).toUpperCase()
-                          )}
-                        </div>
+                    {[...post.Comment]
+                      .filter((c) => c.approved === true)
+                      .reverse()
+                      .slice(0, visibleComments)
+                      .map((comment) => (
+                        <div
+                          key={comment.id}
+                          className="comment-item d-flex gap-3 align-items-start mb-4"
+                        >
+                          <div className="comment-avatar rounded-circle bg-secondary d-flex justify-content-center align-items-center text-white fw-bold">
+                            {comment.profileImage ? (
+                              <img
+                                src={comment.profileImage}
+                                alt={comment.name}
+                                className="rounded-circle"
+                              />
+                            ) : (
+                              comment.name.charAt(0).toUpperCase()
+                            )}
+                          </div>
 
-                        <div className="comment-body">
-                          <h6 className="mb-1 text-white">{comment.name}</h6>
-                          <small className="d-block mb-1 text-white">
-                            {getDaysAgo(comment.createdAt)}
-                          </small>
-                          <p className="gray mb-0">{comment.content}</p>
+                          <div className="comment-body">
+                            <h6 className="mb-1 text-white">{comment.name}</h6>
+                            <small className="d-block mb-1 text-white">
+                              {getDaysAgo(comment.createdAt)}
+                            </small>
+                            <p className="gray mb-0">{comment.content}</p>
+                          </div>
                         </div>
+                      ))}
+
+                    {visibleComments <
+                      post.Comment.filter((c) => c.approved === true)
+                        .length && (
+                      <div className="text-center mt-4">
+                        <button
+                          onClick={loadMoreComments}
+                          className="theme_btn-3 d-inline-flex align-items-center justify-content-center px-4 py-2"
+                        >
+                          Load More Comments
+                        </button>
                       </div>
-                    ))}
-
-                  
-                  {visibleComments < post.Comment.length && (
-                    <div className="text-center mt-4">
-                      <button
-                        onClick={loadMoreComments}
-                        className="theme_btn-3 d-inline-flex align-items-center justify-content-center px-4 py-2"
-                      >
-                        Load More Comments
-                      </button>
-                    </div>
-                  )}
-                </div>
-              )}
+                    )}
+                  </div>
+                )}
             </div>
           </div>
         </div>

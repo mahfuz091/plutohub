@@ -93,6 +93,7 @@ export const getPostById = async (
             content: true,
             createdAt: true,
             updatedAt: true,
+            approved:true,
           },
         },
       },
@@ -156,7 +157,7 @@ export const createComment = async (
 
     return {
       success: true,
-      msg: "Comment created successfully",
+      msg: "Your comment is submitted. It will be visible after admin approval.",
       data: comment,
     };
   } catch (err) {

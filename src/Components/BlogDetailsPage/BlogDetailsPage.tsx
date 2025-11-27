@@ -23,6 +23,7 @@ interface BlogDetailsPageProps {
       content: string;
       createdAt: string;
       profileImage?: string;
+      approved?:boolean;
     }[];
     metaDescription?: string;
   };

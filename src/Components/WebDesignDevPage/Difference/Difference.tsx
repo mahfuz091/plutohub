@@ -93,46 +93,55 @@ const ServicesScroll = () => {
     if (typeof window === "undefined") return;
 
     const cards = gsap.utils.toArray<HTMLElement>(".card_item");
-    const triggers: (ScrollTrigger | undefined)[] = [];
 
+    // initial stacking position (no blur)
     cards.forEach((card, index) => {
-      if (!card) return;
-
-      // Set initial state
       gsap.set(card, {
         y: index * 70,
-        filter: "blur(0px)",
+        scale: 1,
       });
 
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "top bottom-=300",
-          end: "top top+=40",
-          scrub: true,
-          markers: false,
-          invalidateOnRefresh: true,
+      ScrollTrigger.create({
+        trigger: card,
+        start: "top center+=150",
+        end: "bottom center",
+        scrub: true,
+
+        onEnter: () => {
+          gsap.to(card, {
+            scale: 1.03,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        },
+
+        onEnterBack: () => {
+          gsap.to(card, {
+            scale: 1.03,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        },
+
+        onLeave: () => {
+          gsap.to(card, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        },
+
+        onLeaveBack: () => {
+          gsap.to(card, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power1.out",
+          });
         },
       });
-
-     
-      const isLast = index === cards.length - 1;
-      if (!isLast) {
-        const blurStrength = 5 - index;
-        const blurValue = `blur(${blurStrength}px)`;
-        timeline.to(card, {
-          filter: blurValue,
-          ease: "none",
-          duration: 0.5,
-        });
-      }
-
-      triggers.push(timeline.scrollTrigger);
     });
 
-    return () => {
-      triggers.forEach((trigger) => trigger?.kill());
-    };
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
   return (
@@ -148,21 +157,17 @@ const ServicesScroll = () => {
             help your product connect with users and drive real business growth.
           </p>
         </div>
+
         <div className="service_card_inner">
           {services.map((feature, index) => (
-            <div
-              key={feature.id}
-              className={`card_item ${
-                index === services.length - 1 ? "sticky-card" : ""
-              }`}
-            >
+            <div key={feature.id} className="card_item">
               <Card.Body>
                 <Row className="d-flex align-items-center justify-content-between g-4">
-                  <Col xl={4} className="mb-3 mb-md-0">
+                  <Col xl={4}>
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      width={353.33}
+                      width={353}
                       height={250}
                       layout="responsive"
                       className="img-fluid rounded"
@@ -181,7 +186,7 @@ const ServicesScroll = () => {
                       {feature.list.map((item, idx) => (
                         <li
                           key={idx}
-                          className="d-flex align-items-center justify-content-start mb-2 list"
+                          className="d-flex align-items-center mb-2 list"
                         >
                           <Image
                             src="/images/UiUx-Service/right.svg"
