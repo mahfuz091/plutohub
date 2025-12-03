@@ -172,7 +172,10 @@ const Footer = () => {
                 <div className="middle-footer-box-content">
                   <span>Portugal</span>
                   <p>
-                    Rua da Ilha de Sao Tome 1, 1E Lisbon, <br /> Lisbon 1170-185
+                    Rua da Ilha de Sao Tome 1,
+                    <br />
+                    1E Lisbon, Lisbon 1170-185
+                    <br />
                     Portugal
                   </p>
                   <a href="tel:++351937296113">+351937296113</a>
