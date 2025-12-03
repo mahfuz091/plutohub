@@ -70,7 +70,9 @@ const Footer = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/web-development">Web Development</Link>
+                        <Link href="/services/web-development">
+                          Web Development
+                        </Link>
                       </li>
                       <li>
                         <Link href="/services">Apps Design</Link>
@@ -90,7 +92,7 @@ const Footer = () => {
                         <Link href="/services">Webflow Website</Link>
                       </li>
                       <li>
-                        <Link href="/services">WordPress Website</Link>
+                        <Link href="/services">Webflow Website</Link>
                       </li>
                       <li>
                         <Link href="/services">Shopify Website</Link>
@@ -170,8 +172,8 @@ const Footer = () => {
                 <div className="middle-footer-box-content">
                   <span>Portugal</span>
                   <p>
-                    R. Das Pedralvas 5 A, <br /> 1500-487, Lisboa <br />{" "}
-                    Portugal{" "}
+                    Rua da Ilha de Sao Tome 1, 1E Lisbon, <br /> Lisbon 1170-185
+                    Portugal
                   </p>
                   <a href="tel:++351937296113">+351937296113</a>
                 </div>
