@@ -24,6 +24,7 @@ const processData = [
 ];
 
 const Process = () => {
+  
   return (
     <div className="pt-120 process-loc">
       <Container>
@@ -38,10 +39,10 @@ const Process = () => {
         </div>
 
         <div className="pt-60">
-          <Row>
+          <Row className="">
             {processData.map((item, index) => (
-              <Col lg={4} md={6} xs={12} key={index} className="mb-4">
-                <div className="card-custom process-card">
+              <Col lg={4} md={6} xs={12} key={index} className="mb-4 gap-4">
+                <div className="card-custom process-card ">
                   <img src={item.img} alt={item.title} className="process-img" />
                   <span className="step-tag">{item.step}</span>
                   <h4 className="process-title">{item.title}</h4>

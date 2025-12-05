@@ -3,6 +3,7 @@ import Banner from './Banner/Banner';
 import Range from './Range/Range';
 import RecentWork from './RecentWork/RecentWork';
 import Process from './Process/Process';
+import ClientSay from './ClientSay/ClientSay';
 
 const Location = () => {
     return (
@@ -11,6 +12,7 @@ const Location = () => {
            <Range/>
            <RecentWork/>
            <Process/>
+           <ClientSay/>
 
         </div>
     );

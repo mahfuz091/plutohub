@@ -59,7 +59,7 @@ const DesignProcess = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: false, 
+    centerMode: false,
     focusOnSelect: false,
     beforeChange: (_, next) => setCurrentSlide(next),
     responsive: [
@@ -81,7 +81,7 @@ const DesignProcess = () => {
   const handleTabClick = (index) => {
     setCurrentSlide(index);
     sliderRef.current?.slickGoTo(index);
-    
+
     setTimeout(() => {
       document
         .querySelector(".design-process .slick-list")
@@ -91,15 +91,14 @@ const DesignProcess = () => {
 
   return (
     <div className="design-process ">
-        <Image
-                src="/images/idu.png"
-                alt="yellow ellipse"
-                width={1800}
-                height={1300}
-                className="ellipse-recentwork"
-              />
+      <Image
+        src="/images/idu.png"
+        alt="yellow ellipse"
+        width={1800}
+        height={1300}
+        className="ellipse-recentwork"
+      />
       <Container>
-        
         <Row className="align-items-center mb-3 mb-md-5">
           <Col xl={7}>
             <h5 className="text-left web-title">
@@ -117,9 +116,7 @@ const DesignProcess = () => {
           </Col>
         </Row>
 
-        
         <div className="process-tabs d-flex gap-2 mb-4   flex-wrap">
-
           {processData.map((item, index) => (
             <button
               key={item.id}
@@ -133,34 +130,34 @@ const DesignProcess = () => {
           ))}
         </div>
 
-      
         <div className="pr-card">
-            <Slider {...sliderSettings} ref={sliderRef}>
-          {processData.map((item) => (
-            <div key={item.id}>
-              <div className="process-card mx-auto">
-                <div className="process-image">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={460}
-                    height={300}
-                    layout="responsive"
-                    className="rounded-3"
-                  />
-                </div>
-                <div className="process-content mt-2 mt-md-4">
-                  <p className="process-step white">{item.step}</p>
-                  <h3 className="process-title">{item.title}</h3>
-                  <p className="process-description gray">{item.description}</p>
+          <Slider {...sliderSettings} ref={sliderRef}>
+            {processData.map((item) => (
+              <div key={item.id}>
+                <div className="process-card mx-auto">
+                  <div className="process-image">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={460}
+                      height={300}
+                      layout="responsive"
+                      className="rounded-3"
+                    />
+                  </div>
+                  <div className="process-content mt-2 mt-md-4">
+                    <p className="process-step white">{item.step}</p>
+                    <h3 className="process-title">{item.title}</h3>
+                    <p className="process-description gray">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-
+            ))}
+          </Slider>
         </div>
-        
+
         <div className="d-flex justify-content-end justify-content-md-end justify-content-center gap-3 nav-mt-arrow ">
           <span
             className="nav-arrow"
@@ -176,8 +173,6 @@ const DesignProcess = () => {
           </span>
         </div>
       </Container>
-
-      
     </div>
   );
 };

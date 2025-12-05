@@ -8074,7 +8074,7 @@ nav a:hover::before {
 
 .loc-des {
   font-size: 18px;
-  letter-spacing: 1.6 ;
+  letter-spacing: 1.6;
   line-height: 1.6;
   font-weight: 400;
   opacity: 0.8;
@@ -8164,16 +8164,14 @@ nav a:hover::before {
     background-color: #004533;
   }
   .health-bg {
-    background-color: #003C4A;
+    background-color: #003c4a;
   }
   .quantafit-bg {
-    background-color: #1F1F1F;
+    background-color: #1f1f1f;
   }
 
-  
-
   .booking {
-    margin-top: 30px; 
+    margin-top: 30px;
     overflow: hidden;
     border-radius: 16px; /* rounded-[16px] */
     padding: 16px; /* p-4 */
@@ -8190,36 +8188,34 @@ nav a:hover::before {
       line-height: 1.5;
     }
 
-    img{
+    img {
       width: 100%;
     }
   }
 
   .booking-text {
-    color: rgba(255, 255, 255, 0.8); 
-    padding-top: 1px; 
-    padding-bottom: 10px; 
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 1px;
+    padding-bottom: 10px;
     line-height: 1.5;
     font-size: 16px;
   }
 
   @media (min-width: 1024px) {
     .booking-text {
-       padding-top: 12px; 
-      padding-bottom: 30px; 
+      padding-top: 12px;
+      padding-bottom: 30px;
       font-size: 18px;
     }
   }
 
   @media (min-width: 768px) {
-    
     .booking {
       flex-direction: row;
     }
   }
 
   @media (min-width: 1024px) {
-   
     .booking {
       margin-top: 60px; /* lg:mt-[60px] */
       padding: 40px; /* lg:p-10 */
@@ -8232,74 +8228,231 @@ nav a:hover::before {
   }
 }
 
-@media (max-width:765px) {
-  .recent-work-loc{
-     padding: 50px 0;
+@media (max-width: 765px) {
+  .recent-work-loc {
+    padding: 50px 0;
   }
 }
 
-
-.process-loc{
-  h2{
+.process-loc {
+  h2 {
     max-width: 588px;
   }
 
-  p{
+  p {
     max-width: 495px;
   }
 
   .process-card {
-  
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  
-}
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
 
-.process-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+  .process-card:hover {
+    transform: scale(1.02);
+    cursor: default;
+  }
 
+  .process-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 26px;
+  }
 
-.process-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 26px;
-}
+  .step-tag {
+    display: inline-block;
+    padding: 4px 30px;
+    font-size: 14px;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+  }
 
-
-.step-tag {
-  display: inline-block;
-  padding: 4px 30px;
-  font-size: 14px;
-  border: 1px solid var(--primary);
-  border-radius: 50px;
-}
-
-/* Title */
-.process-title {
-  font-size: 18px;
-  margin-top: 15px;
-  font-weight: 600;
-}
-
-@media (min-width: 992px) {
+  /* Title */
   .process-title {
-    font-size: 22px;
-    margin-top: 20px;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 600;
   }
-}
 
-/* Description */
-.process-desc {
-  font-size: 14px;
-  margin-top: 10px;
-  line-height: 1.7;
-}
+  @media (min-width: 992px) {
+    .process-title {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+  }
 
-@media (min-width: 992px) {
+  /* Description */
   .process-desc {
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 992px) {
+    .process-desc {
+      font-size: 16px;
+    }
   }
 }
 
+.client-say-loc {
+  background-color: #edf0f2;
+  padding: 100px 0;
+
+  .happy-client-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    .happy-client-wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .happy-client {
+    padding: 7px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 9999px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  .clientreview-wrapper {
+    position: relative;
+    max-width: 994px;
+    margin: 30px auto 0;
+  }
+
+  @media (min-width: 1024px) {
+    .clientreview-wrapper {
+      margin-top: 60px;
+    }
+  }
+
+  /* Slick container */
+  .clientreview {
+    position: relative;
+  }
+
+  /* Each slide card */
+  .review-card {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .review-card {
+      flex-direction: row;
+      gap: 40px;
+      padding: 30px;
+    }
+  }
+
+  .review-img {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .review-img {
+      width: 30%;
+    }
+  }
+
+  .review-img img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  @media (min-width: 768px) {
+    .review-img img {
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .review-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 500;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    .review-content {
+      width: 70%;
+    }
+    .review-content p {
+      font-size: 18px;
+    }
+  }
+
+  .review-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review-footer .client {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .review-footer .role {
+    font-size: 15px;
+    opacity: 0.8;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+ 
+  .nav-btn-loc {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: white;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  .nav-btn-loc:hover,
+  .nav-btn-loc.active {
+    background: var(--secondary);
+    color: white;
+  }
+
+  .next-btn-loc {
+    right: -10px;
+  }
+
+  .prev-btn-loc {
+    left: -10px;
+  }
 }
