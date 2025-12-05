@@ -8064,6 +8064,9 @@ nav a:hover::before {
 .pt-60 {
   padding-top: 60px;
 }
+.pt-30 {
+  padding-top: 30px;
+}
 
 .loc-title {
   font-size: 45px;
@@ -8425,7 +8428,6 @@ nav a:hover::before {
     padding-bottom: 0 !important;
   }
 
- 
   .nav-btn-loc {
     position: absolute;
     top: 50%;
@@ -8455,4 +8457,173 @@ nav a:hover::before {
   .prev-btn-loc {
     left: -10px;
   }
+}
+
+@media (max-width:765px) {
+  .client-say-loc{
+    padding: 45px 0;
+  }
+}
+
+.industries-expertise-loc {
+  .industries-expertise-content {
+    h2 {
+      max-width: 388px;
+    }
+
+    p {
+      max-width: 675px;
+    }
+  }
+
+  .industries-expertise-slide-loc {
+    position: relative;
+
+    .industries-expertise-slide-loc-card {
+      position: relative;
+      height: 300px;
+      border-radius: 1rem; 
+      overflow: hidden;
+      
+      width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      
+      .industries-expertise-slide-loc-card {
+        height: 400px;
+      }
+    }
+
+    .industries-expertise-slide-loc-card .card-image {
+      width: 100%;
+       height: 400px;
+      object-fit: cover;
+    }
+
+    .industries-expertise-slide-loc-card .card-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+      background: linear-gradient(
+        to top,
+        #111827,
+        rgba(17, 24, 39, 0.8),
+        transparent
+      );
+    }
+
+    .industries-expertise-slide-loc-card .card-title {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
+      color: white;
+      z-index: 20;
+    }
+  }
+
+   .nav-btn-loc {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: white;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  .nav-btn-loc:hover,
+  .nav-btn-loc.active {
+    background: var(--secondary);
+    color: white;
+  }
+
+ 
+}
+
+.number-loc{
+  
+  .number-loc-content{
+    h2{
+      max-width: 390px;
+    }
+
+    p{
+      max-width: 391px;
+    }
+  }
+
+  /* Container grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+ 
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    
+  }
+}
+
+/* Headings inside existing card-custom */
+.content-number h3 {
+  font-weight: bold;
+  color: var(--secondary, #004533);
+  font-size: 30px;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .content-number h3 {
+    font-size: 40px;
+  }
+}
+
+.content-number h4 {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .content-number h4 {
+    font-size: 24px;
+    padding-top: 40px;
+  }
+}
+
+.content-number p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .content-number p {
+    font-size: 16px;
+  }
+}
+
 }

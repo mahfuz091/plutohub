@@ -4,6 +4,8 @@ import Range from './Range/Range';
 import RecentWork from './RecentWork/RecentWork';
 import Process from './Process/Process';
 import ClientSay from './ClientSay/ClientSay';
+import IndustriesExpertise from './IndustriesExpertise/IndustriesExpertise';
+import NumberLoc from './NumberLoc/NumberLoc';
 
 const Location = () => {
     return (
@@ -13,6 +15,8 @@ const Location = () => {
            <RecentWork/>
            <Process/>
            <ClientSay/>
+           <IndustriesExpertise/>
+           <NumberLoc/>
 
         </div>
     );
