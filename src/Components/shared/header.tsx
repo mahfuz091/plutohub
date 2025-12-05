@@ -17,24 +17,23 @@ const Header = () => {
     path === "/" ? pathname === path : pathname.startsWith(path);
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const headerContentClass =
+    pathname === "/location" ? "header-content-loc" : "header-content";
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-     
       <Offcanvas
         show={show}
         onHide={handleClose}
@@ -174,13 +173,12 @@ useEffect(() => {
         </Container>
       </div>
 
-      {/* DESKTOP HEADER */}
-   <header className={isScrolled ? "header shrink" : "header"}>
-
+   
+      <header className={isScrolled ? "header shrink" : "header"}>
         <Container>
           <Row>
             <Col xxl={12}>
-              <div className="header-content d-flex align-items-center justify-content-between">
+              <div className={`${headerContentClass} d-flex align-items-center justify-content-between`}>
                 <div className="site-logo">
                   <Link href="/">
                     <Image

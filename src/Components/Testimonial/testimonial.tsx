@@ -250,7 +250,7 @@ const TestimonialsSection = () => {
             
           ))}
         </Slider>
-                <div className="d-flex justify-content-end align-items-end justify-content-center justify-content-md-end align-items-center align-items-md-end nav-mt-arrow ">
+                <div className="d-flex gap-3 justify-content-end align-items-end justify-content-center justify-content-md-end align-items-center align-items-md-end nav-mt-arrow ">
           <span
             className="nav-arrow"
             onClick={() => sliderRef.current?.slickPrev()}
