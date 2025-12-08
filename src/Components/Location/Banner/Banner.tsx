@@ -4,6 +4,7 @@ import { HiArrowUp } from "react-icons/hi";
 import LogoSlider from "../LogoSlider/LogoSLider";
 import LogoSlidertwo from "@/Components/Clientlogo/LogoSlidertwo";
 import LogoSliderTwo from "../LogoSlider/LogoSlidertwo";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -22,12 +23,16 @@ const Banner = () => {
             research, and refined interfaces, your product feels intuitive from
             day one.
           </p>
-          <button className="theme_btn mt-3 mt-md-4 ">
+
+          <Link href="/contact">
+           <button className="theme_btn mt-3 mt-md-4 ">
             Get Started
             <div className="arrow_icon">
               <HiArrowUp />
             </div>
           </button>
+          </Link>
+         
         </div>
 
         <div className="trusted-container">

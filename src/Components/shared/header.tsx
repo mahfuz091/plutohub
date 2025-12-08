@@ -18,7 +18,7 @@ const Header = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const headerContentClass =
-    pathname === "/location" ? "header-content-loc" : "header-content";
+    pathname === "/locations/ui-ux-design-lisbon" ? "header-content-loc" : "header-content";
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {

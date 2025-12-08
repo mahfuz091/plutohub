@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Container } from "react-bootstrap";
 import { HiArrowUp } from "react-icons/hi";
@@ -9,12 +10,14 @@ const RecentWork = () => {
         <Container>
           <div className="d-flex justify-content-between gap-3 flex-wrap align-items-center">
             <h2 className="loc-title">Our Recent UI/UX Design Works</h2>
-            <button className="theme_btn ">
-              Get in touch
-              <div className="arrow_icon">
-                <HiArrowUp />
-              </div>
-            </button>
+            <Link href="/contact">
+              <button className="theme_btn ">
+                Get in touch
+                <div className="arrow_icon">
+                  <HiArrowUp />
+                </div>
+              </button>
+            </Link>
           </div>
 
           <div className="">

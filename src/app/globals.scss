@@ -9034,6 +9034,7 @@ nav a:hover::before {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+   width: fit-content;
 }
 
 .theme_btn-sub .arrow_icon {
