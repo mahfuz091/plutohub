@@ -6,11 +6,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/locations/ui-ux-design-lisbon",
   },
-  title: "UI/UX Design Lisbon: Your Trusted Digital Solutions Partner",
-  description: "UI/UX Design Lisbon: Your Trusted Digital Solutions Partner",
+  title: "Lisbon’s Trusted UI/UX Design Agency | Plutohub",
+  description:
+    "Partner with Plutohub, Lisbon’s trusted UI/UX design agency. We design seamless digital experiences that turn users into loyal customers.",
   openGraph: {
-    title: "UI/UX Design Lisbon: Your Trusted Digital Solutions Partner",
-    description: "UI/UX Design Lisbon: Your Trusted Digital Solutions Partner",
+    title: "Lisbon’s Trusted UI/UX Design Agency | Plutohub",
+    description:
+      "Partner with Plutohub, Lisbon’s trusted UI/UX design agency. We design seamless digital experiences that turn users into loyal customers.",
   },
 };
 const LocationPage = () => {
