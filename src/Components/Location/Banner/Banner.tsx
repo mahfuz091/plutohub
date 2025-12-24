@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { HiArrowUp } from "react-icons/hi";
-import LogoSlider from "../LogoSlider/LogoSLider";
-import LogoSlidertwo from "@/Components/Clientlogo/LogoSlidertwo";
-import LogoSliderTwo from "../LogoSlider/LogoSlidertwo";
+
+
 import Link from "next/link";
+import LogoSlider from "../LogoSlider/LogoSLider";
 
 const Banner = () => {
   return (
@@ -36,16 +36,16 @@ const Banner = () => {
         </div>
 
         <div className="trusted-container">
-          <button className="trusted-badge">
+          {/* <button className="trusted-badge">
             Trusted By 200+ Global Brands
-          </button>
+          </button> */}
         </div>
       </Container>
 
       <div className="logo-section">
         <div className="logo-slider-wrapper">
           <LogoSlider />
-          <LogoSliderTwo/>
+          {/* <LogoSliderTwo/> */}
 
         </div>
       </div>

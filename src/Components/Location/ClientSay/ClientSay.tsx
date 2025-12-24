@@ -58,18 +58,13 @@ const ClientSay = () => {
 
                 <div className="review-content">
                   <p>
-                    “We are pleased with the quality and comprehensiveness of
-                    the outcomes, as well as the ongoing support. The team
-                    recognized the limitations of mobile and web app
-                    development, avoiding overly flashy designs that complicate
-                    front-end coding. We are pleased with the quality and
-                    comprehensiveness outcomes, as well as the ongoing support.”
+                    “Shahin has been incredible. He went above and beyond our expectations, and we couldn’t be happier with how the page looks. The quality of the Figma design, attention to detail, and responsiveness throughout the process were outstanding. We’re actually hiring him again for future client projects- highly recommended.”
                   </p>
 
                   <div className="review-footer">
                     <div>
-                      <p className="client">Khaled Belkadi</p>
-                      <p className="role">Product Manager</p>
+                      <p className="client">Lucas Alvarez</p>
+                      <p className="role">Head of PPC</p>
                     </div>
 
                     <Image

@@ -1,5 +1,6 @@
 import {
   ArrowDown,
+  Dribbble,
   Facebook,
   Instagram,
   Linkedin,
@@ -50,6 +51,13 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <FaXTwitter color="white" size={22} />
+                  </a>
+                  <a
+                    href="https://dribbble.com/plutohubagency"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Dribbble color="white" size={22} />
                   </a>
                 </div>
               </div>

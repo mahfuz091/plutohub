@@ -38,13 +38,18 @@ const RecentWork = () => {
                   search to booking. The design balances clarity and charm to
                   make every stay feel seamless.
                 </p>
-
-                <button className="theme_btn-2">
-                  Check Our Full Project
-                  <div className="arrow_icon">
-                    <HiArrowUp />
-                  </div>
-                </button>
+                <Link
+                  href="https://dribbble.com/shots/25672112-Hotel-Booking-Landing-Page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="theme_btn-2">
+                    Check Our Full Project
+                    <div className="arrow_icon">
+                      <HiArrowUp />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="booking health-bg">
@@ -64,13 +69,18 @@ const RecentWork = () => {
                   health tech or clinic brand seeking to turn visitors into
                   confident users through clarity and thoughtful design.
                 </p>
-
-                <button className="theme_btn-2">
-                  Check Our Full Project
-                  <div className="arrow_icon">
-                    <HiArrowUp />
-                  </div>
-                </button>
+                <Link
+                  href="https://dribbble.com/shots/25480753-Healthcare-Landing-Page-Design"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="theme_btn-2">
+                    Check Our Full Project
+                    <div className="arrow_icon">
+                      <HiArrowUp />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="booking quantafit-bg">
@@ -91,13 +101,18 @@ const RecentWork = () => {
                   brands aiming for clarity, motivation, and a polished user
                   experience.
                 </p>
-
+                <Link
+                  href="https://dribbble.com/shots/26309394-Quantafit-AI-Fitness-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <button className="theme_btn-2">
                   Check Our Full Project
                   <div className="arrow_icon">
                     <HiArrowUp />
                   </div>
                 </button>
+                </Link>
               </div>
             </div>
           </div>

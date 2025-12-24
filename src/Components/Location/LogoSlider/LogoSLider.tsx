@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 
-const ClientlogoData = Array.from({ length: 8 }, (_, i) => ({
+const ClientlogoData = Array.from({ length: 7 }, (_, i) => ({
   id: i + 1,
   image: require(`../../../assets/logos/${i + 1}.png`),
 }));
@@ -33,13 +33,18 @@ export default function LogoSlider() {
 
   return (
       <div className="client_logo_slider" ref={marqueeRef}>
-        {[...ClientlogoData,...ClientlogoData].map((item, index) => (
-          <div className="logo_slider_item" key={`${item.id}-${index}`} >
-            <Image
-               src={item.image}
-            alt={`client-${item.id}`}/>
-          </div>
-        ))}
-      </div>
+  {[...ClientlogoData, ...ClientlogoData].map((item, index) => (
+    <div className="logo_slider_item" key={`${item.id}-${index}`}>
+      <Image
+        src={item.image}
+        alt={`client-${item.id}`}
+        style={{
+          filter: 'brightness(0) invert(1)',
+        }}
+      />
+    </div>
+  ))}
+</div>
+
   );
 }
