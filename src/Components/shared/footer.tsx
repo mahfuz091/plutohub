@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   ArrowDown,
   Dribbble,
@@ -9,7 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter ,FaBehance,} from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer style={{ backgroundImage: "url(/images/footer-bg.jpg)" }}>
@@ -58,6 +59,13 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <Dribbble color="white" size={22} />
+                  </a>
+                  <a
+                    href="https://www.behance.net/plutohubagency"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaBehance size={22} color="white" />
                   </a>
                 </div>
               </div>

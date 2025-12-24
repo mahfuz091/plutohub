@@ -3,7 +3,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, phone, services, budget, project } = await req.json();
+    const body = await req.json();
+    const { name, email, phone, services, budget, project } = body;
 
     if (!name || !email || !phone || !services || !budget || !project) {
       return NextResponse.json(
@@ -12,10 +13,12 @@ export async function POST(req: Request) {
       );
     }
 
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      throw new Error("Email env variables missing");
+    }
+
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -28,23 +31,19 @@ export async function POST(req: Request) {
       replyTo: email,
       subject: `New Project Inquiry from ${name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Services:</strong> ${services}</p>
-          <p><strong>Budget:</strong> ${budget}</p>
-          <p><strong>Project Details:</strong> ${project}</p>
-         
-          
-        </div>
+        <h3>New Contact Form Submission</h3>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Services:</b> ${services}</p>
+        <p><b>Budget:</b> ${budget}</p>
+        <p><b>Project:</b> ${project}</p>
       `,
     });
 
-    return NextResponse.json({ message: "Email sent successfully" });
-  } catch (err) {
-    console.error(err);
+    return NextResponse.json({ success: true });
+  } catch (error: any) {
+    console.error("EMAIL ERROR 👉", error.message);
     return NextResponse.json(
       { message: "Failed to send email" },
       { status: 500 }

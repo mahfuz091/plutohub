@@ -7,9 +7,10 @@ import { MoveLeft, MoveRight } from "lucide-react";
 import { useRef, useState } from "react";
 const industries = [
   { img: "/images/services-web/crypto.png", title: "Crypto" },
-  { img: "/images/services-web/travel.png", title: "Travel" },
+ 
   { img: "/images/services-web/medical.png", title: "Medical" },
   { img: "/images/services-web/finance.png", title: "Finance" },
+   { img: "/images/services-web/travel.png", title: "Travel" },
 ];
 
 const IndustriesExpertise = () => {
@@ -86,11 +87,11 @@ const IndustriesExpertise = () => {
 
         <Slider {...sliderSettings} ref={sliderRef}>
           {industries.map((item, index) => (
-            <div key={index} className="industry-card position-relative overflow-hidden rounded-3.">
+            <div key={index} className="industry-card position-relative  overflow-hidden rounded-3.">
               <Image
                 src={item.img}
                 alt={item.title}
-                height={420}
+                height={300}
                 width={400}
                 className=" slide-img"
               />

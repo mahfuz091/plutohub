@@ -30,7 +30,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
           <Image
             src={item.image}
             alt={item.bannerAltText}
-            height={300}
+            height={220}
             width={390}
           />
           <div className='blog-card-text'>

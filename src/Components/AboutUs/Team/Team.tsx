@@ -32,7 +32,7 @@ const Team = () => {
 
   return (
     <section className="team ">
-      <Container>
+      {/* <Container>
         <h5 className="text-center mb-5">Meet Our Team</h5>
         <Row className="g-4 justify-content-center">
           {data.map((member, index) => (
@@ -54,7 +54,7 @@ const Team = () => {
             </Col>
           ))}
         </Row>
-      </Container>
+      </Container> */}
       <Container>
         <div className=" team-container ">
         <Row className="align-items-center">

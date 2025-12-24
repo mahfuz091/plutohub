@@ -77,11 +77,11 @@ const Price = () => {
                       30 min
                     </Nav.Link>
                   </Nav.Item>
-                  <Nav.Item as='li'>
+                  {/* <Nav.Item as='li'>
                     <Nav.Link eventKey='second' data-event-key='second'>
                       1 hour
                     </Nav.Link>
-                  </Nav.Item>
+                  </Nav.Item> */}
                 </Nav>
                 <Tab.Content>
                   <Tab.Pane eventKey='first'>

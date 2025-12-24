@@ -6057,6 +6057,8 @@ html {
   overflow: hidden;
   transition: transform 0.4s ease-in-out;
   will-change: transform;
+
+  
 }
 
 .industry-overlay {
@@ -8013,8 +8015,6 @@ nav a:hover::before {
     transition: all 0.3s ease;
   }
 
-  
-
   @media (max-width: 765px) {
     .trusted-badge {
       width: 100% !important;
@@ -8136,16 +8136,17 @@ nav a:hover::before {
   transform: scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
-
-.service-title {
-  font-size: 18px;
-  font-weight: 600;
-  padding-top: 20px;
-}
-
-@media (min-width: 992px) {
+.main-bg-loc {
   .service-title {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  @media (min-width: 992px) {
+    .service-title {
+      font-size: 22px;
+    }
   }
 }
 
@@ -9085,4 +9086,8 @@ nav a:hover::before {
     font-size: 14px;
     margin-left: 6px;
   }
+}
+
+.cursor-default {
+  cursor: default;
 }

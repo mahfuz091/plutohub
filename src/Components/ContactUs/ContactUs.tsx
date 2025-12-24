@@ -33,7 +33,7 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
-  // Mouse move parallax effect
+  
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const banner = document.querySelector(
@@ -130,16 +130,13 @@ const ContactUs = () => {
       />
       <Image
         src="/images/contact-left-bg.png"
-        width={500}
+        width={350}
         height={500}
         alt="screw"
         className="contact-left-img"
       />
 
-      <div
-        className="hero-image"
-        
-      ></div>
+      <div className="hero-image"></div>
 
       <Container className="contact-py">
         <Row>
@@ -152,7 +149,10 @@ const ContactUs = () => {
               }`}
             >
               {pathname === "/" ? (
-                <h2 className="title text-center" style={{ position: "relative", zIndex: 20 }}>
+                <h2
+                  className="title text-center"
+                  style={{ position: "relative", zIndex: 20 }}
+                >
                   Have a{" "}
                   <span className="green-text">
                     Pr
@@ -167,7 +167,10 @@ const ContactUs = () => {
                   Idea?
                 </h2>
               ) : (
-                <h1 className="title text-center" style={{ position: "relative", zIndex: 20 }}>
+                <h1
+                  className="title text-center"
+                  style={{ position: "relative", zIndex: 20 }}
+                >
                   Have a{" "}
                   <span className="green-text">
                     Pr
@@ -187,7 +190,7 @@ const ContactUs = () => {
         </Row>
 
         <Row className="gx-5">
-          <Col xl={4} lg={5} className="order-2 order-lg-1 mobile-gap gy-4">
+          <Col xl={4} lg={5} className="order-2 order-lg-1 mobile-gap gy-4 ">
             <div className="contact-info">
               <div className="contact-info-inner">
                 <div className="contact-info-top">
@@ -229,8 +232,12 @@ const ContactUs = () => {
                   <div className="contact-info-box">
                     <h5>Whatsapp</h5>
                     <p>
-                      <a target="_blank" href="https://wa.me/351937296113">
-                        +351937296113
+                      <a
+                        href="https://wa.me/351937296113"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        +351 937 296 113
                       </a>
                     </p>
                   </div>
@@ -239,7 +246,7 @@ const ContactUs = () => {
             </div>
           </Col>
 
-          <Col xl={8} lg={7} className="order-1 order-lg-2 ">
+          <Col xl={8} lg={7} className="order-1 order-lg-2  mt-md-4">
             <div
               className="contact-form-wrapper"
               style={{ backgroundImage: "url(/images/contact-form-bg.png)" }}
@@ -358,8 +365,5 @@ const ContactUs = () => {
     </section>
   );
 };
-
-
-
 
 export default ContactUs;
