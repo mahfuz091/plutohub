@@ -6,7 +6,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    // You can keep domains for simple whitelisting (Cloudinary) 
+    // You can keep domains for simple whitelisting (Cloudinary)
     domains: ["res.cloudinary.com"],
     // Add remote patterns for additional external sources
     remotePatterns: [
@@ -26,6 +26,7 @@ const nextConfig = {
     }
     return config;
   },
+  turbopack: {},
 };
 
 export default nextConfig;
