@@ -7,10 +7,10 @@ import { MoveLeft, MoveRight } from "lucide-react";
 import { useRef, useState } from "react";
 const industries = [
   { img: "/images/services-web/crypto.png", title: "Crypto" },
- 
+
   { img: "/images/services-web/medical.png", title: "Medical" },
   { img: "/images/services-web/finance.png", title: "Finance" },
-   { img: "/images/services-web/travel.png", title: "Travel" },
+  { img: "/images/services-web/travel.png", title: "Travel" },
 ];
 
 const IndustriesExpertise = () => {
@@ -22,7 +22,7 @@ const IndustriesExpertise = () => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: false,
     focusOnSelect: false,
@@ -67,11 +67,7 @@ const IndustriesExpertise = () => {
         <div className="Industries-Expertise-heading mb-5">
           <Row>
             <Col xl={6}>
-              <h2 className="text-start ">
-                Industries
-                
-                Expertise
-              </h2>
+              <h2 className="text-start ">Industries Expertise</h2>
             </Col>
             <Col xl={6}>
               <p className="gray text-start ">
@@ -87,12 +83,14 @@ const IndustriesExpertise = () => {
 
         <Slider {...sliderSettings} ref={sliderRef}>
           {industries.map((item, index) => (
-            <div key={index} className="industry-card position-relative  overflow-hidden rounded-3.">
-              <Image
+            <div
+              key={index}
+              className="industry-card position-relative  overflow-hidden rounded-3."
+            >
+              <img
                 src={item.img}
                 alt={item.title}
-                height={300}
-                width={400}
+                
                 className=" slide-img"
               />
               <div className="industry-overlay position-absolute bottom-0   text-white py-3">

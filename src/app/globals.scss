@@ -597,7 +597,7 @@ span.animated-dominate {
   }
 
   .pr_content {
-    padding: 30px 20px 10px;
+    padding: 30px 0px 10px;
 
     h3 {
       font-size: 26px;
@@ -2192,7 +2192,7 @@ section.testimonials-area {
   }
   .single-testimonial-item {
     width: 100% !important;
-    height: 500px;
+    height: 370px;
 
     background-size: cover;
   }
@@ -3481,6 +3481,7 @@ section.team {
     z-index: 2;
   }
 }
+
 
 .about_banner_area {
   position: relative;
@@ -6058,6 +6059,12 @@ html {
   transition: transform 0.4s ease-in-out;
   will-change: transform;
 
+
+
+  .slide-img{
+    width: 100%;
+  }
+
   
 }
 
@@ -6377,6 +6384,22 @@ html {
   letter-spacing: 0%;
   transition: all 0.3s ease-in-out;
   color: white;
+}
+
+@media (max-width:765px) {
+  .process-tab {
+    opacity: 1;
+    letter-spacing: 0%;
+    color: #fff;
+    background: #ffffff0d;
+    border: 1px solid #ffffff05;
+    border-radius: 50px;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 160%;
+    transition: all .3s ease-in-out;
+}
 }
 
 .process-tab:hover {
