@@ -18,7 +18,11 @@ const Header = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const headerContentClass =
-    pathname === "/locations/ui-ux-design-lisbon" ? "header-content-loc" : "header-content";
+    pathname.includes("/locations/ui-ux-design-lisbon") ||
+      pathname.includes("/locations/web-design-lisbon")
+      ? "header-content-loc"
+      : "header-content";
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -173,7 +177,7 @@ const Header = () => {
         </Container>
       </div>
 
-   
+
       <header className={isScrolled ? "header shrink" : "header"}>
         <Container>
           <Row>
@@ -222,9 +226,8 @@ const Header = () => {
                       </Link>
 
                       <ul
-                        className={`dropdown-menu-custom ${
-                          showDropdown ? "show" : ""
-                        }`}
+                        className={`dropdown-menu-custom ${showDropdown ? "show" : ""
+                          }`}
                       >
                         <li>
                           <Link href="/services/web-development">

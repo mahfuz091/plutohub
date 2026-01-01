@@ -13,16 +13,16 @@ import Contact from './Contact/Contact';
 const Location = () => {
     return (
         <div className='main-bg-loc'>
-           <Banner/>
-           <Range/>
-           <RecentWork/>
-           <Process/>
-           <ClientSay/>
-           <IndustriesExpertise/>
-           <NumberLoc/>
-           <Boost/>
-           <Faq/>
-           <Contact/>
+            <Banner />
+            <Range />
+            <RecentWork />
+            <Process />
+            <ClientSay />
+            <IndustriesExpertise />
+            <NumberLoc />
+            <Boost />
+            <Faq />
+            <Contact />
         </div>
     );
 };

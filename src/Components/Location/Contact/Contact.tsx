@@ -11,6 +11,7 @@ interface FormData {
   services: string;
   budget: string;
   project: string;
+  phone: string;
 }
 
 const Contact = () => {
@@ -20,6 +21,7 @@ const Contact = () => {
     services: "",
     budget: "",
     project: "",
+    phone: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -31,19 +33,20 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     console.log(e)
 
- 
+
     if (
       !formData.email ||
       !formData.name ||
       !formData.services ||
       !formData.budget ||
-      !formData.project
+      !formData.project ||
+      !formData.phone
     ) {
       toast.error("Please fill all fields!");
       return;
@@ -68,6 +71,7 @@ const Contact = () => {
           services: "",
           budget: "",
           project: "",
+          phone: "",
         });
       } else {
         toast.error(data?.message || "Failed to send message");
@@ -130,16 +134,6 @@ const Contact = () => {
             {/* RIGHT FORM */}
             <div className="contact-loc-form-wrapper">
               <form className="contact-loc-form" onSubmit={handleSubmit}>
-                <div className="form-loc-group">
-                  <label>Email Address*</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </div>
 
                 <div className="form-loc-group">
                   <label>Full Name*</label>
@@ -151,6 +145,31 @@ const Contact = () => {
                     onChange={handleChange}
                   />
                 </div>
+                <div className="form-loc-grid">
+                  <div className="form-loc-group">
+                    <label>Email Address*</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="form-loc-group">
+                    <label>Phone (Whatsapp)*</label>
+                    <input
+                      type="number"
+                      name="phone"
+                      placeholder="+192********"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
+
+
 
                 <div className="form-loc-grid">
                   <div className="form-loc-group">

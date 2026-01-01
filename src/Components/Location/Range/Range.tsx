@@ -1,9 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-
-const services = [
+const defaultServices = [
   {
     img: "/assets/images/consulting.png",
     title: "UI UX Consulting",
@@ -42,27 +40,28 @@ const services = [
   },
 ];
 
-const Range = () => {
+const Range = ({
+  services = defaultServices,
+  title = "Our UX & UI Design Services in Lisbon, Portugal",
+}) => {
   return (
     <div className="pt-120 range">
       <Container>
-        <h2 className="loc-title range-title text-md-center">
-          Our UX & UI Design Services in Lisbon, Portugal
-        </h2>
+        <h2 className="loc-title range-title text-md-center">{title}</h2>
 
-        <div className=" pt-60">
+        <div className="pt-60">
           <Row className="g-4">
             {services.map((service, index) => (
               <Col key={index} xs={12} md={6} lg={4}>
                 <div className="rang-card">
                   <div className="rang-card-img">
                     <img
-                    src={service.img}
-                    alt={service.title}
-                    className=" "
-                   
-                  />
+                      src={service.img}
+                      alt={service.title}
+                      className="range-card-img"
+                    />
                   </div>
+
                   <h4 className="service-title">{service.title}</h4>
                   <p className="service-desc">{service.description}</p>
                 </div>

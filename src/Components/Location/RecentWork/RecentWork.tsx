@@ -106,12 +106,12 @@ const RecentWork = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                <button className="theme_btn-2">
-                  Check Our Full Project
-                  <div className="arrow_icon">
-                    <HiArrowUp />
-                  </div>
-                </button>
+                  <button className="theme_btn-2">
+                    Check Our Full Project
+                    <div className="arrow_icon">
+                      <HiArrowUp />
+                    </div>
+                  </button>
                 </Link>
               </div>
             </div>
