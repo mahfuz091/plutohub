@@ -78,7 +78,9 @@ const Faq = ({
 
               <div
                 className="faq-content"
-                ref={(el) => (contentRefs.current[index] = el)}
+                ref={(el) => {
+                  contentRefs.current[index] = el;
+                }}
               >
                 <p>{item.a}</p>
               </div>
