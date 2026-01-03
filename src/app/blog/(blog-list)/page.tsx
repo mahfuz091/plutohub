@@ -1,7 +1,7 @@
 import React from "react";
-import BlogPage from "../../Components/BlogPage/BlogPage";
-import { postList } from "../actions/blog/blog.actions";
-import { blogCategoryList } from "../actions/blog/blogCategory";
+import BlogPage from "@/Components/BlogPage/BlogPage";
+import { postList } from "@/app/actions/blog/blog.actions";
+import { blogCategoryList } from "@/app/actions/blog/blogCategory";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 const page = async () => {
   const blogsResponse = await postList();
-  
+
   const blogCategoriesResponse: any = await blogCategoryList();
- 
+
 
   if (!blogCategoriesResponse.success) {
     console.error(" Failed to fetch categories:", blogCategoriesResponse.msg);
@@ -33,12 +33,12 @@ const page = async () => {
 
   const blogsArray = Array.isArray(blogsResponse?.post?.postsWithContentObj)
     ? blogsResponse?.post?.postsWithContentObj.map((blog: any) => ({
-        ...blog,
-        author: {
-          ...blog.author,
-          profileImage: blog.author?.profileImage ?? "",
-        },
-      }))
+      ...blog,
+      author: {
+        ...blog.author,
+        profileImage: blog.author?.profileImage ?? "",
+      },
+    }))
     : [];
 
   const categoriesArray = Array.isArray(blogCategoriesResponse.blogCategory)

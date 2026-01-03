@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Banner from "../AboutUs/Banner/Banner";
+
 import BlogBanner from "./BlogBanner/BlogBanner";
 import Blogs from "./Blogs/Blogs";
 import JoinTeam from "./Blogs/JoinTeam";
+import Banner from "./Blogs/Banner";
 
 // category type
 type BlogCategory = {

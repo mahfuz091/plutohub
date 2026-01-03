@@ -17,7 +17,7 @@ const FaqSection = () => {
         duration: 1.2, // 1.2 seconds duration (faster)
         ease: "power2.inOut", // Smooth easing
         yoyo: true, // Reverse the animation
-        repeat: -1, // Infinite repeat
+        repeat: -1,
       });
     }
   }, []);
