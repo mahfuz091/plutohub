@@ -41,6 +41,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/locations/web-design-lisbon`,
+      lastModified: new Date(),
+    },
+    {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
       lastModified: new Date(),
     },
