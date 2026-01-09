@@ -37,7 +37,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
   const [filteredBlogs, setFilteredBlogs] = useState<Blog[]>(blogs);
 
 
-  
+
 
   const handleSelectCategory = (categoryId: string) => {
     if (!categoryId) {
@@ -50,7 +50,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
     }
   };
 
-  console.log(filteredBlogs,'filter data')
+
 
   return (
     <div className={` ${filteredBlogs.length > 0 ? "" : ""}`}>
@@ -64,7 +64,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, categories }) => {
 
             <Col xs={12} md={4} className="ps-md-5 mt-4 mt-md-0 ">
               <div className="sidebar-sticky ">
-                <RecentBlog  recentBlogs={blogs}/>
+                <RecentBlog recentBlogs={blogs} />
 
                 <div className="">
                   <p className="fw-semibold mb-3 blog-category mt-3 mt-md-5 ">

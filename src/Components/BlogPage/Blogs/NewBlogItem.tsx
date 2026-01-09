@@ -42,7 +42,7 @@ const NewBlogItem: React.FC<NewBlogItemProps> = ({ filterData }) => {
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = filterData.slice(indexOfFirstBlog, indexOfLastBlog);
-console.log(currentBlogs);
+
   const handleNext = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
   };
@@ -66,7 +66,7 @@ console.log(currentBlogs);
   return (
     <div>
       {currentBlogs.map((blog, index) => {
-       
+
         const firstParagraph =
           blog?.content?.blocks?.find((b: any) => b.type === "paragraph")
             ?.data?.text || "";
@@ -76,7 +76,7 @@ console.log(currentBlogs);
             key={blog.id || index}
             className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center blog-card-new gap-3 mb-4"
           >
-            
+
             <Link href={`/blog/${blog.postSlug}`} className="order-1 order-md-2">
               <div className="blog-thumbnail">
                 <img
@@ -87,7 +87,7 @@ console.log(currentBlogs);
               </div>
             </Link>
 
-           
+
             <div className="flex-grow-1 me-3 order-2 order-md-1">
               <div className="d-flex align-items-center mb-2">
                 <Image
@@ -106,7 +106,7 @@ console.log(currentBlogs);
                 <h5 className="mb-1 mt-3 title-blog">{blog.title}</h5>
               </Link>
 
-             
+
               <p className="mb-2 title-description two-line-text">
                 {firstParagraph}
               </p>
@@ -128,7 +128,7 @@ console.log(currentBlogs);
 
                 <span className="d-flex align-items-center gap-1">
                   <MessageCircle size={14} />
-                 {blog.Comment?.filter((c: any) => c.approved === true).length || 0}
+                  {blog.Comment?.filter((c: any) => c.approved === true).length || 0}
                 </span>
               </div>
             </div>
@@ -151,9 +151,8 @@ console.log(currentBlogs);
             <button
               key={i}
               onClick={() => handlePageClick(i + 1)}
-              className={`pagination-btn ${
-                currentPage === i + 1 ? "pagination-active-btn" : ""
-              }`}
+              className={`pagination-btn ${currentPage === i + 1 ? "pagination-active-btn" : ""
+                }`}
             >
               {i + 1}
             </button>
@@ -162,9 +161,8 @@ console.log(currentBlogs);
           <button
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className={`pagination-btn ${
-              currentPage === totalPages ? "disabled" : ""
-            }`}
+            className={`pagination-btn ${currentPage === totalPages ? "disabled" : ""
+              }`}
           >
             Next
           </button>

@@ -16,7 +16,7 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ item }) => {
   const [isVisible, setIsVisible] = useState(false);
-  console.log(item);
+
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);

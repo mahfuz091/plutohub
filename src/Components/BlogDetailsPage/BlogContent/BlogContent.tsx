@@ -50,19 +50,19 @@ const BlogContent = ({ post }: BlogContentProps) => {
   const [visibleComments, setVisibleComments] = useState(5);
 
   useEffect(() => {
-    
 
-    if (state.success){
- if (state.msg) {
-        
+
+    if (state.success) {
+      if (state.msg) {
+
         toast.success(state.msg);
       } else {
         toast.error(state.msg);
       }
     }
 
-     
-    
+
+
   }, [state]);
 
   const loadMoreComments = () => {
@@ -202,10 +202,10 @@ const BlogContent = ({ post }: BlogContentProps) => {
     const weeks = Math.floor(days / 7);
     return `${weeks} week${weeks > 1 ? "s" : ""} ago`;
   };
-  console.log(post.Comment, "comment all");
+
   return (
     <div className="blogContentWrapper">
-      <Toaster position="bottom-right"  />
+      <Toaster position="bottom-right" />
       <div className="blogContent">
         <span className="blog-Category">{post.BlogCategory?.name}</span>
         <h1 className="blog-title">{post.title}</h1>
@@ -361,7 +361,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
                     <h4 className="reply-title mb-4">
                       {post.Comment.filter((c) => c.approved === true).length}{" "}
                       {post.Comment.filter((c) => c.approved === true).length >
-                      1
+                        1
                         ? "Comments"
                         : "Comment"}
                     </h4>
@@ -400,15 +400,15 @@ const BlogContent = ({ post }: BlogContentProps) => {
                     {visibleComments <
                       post.Comment.filter((c) => c.approved === true)
                         .length && (
-                      <div className="text-center mt-4">
-                        <button
-                          onClick={loadMoreComments}
-                          className="theme_btn-3 d-inline-flex align-items-center justify-content-center px-4 py-2"
-                        >
-                          Load More Comments
-                        </button>
-                      </div>
-                    )}
+                        <div className="text-center mt-4">
+                          <button
+                            onClick={loadMoreComments}
+                            className="theme_btn-3 d-inline-flex align-items-center justify-content-center px-4 py-2"
+                          >
+                            Load More Comments
+                          </button>
+                        </div>
+                      )}
                   </div>
                 )}
             </div>
