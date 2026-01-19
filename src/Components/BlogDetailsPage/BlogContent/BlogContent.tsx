@@ -209,7 +209,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
       <div className="blogContent">
         <span className="blog-Category">{post.BlogCategory?.name}</span>
         <h1 className="blog-title">{post.title}</h1>
-        {/* <p className="blog-explain-text-1 white">{post.metaDescription}</p> */}
+
 
         <div className="blog-author-meta mt-3">
           <div className="blog-author-meta-gap ">
@@ -279,7 +279,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
             <div className="col-12 col-md comment-author-info text-center text-md-start">
               <span className="written-by">Written by</span>
               <h5 className="white">{post.author?.name}</h5>
-              {/* <p className="writer-post white">{post.author?.email}</p> */}
+
             </div>
 
             <div className="">

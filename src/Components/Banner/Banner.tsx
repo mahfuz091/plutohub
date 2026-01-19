@@ -229,15 +229,7 @@ const Banner = () => {
         <Row>
           <Col>
             <div className="banner_content text-center">
-              {/* <div className='b_review'>
-                <Image
-                  src='/images/review_img.png'
-                  width={114}
-                  height={40}
-                  alt='review image'
-                />
-                Based on <strong>24 clutch</strong> reviews
-              </div> */}
+
               <h1 className="banner-title">
                 <Image
                   ref={blubRef}

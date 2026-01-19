@@ -117,7 +117,7 @@ const Services = () => {
 
   return (
     <section className='service_about_area about_area services' ref={aboutRef}>
-      {/*  */}
+
 
       <Container>
         <Row>

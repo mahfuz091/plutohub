@@ -6,7 +6,7 @@ export const BlogDetailsSkeleton = () => {
     return (
         <div className="container blog-details">
             <div className="row">
-                {/* TOC Sidebar Skeleton */}
+
                 <div className="col-xl-3 mb-4">
                     <div className="sticky-sidebar p-4 border rounded" style={{ background: "#1c1c22" }}>
                         <Skeleton width={120} height={24} className="mb-4" />
@@ -16,7 +16,6 @@ export const BlogDetailsSkeleton = () => {
                     </div>
                 </div>
 
-                {/* Main Content Skeleton */}
                 <div className="col-xl-9 mb-4">
                     <div className="blogContentWrapper">
                         <div className="blogContent">
@@ -46,7 +45,7 @@ export const BlogDetailsSkeleton = () => {
                 </div>
             </div>
 
-            {/* Related Blog Skeleton */}
+
             <div className="related-blog mt-5">
                 <Skeleton width={200} height={32} className="mb-4" />
                 <Row>

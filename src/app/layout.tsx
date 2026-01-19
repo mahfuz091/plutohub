@@ -62,14 +62,14 @@ export default function RootLayout({
       className={`${interSans.variable} ${plusJakartaSans.variable}`}
     >
       <head>
-        {/* Google Site Verification */}
+
         <meta
           name="google-site-verification"
           content="jL50bNw8bkBkNtudsNvptQ0motABgDg2_kSDEylPrxk"
         />
       </head>
       <body>
-        {/*  Google Analytics */}
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BV2Q0LTKVM"
           strategy="afterInteractive"
@@ -83,7 +83,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/*  Microsoft Clarity */}
+
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){

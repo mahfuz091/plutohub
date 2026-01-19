@@ -12,7 +12,7 @@ export const BlogCardSkeleton = () => {
                 </div>
             </div>
 
-            {/* Content Skeleton */}
+
             <div className="flex-grow-1 me-3 order-2 order-md-1" style={{ width: "100%" }}>
                 <div className="d-flex align-items-center mb-2">
                     <Skeleton circle width={30} height={30} className="me-3" />

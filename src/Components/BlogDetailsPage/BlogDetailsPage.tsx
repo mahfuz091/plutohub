@@ -23,7 +23,7 @@ interface BlogDetailsPageProps {
       content: string;
       createdAt: string;
       profileImage?: string;
-      approved?:boolean;
+      approved?: boolean;
     }[];
     metaDescription?: string;
   };
@@ -48,28 +48,24 @@ const BlogDetailsPage = ({
 }: BlogDetailsPageProps) => {
   return (
     <div className='container  blog-details'>
-      
+
       <div className='row'>
         <div className='col-xl-3 mb-4'>
           <div className='sticky-sidebar'>
             <TableOfContents
               blocks={post.content?.blocks || []}
               postSlug={post.postSlug}
-             
+
             />
           </div>
         </div>
-        
+
 
         <div className='col-xl-9 mb-4'>
           <BlogContent post={post} />
         </div>
 
-        {/* <div className='col-xl-3'>
-          <div className='sticky-sidebar'>
-            <RightSidebar categories={blogCategories} />
-          </div>
-        </div> */}
+
       </div>
 
       <RelatedBlog
