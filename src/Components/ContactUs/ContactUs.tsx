@@ -33,7 +33,7 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
-  
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const banner = document.querySelector(
@@ -50,9 +50,8 @@ const ContactUs = () => {
       const yPos = (clientY / innerHeight - 0.5) * 2;
 
       if (blubRef.current) {
-        blubRef.current.style.transform = `translate(${xPos * 20}px, ${
-          yPos * 15
-        }px) rotate(${xPos * 5}deg)`;
+        blubRef.current.style.transform = `translate(${xPos * 20}px, ${yPos * 15
+          }px) rotate(${xPos * 5}deg)`;
       }
     };
 
@@ -75,7 +74,11 @@ const ContactUs = () => {
     setStatus("Sending...");
 
     try {
-      const res = await fetch("/api/contact", {
+      // Original Nodemailer implementation:
+      // const res = await fetch("/api/contact", {
+
+      // New Resend implementation:
+      const res = await fetch("/api/contact-resend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -142,11 +145,10 @@ const ContactUs = () => {
         <Row>
           <Col xl={12}>
             <div
-              className={`${
-                pathname === "/contact"
+              className={`${pathname === "/contact"
                   ? "section-title-wrapper2"
                   : "section-title-wrapper"
-              }`}
+                }`}
             >
               {pathname === "/" ? (
                 <h2
