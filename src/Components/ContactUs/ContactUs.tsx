@@ -59,7 +59,7 @@ const ContactUs = () => {
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Input change handler
+ 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -67,17 +67,14 @@ const ContactUs = () => {
     setFormData({ ...formData, [id]: value });
   };
 
-  // Form submit handler
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setStatus("Sending...");
 
     try {
-      // Original Nodemailer implementation:
-      // const res = await fetch("/api/contact", {
-
-      // New Resend implementation:
+      
       const res = await fetch("/api/contact-resend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -23,7 +23,7 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ success: true, data });
     } catch (error: any) {
-        console.error('RESEND CONTACT ERROR 👉', error.message);
+        console.error('RESEND CONTACT ERROR ', error.message);
         return NextResponse.json(
             { message: 'Failed to send email via Resend', error: error.message },
             { status: 500 }
