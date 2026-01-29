@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Col, Container, Offcanvas, Row, NavDropdown } from "react-bootstrap";
 import Buttons from "../Banner/Buttons";
 import { usePathname } from "next/navigation";
-import { Layers } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -219,7 +219,7 @@ const Header = () => {
                         }
                       >
                         Services
-                        <Layers
+                        <ChevronDown
                           size={16}
                           className={`dropdown-icon  ${showDropdown ? "" : ""}`}
                         />
